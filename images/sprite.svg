@@ -1,0 +1,11 @@
+<svg width="0" height="0" class="hidden">
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" id="ic_arr_hor">
+    <path d="M13.5 4L7 10.5L13.5 17" stroke="currentColor" stroke-width="1.5"></path>
+  </symbol>
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 18" id="ic_arrow_hor">
+    <path d="M11.6129 1L20 9M20 9L11.6129 17M20 9H0" stroke="currentColor" stroke-width="1.5"></path>
+  </symbol>
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="ic_search">
+    <path d="M14 14L11.1333 11.1333M12.6667 7.33333C12.6667 10.2789 10.2789 12.6667 7.33333 12.6667C4.38781 12.6667 2 10.2789 2 7.33333C2 4.38781 4.38781 2 7.33333 2C10.2789 2 12.6667 4.38781 12.6667 7.33333Z" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+  </symbol>
+</svg>
