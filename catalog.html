@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+		<!-- Adapting the page for mobile devices -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+		<!-- Prohibition of phone number recognition -->
+		<meta name="format-detection" content="telephone=no">
+		<meta name="SKYPE_TOOLBAR" content ="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+
+		<!-- Page title -->
+		<title>Заголовок страницы</title>
+
+		<!-- Meta description -->
+		<meta name="description" content="">
+
+		<!-- Meta Keywords -->
+		<meta name="keywords" content="">
+
+		<!-- Changing the color of the mobile browser panel -->
+		<meta name="msapplication-TileColor" content="#7F1AFF">
+		<meta name="theme-color" content="#7F1AFF">
+
+		<!-- Connecting fonts from Google -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Onest:wght@100..900&display=swap" rel="stylesheet">
+
+		<!-- Connecting style files -->
+		<link rel="stylesheet" href="css/swiper-bundle.min.css" async>
+		<link rel="stylesheet" href="css/swiper.css" async>
+		<link rel="stylesheet" href="css/styles.css" async>
+
+		<link rel="stylesheet" href="css/response_1279.css" media="print, (max-width: 1279px)" async>
+		<link rel="stylesheet" href="css/response_1023.css" media="print, (max-width: 1023px)" async>
+		<link rel="stylesheet" href="css/response_767.css" media="print, (max-width: 767px)" async>
+		<link rel="stylesheet" href="css/response_479.css" media="(max-width: 479px)" async>
+	</head>
+
+	<body>
+		<div class="wrap">
+			<div class="main">
+				<header>
+					<div class="cont">
+						<div class="data">
+							<a href="/" class="logo">
+								<img src="images/logo.svg" alt="">
+
+								<div>
+									<div>ФЕДЕРАЛЬНАЯ</div>
+									<div>КОМИССИЯ</div>
+								</div>
+							</a>
+
+							<nav class="menu row">
+								<div class="menu_item">
+									<a href="/">Меры поддержки</a>
+								</div>
+
+								<div class="menu_item">
+									<a href="/">Кинокомиссии</a>
+								</div>
+
+								<div class="menu_item">
+									<a href="/">О нас</a>
+								</div>
+
+								<div class="menu_item">
+									<a href="/">Новости</a>
+								</div>
+
+								<div class="menu_item">
+									<a href="/">Контакты</a>
+								</div>
+							</nav>
+
+							<div class="search modal_cont">
+								<button class="btn mini_modal_btn" data-modal-id="#search_modal">
+									<svg class="icon"><use xlink:href="images/sprite.svg#ic_search"></use></svg>
+								</button>
+
+								<div class="mini_modal" id="search_modal">
+
+								</div>
+							</div>
+
+							<button class="callback_btn">Связаться с нами</button>
+						</div>
+					</div>
+				</header>
+
+
+				<section class="page_head">
+					<div class="cont">
+						<div class="back_btn">
+							<a href="/">
+								<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>
+								<span>Назад</span>
+							</a>
+						</div>
+
+						<h1 class="page_title">Региональные Департаменты Культуры и Кинокомиссии</h1>
+					</div>
+				</section>
+
+
+				<section class="catalog block small tabs_container">
+					<div class="cont">
+						<div class="head">
+							<div class="tabs">
+								<div class="btns">
+									<button data-content="#catalog_tab1" data-level="level1" class="btn active">Кинокомисии</button>
+
+									<button data-content="#catalog_tab2" data-level="level1" class="btn">Департаменты культуры</button>
+								</div>
+							</div>
+
+							<form action="" class="form filter">
+								<div class="line">
+									<div class="field">
+										<select name="" data-placeholder="Регионы">
+											<option value="1">Алтайский край</option>
+											<option value="2">Калининградская область</option>
+											<option value="3">Краснодарский край</option>
+											<option value="4">Красноярский край</option>
+											<option value="5">Ленинградская область</option>
+											<option value="6">Мурманская область</option>
+											<option value="7">Нижегородская область</option>
+											<option value="1">Алтайский край</option>
+											<option value="2">Калининградская область</option>
+											<option value="3">Краснодарский край</option>
+											<option value="4">Красноярский край</option>
+											<option value="5">Ленинградская область</option>
+											<option value="6">Мурманская область</option>
+											<option value="7">Нижегородская область</option>
+										</select>
+
+										<svg class="arr"><use xlink:href="images/sprite.svg#ic_arr_ver"></use></svg>
+									</div>
+								</div>
+
+								<div class="line">
+									<div class="field">
+										<select name="" data-placeholder="Меры поддержки">
+											<option value="1">Гранты</option>
+											<option value="2">Налоги и льготы</option>
+											<option value="3">Рибейт</option>
+											<option value="4">Субсидии</option>
+										</select>
+
+										<svg class="arr"><use xlink:href="images/sprite.svg#ic_arr_ver"></use></svg>
+									</div>
+								</div>
+
+								<button type="button" class="sort_btn">
+									<svg class="icon"><use xlink:href="images/sprite.svg#ic_sort"></use></svg>
+									<svg class="icon"><use xlink:href="images/sprite.svg#ic_sort_a"></use></svg>
+								</button>
+							</form>
+						</div>
+
+						<div class="tab_content level1 active" id="catalog_tab1">
+							<div class="list">
+								<div class="item">
+									<div class="logo">
+										<img src="images/tmp/film_commissions_logo5.png" alt="" loading="lazy">
+									</div>
+
+									<div class="info">
+										<div class="region">Алтайский край</div>
+
+										<div class="name">Кинокомиссия Алтайского края</div>
+									</div>
+
+									<div class="opportunities">
+										<div class="label">
+											<span>меры поддержки</span>
+										</div>
+
+										<div class="items">
+											<div>Рибейт</div>
+											<div>Налоги и льготы</div>
+											<div>Гранты</div>
+											<div>Субсидии</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="item">
+									<div class="logo">
+										<img src="images/tmp/film_commissions_logo3.png" alt="" loading="lazy">
+									</div>
+
+									<div class="info">
+										<div class="region">Калининградская область</div>
+
+										<div class="name">Кинокомиссия Калининград</div>
+									</div>
+
+									<div class="opportunities">
+										<div class="label">
+											<span>меры поддержки</span>
+										</div>
+
+										<div class="items">
+											<div>Рибейт</div>
+											<div>Налоги и льготы</div>
+											<div>Гранты</div>
+											<div>Субсидии</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="item">
+									<div class="logo">
+										<img src="images/tmp/film_commissions_logo1.png" alt="" loading="lazy">
+									</div>
+
+									<div class="info">
+										<div class="region">Краснодарский край</div>
+
+										<div class="name">Кинокомиссия Краснодарского края</div>
+									</div>
+
+									<div class="opportunities">
+										<div class="label">
+											<span>меры поддержки</span>
+										</div>
+
+										<div class="items">
+											<div>Рибейт</div>
+											<div>Налоги и льготы</div>
+											<div>Гранты</div>
+											<div>Субсидии</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="item">
+									<div class="logo">
+										<img src="images/tmp/film_commissions_logo6.png" alt="" loading="lazy">
+									</div>
+
+									<div class="info">
+										<div class="region">Ленинградская область</div>
+
+										<div class="name">Кинокомиссия Ленинградской области</div>
+									</div>
+
+									<div class="opportunities">
+										<div class="label">
+											<span>меры поддержки</span>
+										</div>
+
+										<div class="items">
+											<div>Рибейт</div>
+											<div>Налоги и льготы</div>
+											<div>Гранты</div>
+											<div>Субсидии</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="item">
+									<div class="logo">
+										<img src="images/tmp/film_commissions_logo4.png" alt="" loading="lazy">
+									</div>
+
+									<div class="info">
+										<div class="region">Московская область</div>
+
+										<div class="name">Кинокомиссия Московской области</div>
+									</div>
+
+									<div class="opportunities">
+										<div class="label">
+											<span>меры поддержки</span>
+										</div>
+
+										<div class="items">
+											<div>Рибейт</div>
+											<div>Налоги и льготы</div>
+											<div>Гранты</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="item">
+									<div class="logo">
+										<img src="images/tmp/film_commissions_logo7.png" alt="" loading="lazy">
+									</div>
+
+									<div class="info">
+										<div class="region">Мурманская область</div>
+
+										<div class="name">Кинокомиссия Мурманской области</div>
+									</div>
+
+									<div class="opportunities">
+										<div class="label">
+											<span>меры поддержки</span>
+										</div>
+
+										<div class="items">
+											<div>Рибейт</div>
+											<div>Гранты</div>
+											<div>Субсидии</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="item">
+									<div class="logo">
+										<img src="images/tmp/film_commissions_logo8.png" alt="" loading="lazy">
+									</div>
+
+									<div class="info">
+										<div class="region">Нижегородская область</div>
+
+										<div class="name">Кинокомиссия Нижегородской области</div>
+									</div>
+
+									<div class="opportunities">
+										<div class="label">
+											<span>меры поддержки</span>
+										</div>
+
+										<div class="items">
+											<div>Рибейт</div>
+											<div>Налоги и льготы</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="item">
+									<div class="logo">
+										<img src="images/tmp/film_commissions_logo9.png" alt="" loading="lazy">
+									</div>
+
+									<div class="info">
+										<div class="region">новгородская область</div>
+
+										<div class="name">Кинокомиссия Новгорода</div>
+									</div>
+
+									<div class="opportunities">
+										<div class="label">
+											<span>меры поддержки</span>
+										</div>
+
+										<div class="items">
+											<div>Рибейт</div>
+											<div>Налоги и льготы</div>
+											<div>Гранты</div>
+											<div>Субсидии</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="item">
+									<div class="logo">
+										<img src="images/tmp/film_commissions_logo10.png" alt="" loading="lazy">
+									</div>
+
+									<div class="info">
+										<div class="region">Пермский край</div>
+
+										<div class="name">Кинокомиссия Пермского края</div>
+									</div>
+
+									<div class="opportunities">
+										<div class="label">
+											<span>меры поддержки</span>
+										</div>
+
+										<div class="items">
+											<div>Рибейт</div>
+											<div>Налоги и льготы</div>
+											<div>Гранты</div>
+											<div>Субсидии</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="item">
+									<div class="logo">
+										<img src="images/tmp/film_commissions_logo11.png" alt="" loading="lazy">
+									</div>
+
+									<div class="info">
+										<div class="region">Приморский край</div>
+
+										<div class="name">Кинокомиссия Приморья</div>
+									</div>
+
+									<div class="opportunities">
+										<div class="label">
+											<span>меры поддержки</span>
+										</div>
+
+										<div class="items">
+											<div>Рибейт</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="pagination">
+								<button class="more_btn">Показать еще</button>
+
+								<div class="links">
+									<!-- <a href="/" class="prev">
+										<svg class="icon"><use xlink:href="images/sprite.svg#ic_arrow_hor"></use></svg>
+										<span>Назад</span>
+									</a> -->
+
+									<a class="active">1</a>
+
+									<a href="/">2</a>
+
+									<a href="/">3</a>
+
+									<a href="/" class="next">
+										<span>Дальше</span>
+										<svg class="icon"><use xlink:href="images/sprite.svg#ic_arrow_hor"></use></svg>
+									</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="tab_content level1" id="catalog_tab2">
+							<div class="list">
+								<div class="item">
+									<div class="logo">
+										<img src="images/tmp/film_commissions_logo5.png" alt="" loading="lazy">
+									</div>
+
+									<div class="info">
+										<div class="region">Алтайский край</div>
+
+										<div class="name">Кинокомиссия Алтайского края</div>
+									</div>
+
+									<div class="opportunities">
+										<div class="label">
+											<span>меры поддержки</span>
+										</div>
+
+										<div class="items">
+											<div>Рибейт</div>
+											<div>Налоги и льготы</div>
+											<div>Гранты</div>
+											<div>Субсидии</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="item">
+									<div class="logo">
+										<img src="images/tmp/film_commissions_logo3.png" alt="" loading="lazy">
+									</div>
+
+									<div class="info">
+										<div class="region">Калининградская область</div>
+
+										<div class="name">Кинокомиссия Калининград</div>
+									</div>
+
+									<div class="opportunities">
+										<div class="label">
+											<span>меры поддержки</span>
+										</div>
+
+										<div class="items">
+											<div>Рибейт</div>
+											<div>Налоги и льготы</div>
+											<div>Гранты</div>
+											<div>Субсидии</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="item">
+									<div class="logo">
+										<img src="images/tmp/film_commissions_logo1.png" alt="" loading="lazy">
+									</div>
+
+									<div class="info">
+										<div class="region">Краснодарский край</div>
+
+										<div class="name">Кинокомиссия Краснодарского края</div>
+									</div>
+
+									<div class="opportunities">
+										<div class="label">
+											<span>меры поддержки</span>
+										</div>
+
+										<div class="items">
+											<div>Рибейт</div>
+											<div>Налоги и льготы</div>
+											<div>Гранты</div>
+											<div>Субсидии</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="item">
+									<div class="logo">
+										<img src="images/tmp/film_commissions_logo6.png" alt="" loading="lazy">
+									</div>
+
+									<div class="info">
+										<div class="region">Ленинградская область</div>
+
+										<div class="name">Кинокомиссия Ленинградской области</div>
+									</div>
+
+									<div class="opportunities">
+										<div class="label">
+											<span>меры поддержки</span>
+										</div>
+
+										<div class="items">
+											<div>Рибейт</div>
+											<div>Налоги и льготы</div>
+											<div>Гранты</div>
+											<div>Субсидии</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="item">
+									<div class="logo">
+										<img src="images/tmp/film_commissions_logo4.png" alt="" loading="lazy">
+									</div>
+
+									<div class="info">
+										<div class="region">Московская область</div>
+
+										<div class="name">Кинокомиссия Московской области</div>
+									</div>
+
+									<div class="opportunities">
+										<div class="label">
+											<span>меры поддержки</span>
+										</div>
+
+										<div class="items">
+											<div>Рибейт</div>
+											<div>Налоги и льготы</div>
+											<div>Гранты</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="item">
+									<div class="logo">
+										<img src="images/tmp/film_commissions_logo7.png" alt="" loading="lazy">
+									</div>
+
+									<div class="info">
+										<div class="region">Мурманская область</div>
+
+										<div class="name">Кинокомиссия Мурманской области</div>
+									</div>
+
+									<div class="opportunities">
+										<div class="label">
+											<span>меры поддержки</span>
+										</div>
+
+										<div class="items">
+											<div>Рибейт</div>
+											<div>Гранты</div>
+											<div>Субсидии</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="item">
+									<div class="logo">
+										<img src="images/tmp/film_commissions_logo8.png" alt="" loading="lazy">
+									</div>
+
+									<div class="info">
+										<div class="region">Нижегородская область</div>
+
+										<div class="name">Кинокомиссия Нижегородской области</div>
+									</div>
+
+									<div class="opportunities">
+										<div class="label">
+											<span>меры поддержки</span>
+										</div>
+
+										<div class="items">
+											<div>Рибейт</div>
+											<div>Налоги и льготы</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="item">
+									<div class="logo">
+										<img src="images/tmp/film_commissions_logo9.png" alt="" loading="lazy">
+									</div>
+
+									<div class="info">
+										<div class="region">новгородская область</div>
+
+										<div class="name">Кинокомиссия Новгорода</div>
+									</div>
+
+									<div class="opportunities">
+										<div class="label">
+											<span>меры поддержки</span>
+										</div>
+
+										<div class="items">
+											<div>Рибейт</div>
+											<div>Налоги и льготы</div>
+											<div>Гранты</div>
+											<div>Субсидии</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+
+
+			<footer>
+				<div class="cont row">
+					<div class="data">
+						<div class="logo">
+							<img src="images/logo_white.svg" alt="">
+
+							<div>
+								<div>ФЕДЕРАЛЬНАЯ</div>
+								<div>КОМИССИЯ</div>
+							</div>
+						</div>
+
+						<div class="links">
+							<div><a href="/">Меры поддержки</a></div>
+
+							<div><a href="/">Кинокомиссии</a></div>
+
+							<div><a href="/">О нас</a></div>
+
+							<div><a href="/">Новости</a></div>
+
+							<div><a href="/">Контакты</a></div>
+						</div>
+
+						<div class="bottom">
+							<div class="copyright">&copy; 2024 Федеральная Кинокомиссия</div>
+
+							<div class="privacy_policy_link">
+								<a href="/">Политика конфиденциальности</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="feedback">
+						<div class="title">Свяжитесь с&nbsp;нами</div>
+
+						<div class="desc">У&nbsp;вас возникли вопросы? Свяжитесь с&nbsp;нами и&nbsp;мы&nbsp;проконсультируем вас</div>
+
+						<form action="" class="form">
+							<div class="line">
+								<div class="field">
+									<input type="text" name="" value="" class="input" placeholder="Ваше имя">
+								</div>
+							</div>
+
+							<div class="line">
+								<div class="field">
+									<div class="label">+7</div>
+
+									<input type="tel" name="" value="" class="input" placeholder="(999) 999 99 99">
+								</div>
+							</div>
+
+							<div class="submit">
+								<button type="submit" class="submit_btn">Позвонить мне</button>
+							</div>
+
+							<div class="agree">Нажимая на кнопку «Позвонить мне», вы даёте согласие на обработку <a href="/" target="_blank">персональных данных</a></div>
+						</form>
+
+						<div class="contacts">
+							<div class="label">Бесплатный звонок</div>
+
+							<div class="phone">
+								<a href="tel:+7 (999) 088-77-44">+7 (999) 088-77-44</a>
+							</div>
+
+							<div class="row">
+								<div class="email">
+									<a href="mailto:info@fkk.ru">info@fkk.ru</a>
+								</div>
+
+								<div class="location">
+									<a href="/" target="_blank">г. Москва, ул. Тверская, 13</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<img src="images/bg_footer.svg" alt="" class="bg" loading="lazy">
+			</footer>
+
+
+			<div class="overlay"></div>
+		</div>
+
+
+		<!-- Connecting javascript files -->
+		<script src="js/jquery-3.6.3.min.js"></script>
+		<script src="js/functions.js"></script>
+		<script src="js/swiper-bundle.min.js"></script>
+		<script src="js/imask.js"></script>
+		<script src="js/nice-select2.js"></script>
+		<script src="js/scripts.js"></script>
+	</body>
+</html>

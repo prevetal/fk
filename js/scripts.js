@@ -150,6 +150,28 @@ document.addEventListener('DOMContentLoaded', function () {
 			})
 		})
 	}
+
+
+	// Custom select - Nice select
+	const selects = document.querySelectorAll('select:not(.skip)')
+
+	if (selects) {
+		selects.forEach(el => {
+			NiceSelect.bind(el, {
+				placeholder: el.getAttribute('data-placeholder')
+			})
+
+			el.addEventListener('change', () => el.classList.add('selected'))
+		})
+	}
+
+
+	// Filter
+	$('.filter .sort_btn').click(function(e) {
+		e.preventDefault()
+
+		$(this).toggleClass('active')
+	})
 })
 
 

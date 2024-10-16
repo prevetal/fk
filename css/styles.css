@@ -233,6 +233,11 @@ button
     margin-bottom: 140px;
 }
 
+.block.small
+{
+    margin-bottom: 100px;
+}
+
 .block.big_m
 {
     margin-bottom: 180px;
@@ -524,6 +529,132 @@ button
 
 
 
+/*----------------
+    Pagination
+----------------*/
+.pagination
+{
+    margin-top: 40px;
+
+    text-align: center;
+}
+
+
+.pagination .more_btn
+{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 98%;
+
+    margin-bottom: 30px;
+    padding: 10px 15px;
+
+    transition: .2s linear;
+    transition: border-color .2s linear;
+    letter-spacing: -.42px;
+
+    border: 1px solid rgba(22, 15, 37, .50);
+    border-radius: 10px;
+}
+
+
+.pagination .more_btn:hover
+{
+    border-color: #160f25;
+}
+
+
+.pagination .links
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    gap: 4px;
+}
+
+
+.pagination .links a
+{
+    font-weight: 500;
+    line-height: 98%;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 36px;
+    height: 36px;
+
+    transition: .2s linear;
+    text-decoration: none;
+    letter-spacing: -.48px;
+
+    color: currentColor;
+    border-radius: 8px;
+
+    gap: 8px;
+}
+
+
+.pagination .links a:hover,
+.pagination .links a.active
+{
+    color: #fff;
+    background: #7f1aff;
+}
+
+
+.pagination .links a.prev,
+.pagination .links a.next
+{
+    width: auto;
+
+    border-radius: 0;
+}
+
+
+.pagination .links a.prev
+{
+    margin-right: 14px;
+}
+
+.pagination .links a.next
+{
+    margin-left: 14px;
+}
+
+
+.pagination .links a.prev .icon,
+.pagination .links a.next .icon
+{
+    display: block;
+
+    width: 24px;
+    height: 24px;
+
+    color: #292d32;
+}
+
+.pagination .links a.prev .icon
+{
+    transform: rotate(-180deg);
+}
+
+
+.pagination .links a.prev:hover,
+.pagination .links a.next:hover
+{
+    color: currentColor;
+    background: none;
+}
+
+
+
 /*------------
     Header
 ------------*/
@@ -681,6 +812,83 @@ header .callback_btn:hover
 {
     color: #fff;
     background: #2f1f53;
+}
+
+
+
+/*---------------
+    Page head
+---------------*/
+.page_head
+{
+    margin-bottom: 48px;
+    padding-top: 6px;
+}
+
+
+.page_head .back_btn
+{
+    display: flex;
+
+    color: rgba(22, 15, 37, .50);
+}
+
+
+.page_head .back_btn a
+{
+    line-height: 140%;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    transition: color .2s linear;
+    text-decoration: none;
+    letter-spacing: -.16px;
+
+    color: currentColor;
+
+    gap: 8px;
+}
+
+
+.page_head .back_btn .icon
+{
+    display: block;
+
+    width: 20px;
+    height: 20px;
+}
+
+
+.page_head .back_btn a:hover
+{
+    color: var(--text_color);
+}
+
+
+
+.page_title
+{
+    font-family: var(--font_family2);
+    font-size: var(--font_size_title);
+    font-weight: 400;
+    line-height: 100%;
+
+    display: block;
+
+    width: 1086px;
+    max-width: 100%;
+
+    letter-spacing: -2.56px;
+}
+
+
+* + .page_title
+{
+    margin-top: 60px;
 }
 
 
@@ -858,6 +1066,169 @@ header .callback_btn:hover
 .form .error
 {
     border-color: var(--form_error_color);
+}
+
+
+.form select
+{
+    display: none;
+}
+
+
+.form .nice-select
+{
+    position: relative;
+
+    display: block;
+
+    cursor: pointer;
+}
+
+
+.form .nice-select .current
+{
+    line-height: 46px;
+
+    display: block;
+    overflow: hidden;
+
+    height: 48px;
+    padding: 0 39px 0 11px;
+
+    cursor: pointer;
+    transition: .2s linear;
+    white-space: nowrap;
+    letter-spacing: -.16px;
+    text-overflow: ellipsis;
+
+    color: var(--form_placeholder_color);
+    border: 1px solid var(--form_border_color);
+    border-radius: var(--form_border_radius);
+    background: var(--form_bg_color);
+}
+
+.form select.selected + .nice-select .current
+{
+    color: var(--text_color);
+}
+
+
+.form .nice-select .current:hover
+{
+    box-shadow: 0 2px 32px 0 rgba(52, 79, 104, .05), 0 0 16px 0 rgba(68, 83, 113, .10), 0 4px 8px 0 rgba(68, 83, 113, .05);
+}
+
+
+.form .nice-select-dropdown
+{
+    position: absolute;
+    z-index: 9;
+    top: 100%;
+    left: 0;
+
+    visibility: hidden;
+    overflow: hidden;
+
+    width: 100%;
+    margin-top: 8px;
+    padding: 4px 2px 4px 0;
+
+    transition: .2s linear;
+    transform: none;
+
+    opacity: 0;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 12px 16px -4px rgba(16, 24, 40, .08), 0 4px 6px -2px rgba(16, 24, 40, .03);
+}
+
+
+.form .nice-select .list
+{
+    display: block;
+    overflow: auto;
+
+    max-height: 266px;
+
+    border-radius: 0;
+}
+
+
+.form .nice-select .list::-webkit-scrollbar
+{
+    width: 4px;
+    height: 4px;
+
+    border-radius: 4px;
+    background-color: transparent;
+}
+
+.form .nice-select .list::-webkit-scrollbar-thumb
+{
+    border-radius: 4px;
+    background-color: #f4f0f9;
+}
+
+
+.form .nice-select .list .option
+{
+    line-height: 140%;
+
+    display: block;
+
+    padding: 8px 12px;
+
+    list-style-type: none;
+
+    cursor: pointer;
+    transition: background .2s linear;
+    letter-spacing: -.16px;
+}
+
+
+.form .nice-select .list .option:hover
+{
+    background: #fcf8ff;
+}
+
+
+.form .nice-select .list .option:empty
+{
+    display: none;
+}
+
+
+.form .field .arr
+{
+    position: absolute;
+    top: 0;
+    right: 12px;
+    bottom: 0;
+
+    display: block;
+
+    width: 20px;
+    height: 20px;
+    margin: auto 0;
+
+    pointer-events: none;
+}
+
+
+.form .nice-select.open .nice-select-dropdown
+{
+    visibility: visible;
+
+    transform: none;
+
+    opacity: 1;
+}
+
+
+.form .nice-select.open .current
+{
+    border-color: #d6bbfb;
+    box-shadow: 0 0 0 4px #eee0ff;
 }
 
 
@@ -1052,7 +1423,8 @@ header .callback_btn:hover
 }
 
 
-.first_section .img
+.first_section .img,
+.first_section video
 {
     display: block;
 
@@ -1854,10 +2226,11 @@ header .callback_btn:hover
 }
 
 
-.action_block .bg
+.action_block .bg,
+.action_block video
 {
-    position: absolute;
-    z-index: 1;
+    position: absolute !important;
+    z-index: 1 !important;
     right: 0;
     bottom: 0;
 
@@ -2230,6 +2603,268 @@ header .callback_btn:hover
 
 
 
+/*-------------
+    Catalog
+-------------*/
+.catalog .head
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    margin-bottom: 32px;
+
+    gap: 16px;
+}
+
+
+.catalog .tabs
+{
+    margin-bottom: 0;
+}
+
+
+.catalog .filter
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    --form_border_color: #fff;
+    --form_focus_color: #fff;
+    --form_bg_color: #fff;
+    gap: 16px;
+}
+
+
+.catalog .filter .line
+{
+    width: 280px;
+    max-width: 100%;
+    margin-bottom: 0;
+}
+
+
+.catalog .filter .sort_btn
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+
+    transition: box-shadow .2s linear;
+
+    border-radius: 10px;
+    background: #fff;
+}
+
+
+.catalog .filter .sort_btn .icon
+{
+    display: block;
+
+    width: 20px;
+    height: 20px;
+}
+
+
+.catalog .filter .sort_btn .icon + .icon,
+.catalog .filter .sort_btn.active .icon
+{
+    display: none;
+}
+
+
+.catalog .filter .sort_btn:hover
+{
+    box-shadow: 0 2px 32px 0 rgba(52, 79, 104, .05), 0 0 16px 0 rgba(68, 83, 113, .10), 0 4px 8px 0 rgba(68, 83, 113, .05);
+}
+
+
+.catalog .filter .sort_btn.active .icon + .icon
+{
+    display: block;
+}
+
+
+
+.catalog .list
+{
+    display: flex;
+    flex-direction: column;
+
+    gap: 16px;
+}
+
+
+.catalog .list .item
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    padding: 30px;
+
+    transition: box-shadow .2s linear;
+
+    border-radius: 24px;
+    background: #fff;
+    box-shadow: 0 4px 8px 0 rgba(68, 83, 113, .08);
+
+    gap: 20px;
+}
+
+
+.catalog .list .logo
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 64px;
+    height: 64px;
+    padding: 11px;
+
+    border: 1px solid #e4ddec;
+    border-radius: 10px;
+    background: #fff;
+}
+
+
+.catalog .list .logo img
+{
+    display: block;
+
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+.catalog .list .region
+{
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 120%;
+
+    margin-bottom: 8px;
+
+    letter-spacing: -.24px;
+    text-transform: uppercase;
+
+    color: rgba(22, 15, 37, .50);
+}
+
+
+.catalog .list .name
+{
+    font-family: var(--font_family2);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 120%;
+
+    letter-spacing: -.4px;
+}
+
+
+.catalog .list .opportunities
+{
+    margin-left: auto;
+}
+
+
+.catalog .list .opportunities .label
+{
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 120%;
+
+    margin-bottom: 8px;
+
+    text-align: right;
+    letter-spacing: -.24px;
+    text-transform: uppercase;
+
+    color: #1c9d6f;
+}
+
+
+.catalog .list .opportunities .label span
+{
+    display: inline-block;
+
+    padding: 4px 8px 2px;
+
+    vertical-align: top;
+
+    border-radius: 6px;
+    background: rgba(203, 237, 225, .50);
+}
+
+
+.catalog .list .opportunities .items
+{
+    font-size: 14px;
+    line-height: 120%;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+
+    letter-spacing: -.14px;
+
+    color: rgba(22, 15, 37, .50);
+
+    gap: 20px;
+}
+
+
+.catalog .list .opportunities .items > *
+{
+    position: relative;
+}
+
+
+.catalog .list .opportunities .items > * + *:before
+{
+    position: absolute;
+    top: 6px;
+    right: 100%;
+
+    display: block;
+
+    width: 4px;
+    height: 4px;
+    margin-right: 8px;
+
+    content: '';
+    pointer-events: none;
+
+    border-radius: 50%;
+    background: #e4ddec;
+}
+
+
+.catalog .list .item:hover
+{
+    box-shadow: 0 2px 32px 0 rgba(52, 79, 104, .05), 0 0 16px 0 rgba(68, 83, 113, .10), 0 4px 8px 0 rgba(68, 83, 113, .05);
+}
+
+
+
 /*------------
     Footer
 ------------*/
@@ -2244,6 +2879,24 @@ footer
     color: #fff;
     border-radius: 56px 56px 0 0;
     background: #7f1aff;
+}
+
+
+footer .bg
+{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+
+    object-fit: cover;
 }
 
 
