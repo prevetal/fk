@@ -3928,6 +3928,741 @@ header .callback_btn:hover
 
 
 
+/*---------------
+    Locations
+---------------*/
+.locations .filter
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin-bottom: 40px;
+}
+
+
+.locations .filter .btns
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    gap: 8px;
+}
+
+
+.locations .filter .btns .btn
+{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 98%;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    padding: 9px 19px;
+
+    transition: .2s linear;
+    letter-spacing: -.42px;
+
+    color: #4c4c67;
+    border: 1px solid #e4ddec;
+    border-radius: 40px;
+
+    gap: 8px;
+}
+
+
+.locations .filter .btns .btn:hover,
+.locations .filter .btns .btn.active
+{
+    color: #fff;
+    border-color: #160f25;
+    background: #160f25;
+}
+
+
+.locations .filter .btns .btn:hover span,
+.locations .filter .btns .btn.active span
+{
+    color: #9f98af;
+}
+
+
+.locations .filter .sort
+{
+    position: relative;
+}
+
+
+.locations .filter select
+{
+    display: none;
+}
+
+
+.locations .filter .nice-select
+{
+    position: relative;
+
+    display: block;
+
+    cursor: pointer;
+}
+
+
+.locations .filter .nice-select .current
+{
+    line-height: 140%;
+
+    padding-right: 28px;
+
+    cursor: pointer;
+    letter-spacing: -.16px;
+}
+
+
+.locations .filter .nice-select-dropdown
+{
+    position: absolute;
+    z-index: 9;
+    top: 100%;
+    left: -12px;
+
+    visibility: hidden;
+    overflow: hidden;
+
+    width: calc(100% + 24px);
+    margin-top: 8px;
+    padding: 4px 2px 4px 0;
+
+    transition: .2s linear;
+    transform: none;
+
+    opacity: 0;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 12px 16px -4px rgba(16, 24, 40, .08), 0 4px 6px -2px rgba(16, 24, 40, .03);
+}
+
+
+.locations .filter .nice-select .list
+{
+    display: block;
+    overflow: auto;
+
+    max-height: 266px;
+
+    border-radius: 0;
+}
+
+
+.locations .filter .nice-select .list::-webkit-scrollbar
+{
+    width: 4px;
+    height: 4px;
+
+    border-radius: 4px;
+    background-color: transparent;
+}
+
+.locations .filter .nice-select .list::-webkit-scrollbar-thumb
+{
+    border-radius: 4px;
+    background-color: #f4f0f9;
+}
+
+
+.locations .filter .nice-select .list .option
+{
+    line-height: 140%;
+
+    display: block;
+
+    padding: 8px 12px;
+
+    list-style-type: none;
+
+    cursor: pointer;
+    transition: background .2s linear;
+    letter-spacing: -.16px;
+}
+
+
+.locations .filter .nice-select .list .option:hover
+{
+    background: #fcf8ff;
+}
+
+
+.locations .filter .nice-select .list .option:empty
+{
+    display: none;
+}
+
+
+.locations .filter .arr
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    display: block;
+
+    width: 20px;
+    height: 20px;
+    margin: auto 0;
+
+    pointer-events: none;
+}
+
+
+.locations .filter .nice-select.open .nice-select-dropdown
+{
+    visibility: visible;
+
+    transform: none;
+
+    opacity: 1;
+}
+
+
+
+.locations .row
+{
+    align-content: stretch;
+    align-items: stretch;
+
+    margin-bottom: -24px;
+    margin-left: -24px;
+}
+
+
+.locations .row > *
+{
+    width: calc(33.333% - 24px);
+    margin-bottom: 24px;
+    margin-left: 24px;
+}
+
+
+.locations .location
+{
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+
+    transition: box-shadow .2s linear;
+    text-decoration: none;
+
+    color: currentColor;
+    border: 1px solid #e9edf3;
+    border-radius: 24px;
+    background: #fff;
+    box-shadow: 0 4px 8px 0 rgba(68, 83, 113, .08);
+}
+
+
+.locations .location .thumb
+{
+    position: relative;
+
+    overflow: hidden;
+
+    padding-bottom: 70.754%;
+
+    background: #ddd;
+}
+
+
+.locations .location .thumb img
+{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+.locations .location .info
+{
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: column;
+
+    padding: 24px;
+}
+
+
+.locations .location .name
+{
+    font-family: var(--font_family2);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 120%;
+
+    min-height: 48px;
+
+    letter-spacing: -.4px;
+}
+
+
+.locations .location .address
+{
+    font-size: 14px;
+    line-height: 120%;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin-top: auto;
+    padding-top: 8px;
+
+    letter-spacing: -.14px;
+
+    color: #9f98af;
+}
+
+
+.locations .location .address .icon
+{
+    display: block;
+
+    width: 16px;
+    height: 16px;
+}
+
+
+.locations .location .address span
+{
+    align-self: center;
+
+    width: calc(100% - 24px);
+}
+
+
+.locations .location:hover
+{
+    box-shadow: 0 2px 32px 0 rgba(52, 79, 104, .05), 0 0 16px 0 rgba(68, 83, 113, .10), 0 4px 8px 0 rgba(68, 83, 113, .05);
+}
+
+
+
+/*--------------
+    Projects
+--------------*/
+.projects .head
+{
+    display: flex;
+    align-content: flex-end;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin-bottom: 40px;
+}
+
+
+.projects .head .block_title
+{
+    width: 100%;
+}
+
+
+.projects .head .block_desc
+{
+    width: 760px;
+    max-width: 100%;
+    margin-bottom: 0;
+}
+
+
+.projects .head .sort
+{
+    position: relative;
+}
+
+
+.projects .head select
+{
+    display: none;
+}
+
+
+.projects .head .nice-select
+{
+    position: relative;
+
+    display: block;
+
+    cursor: pointer;
+}
+
+
+.projects .head .nice-select .current
+{
+    line-height: 140%;
+
+    padding-right: 28px;
+
+    cursor: pointer;
+    letter-spacing: -.16px;
+}
+
+
+.projects .head .nice-select-dropdown
+{
+    position: absolute;
+    z-index: 9;
+    top: 100%;
+    left: -12px;
+
+    visibility: hidden;
+    overflow: hidden;
+
+    width: calc(100% + 24px);
+    margin-top: 8px;
+    padding: 4px 2px 4px 0;
+
+    transition: .2s linear;
+    transform: none;
+
+    opacity: 0;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 12px 16px -4px rgba(16, 24, 40, .08), 0 4px 6px -2px rgba(16, 24, 40, .03);
+}
+
+
+.projects .head .nice-select .list
+{
+    display: block;
+    overflow: auto;
+
+    max-height: 266px;
+
+    border-radius: 0;
+}
+
+
+.projects .head .nice-select .list::-webkit-scrollbar
+{
+    width: 4px;
+    height: 4px;
+
+    border-radius: 4px;
+    background-color: transparent;
+}
+
+.projects .head .nice-select .list::-webkit-scrollbar-thumb
+{
+    border-radius: 4px;
+    background-color: #f4f0f9;
+}
+
+
+.projects .head .nice-select .list .option
+{
+    line-height: 140%;
+
+    display: block;
+
+    padding: 8px 12px;
+
+    list-style-type: none;
+
+    cursor: pointer;
+    transition: background .2s linear;
+    letter-spacing: -.16px;
+}
+
+
+.projects .head .nice-select .list .option:hover
+{
+    background: #fcf8ff;
+}
+
+
+.projects .head .nice-select .list .option:empty
+{
+    display: none;
+}
+
+
+.projects .head .arr
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    display: block;
+
+    width: 20px;
+    height: 20px;
+    margin: auto 0;
+
+    pointer-events: none;
+}
+
+
+.projects .head .nice-select.open .nice-select-dropdown
+{
+    visibility: visible;
+
+    transform: none;
+
+    opacity: 1;
+}
+
+
+.projects .row
+{
+    align-content: stretch;
+    align-items: stretch;
+
+    margin-bottom: -40px;
+    margin-left: -24px;
+}
+
+
+.projects .row > *
+{
+    width: calc(25% - 24px);
+    margin-bottom: 40px;
+    margin-left: 24px;
+}
+
+
+.projects .project
+{
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    text-decoration: none;
+
+    color: currentColor;
+}
+
+
+.projects .project .sticker
+{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 98%;
+
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+
+    padding: 12px 20px;
+
+    letter-spacing: -.28px;
+
+    color: #fff;
+    border-radius: 16px 0 8px 0;
+    background: #7f1aff;
+}
+
+
+.projects .project .thumb
+{
+    position: relative;
+
+    overflow: hidden;
+
+    margin-bottom: 16px;
+    padding-bottom: 140.384%;
+
+    border-radius: 16px;
+    background: #ddd;
+}
+
+
+.projects .project .thumb img
+{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: inherit;
+
+    object-fit: cover;
+}
+
+
+.projects .project .name
+{
+    font-family: var(--font_family2);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 120%;
+
+    letter-spacing: -.4px;
+}
+
+
+.projects .project .year
+{
+    line-height: 140%;
+
+    margin-top: auto;
+    padding-top: 8px;
+
+    letter-spacing: -.16px;
+
+    opacity: .5;
+}
+
+
+
+/*---------------
+    Festivals
+---------------*/
+.festivals .row
+{
+    align-content: stretch;
+    align-items: stretch;
+
+    margin-bottom: -24px;
+    margin-left: -24px;
+}
+
+
+.festivals .row > *
+{
+    width: calc(33.333% - 24px);
+    margin-bottom: 24px;
+    margin-left: 24px;
+}
+
+
+.festivals .festival
+{
+    display: flex;
+    flex-direction: column;
+
+    padding: 23px;
+
+    transition: box-shadow .2s linear;
+    text-decoration: none;
+
+    color: currentColor;
+    border: 1px solid #e9edf3;
+    border-radius: 24px;
+    background: #fff;
+    box-shadow: 0 4px 8px 0 rgba(68, 83, 113, .08);
+}
+
+
+.festivals .festival .thumb
+{
+    width: 80px;
+    max-width: 100%;
+    height: 80px;
+    margin-bottom: 24px;
+
+    border-radius: 12px;
+    background: #ddd;
+}
+
+
+.festivals .festival .thumb img
+{
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: inherit;
+
+    object-fit: cover;
+}
+
+
+.festivals .festival .date
+{
+    font-size: 14px;
+    line-height: 120%;
+
+    letter-spacing: -.14px;
+
+    opacity: .5;
+    color: rgba(22, 15, 37, .50);
+}
+
+
+.festivals .festival .name
+{
+    font-family: var(--font_family2);
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 120%;
+
+    margin-top: 16px;
+
+    letter-spacing: -.48px;
+}
+
+
+.festivals .festival .desc
+{
+    line-height: 140%;
+
+    margin-top: 16px;
+
+    letter-spacing: -.16px;
+}
+
+
+.festivals .festival .link
+{
+    font-weight: 500;
+    line-height: 98%;
+
+    margin-top: auto;
+    padding-top: 70px;
+
+    letter-spacing: -.48px;
+
+    color: #7f1aff;
+}
+
+
+.festivals .festival:hover
+{
+    box-shadow: 0 2px 32px 0 rgba(52, 79, 104, .05), 0 0 16px 0 rgba(68, 83, 113, .10), 0 4px 8px 0 rgba(68, 83, 113, .05);
+}
+
+
+
 /*------------
     Footer
 ------------*/

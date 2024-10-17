@@ -153,7 +153,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 	// Custom select - Nice select
-	const selects = document.querySelectorAll('select:not(.skip)')
+	const selects = document.querySelectorAll('select')
 
 	if (selects) {
 		selects.forEach(el => {
