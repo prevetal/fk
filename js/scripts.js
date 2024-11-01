@@ -167,6 +167,17 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 
 
+	$('.form .input, .form textarea').keyup(function() {
+		let _self = $(this)
+
+		setTimeout(() => {
+			_self.val().length
+				? _self.addClass('active')
+				: _self.removeClass('active')
+		})
+	})
+
+
 	// Filter
 	$('.filter .sort_btn').click(function(e) {
 		e.preventDefault()

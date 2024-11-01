@@ -995,7 +995,7 @@ header .callback_btn:hover
 .form
 {
     --form_border_color: #f4f0f9;
-    --form_focus_color: #f4f0f9;
+    --form_focus_color: #7f1aff;
     --form_error_color: red;
     --form_border_radius: 10px;
     --form_bg_color: #f4f0f9;
@@ -1055,6 +1055,50 @@ header .callback_btn:hover
 }
 
 
+.form .fixed_label
+{
+    font-size: var(--font_size);
+    line-height: 140%;
+
+    position: absolute;
+    z-index: 3;
+    top: 2px;
+    left: 2px;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    width: calc(100% - 4px);
+    height: 44px;
+    padding: 0 10px;
+
+    transition: .2s linear;
+    letter-spacing: -.14px;
+    pointer-events: none;
+
+    color: var(--form_placeholder_color);
+    border-radius: var(--form_border_radius);
+    background: var(--form_bg_color);
+}
+
+
+.form .input:focus ~ .fixed_label,
+.form textarea:focus ~ .fixed_label,
+.form .input.active ~ .fixed_label,
+.form textarea.active ~ .fixed_label
+{
+    font-size: 11px;
+    line-height: 100%;
+
+    height: 18px;
+
+    color: #c0add8;
+}
+
+
 .form .field
 {
     position: relative;
@@ -1070,15 +1114,20 @@ header .callback_btn:hover
 
     width: 100%;
     height: 48px;
-    padding: 0 11px;
+    padding: 0 10px;
 
     transition: border-color .2s linear;
     letter-spacing: -.16px;
 
     color: var(--text_color);
-    border: 1px solid var(--form_border_color);
+    border: 2px solid var(--form_border_color);
     border-radius: var(--form_border_radius);
     background: var(--form_bg_color);
+}
+
+.form .input.pad_t
+{
+    padding-top: 11px;
 }
 
 .form .input[type='tel']
@@ -1103,14 +1152,14 @@ header .callback_btn:hover
     width: 100%;
     height: 80px;
     min-height: 80px;
-    padding: 9px 11px;
+    padding: 19px 10px 8px;
 
     resize: vertical;
     transition: border-color .2s linear;
     letter-spacing: -.16px;
 
     color: var(--text_color);
-    border: 1px solid var(--form_border_color);
+    border: 2px solid var(--form_border_color);
     border-radius: var(--form_border_radius);
     background: var(--form_bg_color);
 }
@@ -1439,6 +1488,12 @@ header .callback_btn:hover
     --webkit-column-break-inside: avoid;
     page-break-inside: avoid;
     break-inside: avoid;
+}
+
+
+.text_block ul.bold
+{
+    font-weight: 500;
 }
 
 
@@ -3237,6 +3292,7 @@ header .callback_btn:hover
 
 .film_commission_info .col_right .title
 {
+    font-family: var(--font_family2);
     font-size: 24px;
     font-weight: 500;
     line-height: 120%;
