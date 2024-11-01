@@ -625,7 +625,12 @@ button
 }
 
 
-.pagination .links a:hover,
+.pagination .links a:hover
+{
+    background: #c0add8;
+}
+
+
 .pagination .links a.active
 {
     color: #fff;
@@ -1242,14 +1247,21 @@ header .callback_btn:hover
     list-style-type: none;
 
     cursor: pointer;
-    transition: background .2s linear;
+    transition: background-color .2s linear;
     letter-spacing: -.16px;
 }
 
 
 .form .nice-select .list .option:hover
 {
-    background: #fcf8ff;
+    background-color: #fcf8ff;
+}
+
+
+.form .nice-select .list .option.selected
+{
+    background: url(../images/ic_check.svg) calc(100% - 12px) 50%/20px 20px no-repeat;
+    background-color: #f9f7fd;
 }
 
 
@@ -2897,7 +2909,9 @@ header .callback_btn:hover
     padding: 30px;
 
     transition: box-shadow .2s linear;
+    text-decoration: none;
 
+    color: currentColor;
     border-radius: 24px;
     background: #fff;
     box-shadow: 0 4px 8px 0 rgba(68, 83, 113, .08);
