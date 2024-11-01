@@ -162,9 +162,15 @@ body
     color: var(--text_color);
 }
 
-body.menu_open
+body.lock
 {
     overflow: hidden;
+}
+
+
+html.custom_scroll body.lock
+{
+    padding-right: var(--scroll_width);
 }
 
 
@@ -1757,8 +1763,6 @@ header .callback_btn:hover
 
 .opportunities_resources .swiper-slide
 {
-    position: relative;
-
     visibility: hidden;
 
     transition: opacity .2s linear, visibility .2s linear;
@@ -2420,8 +2424,8 @@ header .callback_btn:hover
 
     display: block;
 
-    width: calc(100% - 28px);
-    height: calc(100% - 9px);
+    width: 100%;
+    height: 100%;
 
     pointer-events: none;
 
@@ -2453,8 +2457,6 @@ header .callback_btn:hover
     width: 42px;
     height: 47px;
     margin-top: 17px;
-    margin-right: 8px;
-    margin-left: 32px;
 
     vertical-align: top;
 }
@@ -2660,6 +2662,7 @@ header .callback_btn:hover
 
 .feedback .title
 {
+    font-family: var(--font_family2);
     font-size: 48px;
     font-weight: 400;
     line-height: 130%;
@@ -2756,15 +2759,9 @@ header .callback_btn:hover
 
 .feedback .contacts .row
 {
-    justify-content: space-between;
-
     margin-top: 40px;
-}
 
-
-.feedback .contacts .row > *
-{
-    width: 50%;
+    gap: 16px;
 }
 
 
