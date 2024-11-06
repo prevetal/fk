@@ -119,9 +119,42 @@ document.addEventListener('DOMContentLoaded', function () {
 	})
 
 
-	// Tabs
-	var locationHash = window.location.hash
+	// Project steps slider
+	const projectStepsSliders = [],
+		projectSteps = document.querySelectorAll('.project_steps .swiper')
 
+	projectSteps.forEach((el, i) => {
+		el.classList.add('project_steps_s' + i)
+
+		let options = {
+			loop: false,
+			speed: 750,
+			effect: 'coverflow',
+			grabCursor: true,
+			centeredSlides: true,
+			watchSlidesProgress: true,
+			slideActiveClass: 'active',
+			slideVisibleClass: 'visible',
+			coverflowEffect: {
+				rotate: 50,
+				stretch: 24,
+				depth: 150,
+				slideShadows: true
+			},
+			// initialSlide: 1,
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev'
+			},
+			spaceBetween: 0,
+			slidesPerView: 1,
+		}
+
+		projectStepsSliders.push(new Swiper('.project_steps_s' + i, options))
+	})
+
+
+	// Tabs
 	$('body').on('click', '.tabs .btn', function(e) {
 		e.preventDefault()
 
@@ -158,6 +191,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	if (selects) {
 		selects.forEach(el => {
+			if (Array.from(el.options).some(option => option.getAttribute('selected') !== null)) {
+				el.classList.add('selected')
+			}
+
 			NiceSelect.bind(el, {
 				placeholder: el.getAttribute('data-placeholder')
 			})
