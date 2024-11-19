@@ -223,79 +223,15 @@ document.addEventListener('DOMContentLoaded', function () {
 	})
 
 
-	// Scroll interception
-	// scrollStopPosition = $('.opportunities_resources').offset().top + ($(window).outerHeight() * 0.5) - ($('.opportunities_resources').outerHeight() * 0.5)
+	// About gallery
+	lottie.loadAnimation({
+		container: document.querySelector('.about_head .gallery'),
+		renderer: 'canvas',
+		loop: true,
+		autoplay: true,
+		path: '/carousel.json'
+	})
 })
-
-
-
-
-// setInterval(() => {
-// 	const scrollTop = window.scrollY || document.documentElement.scrollTop
-
-// 	if (scrollTop >= scrollStopPosition) {
-// 		if (e.deltaY > 0 && !opportunitiesResourcesSliders[0].isEnd) {
-// 			BODY.classList.add('lock')
-
-// 			window.scrollTo({ top: scrollStopPosition })
-// 		}
-
-// 		if (e.deltaY > 0 && opportunitiesResourcesSliders[0].isEnd) {
-// 			BODY.classList.remove('lock')
-// 		}
-
-// 		if (e.deltaY > 0 && BODY.classList.contains('lock') ){
-// 			if (!opportunitiesResourcesSliders[0].animating) {
-// 				opportunitiesResourcesSliders[0].slideNext(500, true)
-// 			}
-// 		}
-// 	}
-// }, 5)
-
-
-// window.addEventListener('wheel', handleScroll, { passive: false })
-// window.addEventListener('scroll', handleScroll, { passive: false })
-// window.addEventListener('touchmove', handleScroll, { passive: false })
-
-
-// Обработка скроллинга
-// function handleScroll(e) {
-// 	if ($(window).scrollTop() >= scrollStopPosition) {
-// 		if (e.deltaY > 0 && !opportunitiesResourcesSliders[0].isEnd) {
-// 			BODY.classList.add('lock')
-
-// 			window.scrollTo({ top: scrollStopPosition })
-// 		}
-
-// 		if (e.deltaY > 0 && opportunitiesResourcesSliders[0].isEnd) {
-// 			BODY.classList.remove('lock')
-// 		}
-
-// 		if (e.deltaY > 0 && BODY.classList.contains('lock') ){
-// 			if (!opportunitiesResourcesSliders[0].animating) {
-// 				opportunitiesResourcesSliders[0].slideNext(500, true)
-// 			}
-// 		}
-// 	}
-
-
-
-// 	if ($(window).scrollTop() <= scrollStopPosition) {
-// 		if (e.deltaY < 0 && !opportunitiesResourcesSliders[0].isBeginning) {
-// 			BODY.classList.add('lock')
-// 		}
-
-// 		if (e.deltaY < 0 && opportunitiesResourcesSliders[0].isBeginning) {
-// 			BODY.classList.remove('lock')
-// 		}
-
-// 		if (e.deltaY < 0 && BODY.classList.contains('lock') ){
-// 			if (!opportunitiesResourcesSliders[0].animating) {
-// 				opportunitiesResourcesSliders[0].slidePrev(500, true)
-// 			}
-// 		}
-// 	}
-// }
 
 
 

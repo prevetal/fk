@@ -4894,6 +4894,13 @@ header .callback_btn:hover
 }
 
 
+.about_head .cont
+{
+    position: relative;
+    z-index: 3;
+}
+
+
 .about_head .pre_title
 {
     line-height: 140%;
@@ -5005,6 +5012,19 @@ header .callback_btn:hover
     letter-spacing: -.36px;
 
     color: #4c4c67;
+}
+
+
+.about_head .gallery
+{
+    position: absolute;
+    z-index: 1;
+    top: 12%;
+    left: -6%;
+
+    width: 112%;
+
+    pointer-events: none;
 }
 
 
