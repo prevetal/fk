@@ -229,7 +229,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		renderer: 'canvas',
 		loop: true,
 		autoplay: true,
-		path: '/carousel.json'
+		path: './carousel.json'
 	})
 })
 
