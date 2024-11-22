@@ -4,127 +4,417 @@
     /*-------------------
         Global styles
     -------------------*/
+    .cont
+    {
+        padding: 0 20px;
+    }
 
 
 
-    /*--------------
-        Fancybox
-    --------------*/
-    .fancybox__slide
+    /*------------
+        BG block
+    ------------*/
+    .bg_block:before
+    {
+        height: 2000px;
+    }
+
+
+
+    /*-----------------------------
+        Opportunities/Resources
+    -----------------------------*/
+    .opportunities_resources .info
+    {
+        width: 280px;
+    }
+
+
+    .opportunities_resources .swiper
+    {
+        width: calc(100% - 350px);
+    }
+
+
+
+    /*-----------
+        Steps
+    -----------*/
+    .steps .head .pre_title + *
+    {
+        width: calc(100% - 264px);
+    }
+
+
+    .steps .step .front
+    {
+        padding: 24px;
+    }
+
+
+    .steps .step .number
+    {
+        top: 24px;
+        right: 24px;
+    }
+
+
+
+    /*----------------
+        Advantages
+    ----------------*/
+    .advantages .row > *
+    {
+        width: calc(50% - 20px);
+    }
+
+
+    .advantages .item
     {
         padding: 24px;
     }
 
 
 
-    /*------------
-        Header
-    ------------*/
-    header
-    {
-        position: fixed;
-        z-index: 101;
-        top: 0;
-        left: 0;
-
-        width: 310px;
-        height: 100%;
-        min-height: -moz-available;
-        min-height: -webkit-fill-available;
-        min-height:         fill-available;
-        margin: 0;
-        padding: 0;
-
-        transition: transform .3s linear;
-        transform: translateX(-100%);
-
-        background: #fff;
-    }
-
-    header.show
-    {
-        transform: translateX(0);
-    }
-
-
-    header .scroll
-    {
-        display: flex;
-        overflow: auto;
-        align-content: flex-start;
-        align-items: flex-start;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-
-        height: 100%;
-        min-height: -moz-available;
-        min-height: -webkit-fill-available;
-        min-height:         fill-available;
-        padding: 20px 0;
-
-        overscroll-behavior-y: contain;
-    }
-
-    header .scroll > *
-    {
-        width: 100%;
-    }
-
-
-
-    /*-----------------
-        Mob. header
-    -----------------*/
-    .mob_header
+    /*--------------
+        Articles
+    --------------*/
+    .articles .row
     {
         display: block;
+        overflow: auto;
+
+        width: calc(100% + 40px);
+        margin: 0 -20px;
+        padding: 0 20px;
+
+        white-space: nowrap;
+
+        scroll-padding: 0 24px;
+        scroll-snap-type: x mandatory;
+        scrollbar-color: transparent transparent !important;
+        scrollbar-width: thin !important;
+    }
+
+
+    .articles .row::-webkit-scrollbar
+    {
+        display: none !important;
+
+        width: 0 !important;
+        height: 0 !important;
+
+        background-color: transparent !important;
+    }
+
+
+    .articles .row::-webkit-scrollbar-thumb
+    {
+        background-color: transparent !important;
+    }
+
+
+    .articles .row > *
+    {
+        display: inline-block;
+
+        width: 312px;
+        max-width: none;
+        margin: 0;
+
+        vertical-align: top;
+        white-space: normal;
+
+        scroll-snap-align: start;
+    }
+
+
+    .articles .row > * + *
+    {
+        margin-left: 20px;
+    }
+
+
+    .articles .article .name a
+    {
+        display: -webkit-box;
+        overflow: hidden;
+        align-self: stretch;
+        -webkit-box-orient: vertical;
+
+        -webkit-line-clamp: 2;
     }
 
 
 
     /*-------------
-        Sidebar
+        Catalog
     -------------*/
+    .catalog .list .item
+    {
+        padding: 20px;
+    }
+
+
+    .catalog .list .info
+    {
+        align-self: center;
+
+        width: calc(100% - 80px);
+        max-width: calc(100% - 80px);
+        margin-right: 0;
+    }
+
+
+    .catalog .list .col_right
+    {
+        width: 100%;
+    }
+
+
+    .catalog .list .col_right .label,
+    .catalog .list .col_right .date
+    {
+        text-align: left;
+    }
+
+
+    .catalog .list .col_right .tags
+    {
+        justify-content: flex-start;
+    }
+
+
+    .catalog .list .budget
+    {
+        margin-top: 0;
+        padding-top: 0;
+
+        text-align: left;
+    }
+
+
+
+    /*-------------------------
+        Film commision info
+    -------------------------*/
+    .film_commission_info > .cont > .tabs .btns
+    {
+        padding: 0;
+
+        border-radius: 0;
+        background: none;
+
+        gap: 8px;
+    }
+
+
+    .film_commission_info > .cont > .tabs .btn
+    {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 98%;
+
+        padding: 9px 19px;
+
+        border: 1px solid #e4ddec;
+        border-radius: 40px;
+    }
+
+
+    .film_commission_info > .cont > .tabs .btn.active
+    {
+        color: #fff;
+        border-color: #160f25;
+        background: #160f25;
+        box-shadow: none;
+    }
+
+
+
+    .film_commission_info .col_left
+    {
+        width: 100%;
+    }
+
+
+    .film_commission_info .col_right
+    {
+        width: 100%;
+        margin-top: 32px;
+    }
+
+
+
+    /*---------------------
+        Financing terms
+    ---------------------*/
+    .financing_terms .tabs
+    {
+        width: 100%;
+        padding: 19px;
+
+        border: none;
+        border-bottom: 1px solid #e4ddec;
+    }
+
+
+    .financing_terms .tab_content.active
+    {
+        width: 100%;
+        padding: 19px;
+    }
+
+
+
+    /*--------------
+        Services
+    --------------*/
+    .services .row > *
+    {
+        width: calc(50% - 20px);
+    }
+
+
+
+    /*----------
+        Rent
+    ----------*/
+    .rent .data
+    {
+        width: 100%;
+    }
+
+
+    .rent .gallery
+    {
+        width: 100%;
+        margin-top: 32px;
+    }
 
 
 
     /*---------------
-        Page head
+        Locations
     ---------------*/
+    .locations .row > *
+    {
+        width: calc(50% - 20px);
+    }
+
+
+    .locations .location .name
+    {
+        min-height: 48px;
+    }
+
+
+
+    /*--------------
+        Projects
+    --------------*/
+    .projects .head .block_desc
+    {
+        width: 100%;
+        margin-bottom: 16px;
+    }
+
+
+    .projects .row > *
+    {
+        width: calc(50% - 20px);
+    }
+
+
+
+    /*---------------
+        Festivals
+    ---------------*/
+    .festivals .row > *
+    {
+        width: calc(50% - 20px);
+    }
 
 
 
     /*----------------
-        Block head
+        About head
     ----------------*/
+    .about_head .exp
+    {
+        margin-top: 320px;
+    }
+
+
+    .about_head .gallery
+    {
+        top: 32%;
+    }
 
 
 
-    /*------------------
-        Form elements
-    ------------------*/
+    /*-----------
+        Tasks
+    -----------*/
+    .tasks .head .title
+    {
+        width: 100%;
+    }
+
+
+    .tasks .head .desc
+    {
+        width: 100%;
+        margin-top: 16px;
+    }
 
 
 
-    /*----------------
-        Typography
-    ----------------*/
-
-
-
-    /*-----------------
-        Main slider
-    -----------------*/
+    /*----------------------
+        Support measures
+    ----------------------*/
+    .support_measures .row > *
+    {
+        width: calc(50% - 20px);
+    }
 
 
 
     /*------------
         Footer
     ------------*/
+    footer .data
+    {
+        width: 343px;
+    }
 
 
+    footer .links
+    {
+        column-gap: 20px;
+        column-count: 2;
+    }
 
-    /*-----------
-        PopUp
-    -----------*/
+
+    footer .bottom
+    {
+        display: none;
+    }
+
+
+    footer .feedback
+    {
+        width: calc(100% + 40px);
+        max-width: calc(100% + 40px);
+        margin-top: 32px;
+        margin-right: -20px;
+        margin-left: -20px;
+        padding: 32px 20px;
+    }
+
+
+    footer .mob_bottom
+    {
+        display: block;
+    }
 }

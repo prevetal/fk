@@ -257,13 +257,6 @@ button
 
 
 
-.modal_btn > *
-{
-    pointer-events: none;
-}
-
-
-
 .overlay
 {
     position: fixed;
@@ -278,64 +271,6 @@ button
 
     opacity: .65;
     background: #000;
-}
-
-
-
-/*--------------
-    Fancybox
---------------*/
-.fancybox__backdrop
-{
-    background: rgba(0, 0, 0, .6);
-}
-
-
-.fancybox__slide
-{
-    padding: 40px;
-}
-
-
-.fancybox__content > .f-button.is-close-btn
-{
-    top: 0;
-    right: 0;
-
-    opacity: 1;
-
-    --f-button-width: 34px;
-    --f-button-height: 34px;
-    --f-button-border-radius: 0;
-    --f-button-color: var(--text_color);
-    --f-button-hover-color: var(--text_color);
-    --f-button-svg-width: 14px;
-    --f-button-svg-height: 14px;
-    --f-button-bg: transparent;
-    --f-button-hover-bg: transparent;
-    --f-button-active-bg: transparent;
-}
-
-.is-compact .fancybox__content > .f-button.is-close-btn
-{
-    top: 0;
-    right: 0;
-
-    --f-button-border-radius: 0;
-    --f-button-color: var(--text_color);
-    --f-button-hover-color: var(--text_color);
-    --f-button-outline-color: none;
-    --f-button-bg: none;
-    --f-button-active-bg: none;
-    --f-button-hover-bg: none;
-    --f-button-svg-width: 14px;
-    --f-button-svg-height: 14px;
-}
-
-
-.fancybox__content > .f-button.is-close-btn svg
-{
-    stroke: none;
 }
 
 
@@ -390,6 +325,26 @@ button
     padding-bottom: 140px;
 
     border-radius: 0 0 60px 60px;
+}
+
+
+.bg_block:before
+{
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 2308px;
+
+    content: '';
+    pointer-events: none;
+
+    border-radius: inherit;
+    background: url(../images/gradient_pattern.png) 50% 100%/1440px auto no-repeat, radial-gradient(291.76% 93.31% at 50% 6.69%, rgba(255, 251, 26, .00) 29.7%, #801bff 49.46%, #48118d 57.05%, #160f25 68.13%);
 }
 
 
@@ -857,6 +812,33 @@ header .callback_btn:hover
 {
     color: #fff;
     background: #2f1f53;
+}
+
+
+
+header .menu_btn
+{
+    display: none;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+    margin-left: 12px;
+
+    border-radius: 8px;
+    background: #f4f0f9;
+}
+
+
+header .menu_btn .icon
+{
+    display: block;
+
+    width: 16px;
+    height: 16px;
 }
 
 
@@ -1881,6 +1863,8 @@ header .callback_btn:hover
 {
     visibility: hidden;
 
+    width: 294px;
+
     transition: opacity .2s linear, visibility .2s linear;
     pointer-events: none;
 
@@ -2007,7 +1991,7 @@ header .callback_btn:hover
 {
     display: inline-block;
 
-    padding: 12px 15px;
+    padding: 11px 15px;
 
     vertical-align: top;
 
@@ -2173,6 +2157,14 @@ header .callback_btn:hover
 }
 
 
+.steps .step .front .desc
+{
+    display: none;
+
+    text-align: left;
+}
+
+
 .steps .step .btn
 {
     font-size: 18px;
@@ -2208,6 +2200,33 @@ header .callback_btn:hover
 .steps .step:hover .back
 {
     transform: rotate(3.349deg) translate(-6px, 72px);
+}
+
+
+
+.steps .mob_btn
+{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 98%;
+
+    display: none;
+
+    margin: 32px auto 0;
+    padding: 16px 20px;
+
+    transition: background .2s linear;
+    letter-spacing: -.48px;
+
+    color: #fff;
+    border-radius: 10px;
+    background: #7f1aff;
+}
+
+
+.steps .mob_btn:hover
+{
+    background: #8b33fc;
 }
 
 
@@ -2704,7 +2723,10 @@ header .callback_btn:hover
 
 .articles .article .info
 {
+    position: relative;
+
     display: flex;
+    flex: 1 0 auto;
     flex-direction: column;
 
     padding: 32px;
@@ -2754,11 +2776,42 @@ header .callback_btn:hover
     font-size: 14px;
     line-height: 140%;
 
-    margin-top: 24px;
+    margin-top: auto;
+    padding-top: 24px;
 
     letter-spacing: -.14px;
 
     opacity: .5;
+}
+
+
+.articles .article .link
+{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+
+    display: none;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 17px;
+    height: 17px;
+
+    text-decoration: none;
+
+    color: currentColor;
+}
+
+
+.articles .article .link .icon
+{
+    display: block;
+
+    width: 16px;
+    height: 13px;
 }
 
 
@@ -2883,7 +2936,10 @@ header .callback_btn:hover
 
 .feedback .contacts .email a
 {
+    line-height: 140%;
+
     white-space: nowrap;
+    letter-spacing: -.16px;
 
     color: currentColor;
 
@@ -2893,6 +2949,10 @@ header .callback_btn:hover
 
 .feedback .contacts .location a
 {
+    line-height: 140%;
+
+    letter-spacing: -.16px;
+
     color: currentColor;
 
     text-decoration-thickness: 1px;
@@ -3160,6 +3220,13 @@ header .callback_btn:hover
 }
 
 
+.catalog .list .col_right
+{
+    display: flex;
+    flex-direction: column;
+}
+
+
 .catalog .list .col_right .label,
 .catalog .list .col_right .date
 {
@@ -3206,7 +3273,7 @@ header .callback_btn:hover
 
     color: rgba(22, 15, 37, .50);
 
-    gap: 20px;
+    gap: 8px 20px;
 }
 
 
@@ -3229,23 +3296,29 @@ header .callback_btn:hover
 }
 
 
-.catalog .list .tags > * + *:before
+.catalog .list .tags > *:before
 {
     position: absolute;
     top: 6px;
-    right: 100%;
+    left: 100%;
 
     display: block;
 
     width: 4px;
     height: 4px;
-    margin-right: 8px;
+    margin-left: 8px;
 
     content: '';
     pointer-events: none;
 
     border-radius: 50%;
     background: #e4ddec;
+}
+
+
+.catalog .list .tags > *:last-child:before
+{
+    display: none;
 }
 
 
@@ -3754,10 +3827,14 @@ header .callback_btn:hover
 
 .files .file .btn
 {
+    font-size: 14px;
+    line-height: 140%;
+
     margin-left: 12px;
 
     transition: border-color .2s linear;
     text-decoration: none;
+    letter-spacing: -.14px;
 
     color: #7f1aff;
     border-bottom: 1px solid;
@@ -3871,6 +3948,24 @@ header .callback_btn:hover
 .financing_terms .files
 {
     margin-top: 32px;
+}
+
+
+.financing_terms .mob_spoler_btn
+{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 98%;
+
+    display: none;
+
+    margin-top: 4px;
+    margin-bottom: 0;
+    padding: 2px 0;
+
+    letter-spacing: -.48px;
+
+    color: #7f1aff;
 }
 
 
@@ -4014,6 +4109,36 @@ header .callback_btn:hover
 .services .service:hover .thumb:before
 {
     background: linear-gradient(180deg, rgba(0, 0, 0, .00) 0%, rgba(0, 0, 0, .70) 65.12%);
+}
+
+
+.services .service .link
+{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+
+    display: none;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 20px;
+    height: 20px;
+
+    text-decoration: none;
+
+    color: currentColor;
+}
+
+
+.services .service .link .icon
+{
+    display: block;
+
+    width: 20px;
+    height: 20px;
 }
 
 
@@ -5310,7 +5435,7 @@ header .callback_btn:hover
 
     border-radius: 20px;
     background: #fff;
-    box-shadow: 0 5.045px 10.09px 0 rgba(68, 83, 113, .08);
+    box-shadow: 0 5px 10px 0 rgba(68, 83, 113, .08);
 }
 
 
@@ -5421,6 +5546,8 @@ header .callback_btn:hover
 
     margin-bottom: -24px;
     margin-left: -24px;
+
+    counter-reset: number;
 }
 
 
@@ -5775,6 +5902,22 @@ footer .bottom
 
     margin-top: auto;
     padding-top: 40px;
+
+    letter-spacing: -.16px;
+
+    color: #c0add8;
+}
+
+
+
+footer .mob_bottom
+{
+    line-height: 140%;
+
+    display: none;
+
+    margin-top: auto;
+    padding-top: 32px;
 
     letter-spacing: -.16px;
 

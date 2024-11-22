@@ -4,6 +4,24 @@
     /*-------------------
         Global styles
     -------------------*/
+    :root
+    {
+        --font_size: 14px;
+        --font_size_title: 32px;
+    }
+
+
+    .cont
+    {
+        padding: 0 16px;
+    }
+
+
+    .swiper-button-next,
+    .swiper-button-prev
+    {
+        display: none;
+    }
 
 
 
@@ -17,55 +35,1078 @@
 
 
 
-    /*-----------------
-        Mob. header
-    -----------------*/
+    /*------------
+        BG block
+    ------------*/
+    .bg_block
+    {
+        border-radius: 0 0 32px 32px;
+    }
 
 
 
-    /*-------------
-        Sidebar
-    -------------*/
+    .bg_block:before
+    {
+        height: 2520px;
+    }
+
+
+    .bg_block.mob_big_bg:before
+    {
+        height: 2800px;
+    }
+
+
+
+    /*--------------
+        All link
+    --------------*/
+    .all_link
+    {
+        margin-top: 32px;
+    }
+
+
+    .all_link a
+    {
+        width: 100%;
+    }
+
+
+
+    /*----------------
+        Pagination
+    ----------------*/
+    .pagination .more_btn
+    {
+        width: 100%;
+    }
+
+
+
+    /*------------
+        Header
+    ------------*/
+    header
+    {
+        padding-bottom: 16px;
+    }
+
+
+    header .data
+    {
+        padding: 16px 20px;
+    }
 
 
 
     /*---------------
         Page head
     ---------------*/
+    .page_head
+    {
+        margin-bottom: 24px;
+    }
 
 
+    .breadcrumbs .sep
+    {
+        margin: 0 4px;
+    }
 
-    /*----------------
-        Block head
-    ----------------*/
+
+    .page_title
+    {
+        line-height: 120%;
+
+        letter-spacing: -1.28px;
+    }
+
+
+    * + .page_title
+    {
+        margin-top: 32px;
+    }
 
 
 
     /*------------------
         Form elements
     ------------------*/
+    .form .line
+    {
+        margin-bottom: 16px;
+    }
 
 
 
     /*----------------
         Typography
     ----------------*/
+    .text_block
+    {
+        line-height: 120%;
+
+        letter-spacing: -.14px;
+    }
+
+
+    .text_block > *,
+    .text_block .bg_section > *
+    {
+        margin-bottom: 16px;
+    }
+
+
+    .text_block ul li
+    {
+        padding-left: 24px;
+    }
+
+
+    .text_block ul li:before
+    {
+        top: 5px;
+        left: 5px;
+    }
 
 
 
-    /*-----------------
-        Main slider
-    -----------------*/
+    /*-------------------
+        First section
+    -------------------*/
+    .first_section .title
+    {
+        width: 343px;
+
+        letter-spacing: -1.28px;
+    }
+
+
+    .first_section .title > * + *
+    {
+        margin-top: 16px;
+    }
+
+
+    .first_section .title .letter
+    {
+        width: 22px;
+        height: 23px;
+    }
+
+
+    .first_section .title .letter img
+    {
+        right: -6px;
+
+        width: 40px;
+        height: 44px;
+    }
+
+
+    .first_section .desc
+    {
+        line-height: 120%;
+
+        width: 343px;
+
+        letter-spacing: -.14px;
+    }
+
+
+    .first_section .desc br
+    {
+        display: none;
+    }
+
+
+
+    /*-----------------------------
+        Opportunities/Resources
+    -----------------------------*/
+    .opportunities_resources .data
+    {
+        padding: 24px;
+    }
+
+
+    .opportunities_resources .info
+    {
+        width: 100%;
+        min-height: 0;
+    }
+
+
+    .opportunities_resources .title
+    {
+        margin-top: 24px;
+
+        letter-spacing: -1.28px;
+    }
+
+
+    .opportunities_resources .title .letter
+    {
+        top: 0;
+
+        width: 18px;
+        height: 17px;
+    }
+
+
+    .opportunities_resources .title .letter img
+    {
+        right: 2px;
+
+        width: 30px;
+        height: 35px;
+    }
+
+
+    .opportunities_resources .btns
+    {
+        display: none;
+    }
+
+
+    .opportunities_resources .swiper
+    {
+        width: 100%;
+        margin-top: 24px;
+    }
+
+
+    .opportunities_resources .swiper-slide
+    {
+        visibility: visible;
+
+        width: 230px;
+
+        pointer-events: auto;
+
+        opacity: 1;
+    }
+
+
+    .opportunities_resources .item
+    {
+        min-height: 364px;
+        padding: 32px;
+    }
+
+
+    .opportunities_resources .item .icon
+    {
+        height: 130px;
+    }
+
+
+    .opportunities_resources .item .name
+    {
+        font-size: 18px;
+        line-height: 120%;
+
+        letter-spacing: -.36px;
+    }
+
+
+
+    /*-----------
+        Steps
+    -----------*/
+    .steps .head .pre_title
+    {
+        margin-bottom: 24px;
+    }
+
+
+    .steps .head .pre_title + *
+    {
+        width: 100%;
+    }
+
+
+    .steps .head .desc
+    {
+        font-size: 14px;
+        line-height: 120%;
+
+        letter-spacing: -.14px;
+    }
+
+
+    .steps .row
+    {
+        margin-bottom: -16px;
+        margin-left: 0;
+    }
+
+    .steps .row > *
+    {
+        width: 100%;
+        margin-bottom: 16px;
+        margin-left: 0;
+    }
+
+
+    .steps .step
+    {
+        height: 138px;
+    }
+
+
+    .steps .step .front
+    {
+        padding: 20px;
+    }
+
+
+    .steps .step .number
+    {
+        top: 20px;
+        right: 20px;
+    }
+
+
+    .steps .mob_btn
+    {
+        width: 100%;
+        margin-top: 16px;
+    }
+
+
+
+    /*----------------------
+        Film commissions
+    ----------------------*/
+    .film_commissions .swiper-slide
+    {
+        width: 312px;
+    }
+
+
+    .film_commissions .item
+    {
+        padding: 24px;
+    }
+
+
+
+    /*----------------
+        Advantages
+    ----------------*/
+    .advantages .row
+    {
+        margin-bottom: -16px;
+        margin-left: 0;
+    }
+
+
+    .advantages .row > *
+    {
+        width: 100%;
+        margin-bottom: 16px;
+        margin-left: 0;
+    }
+
+
+    .advantages .item
+    {
+        position: sticky;
+        top: 16px;
+
+        padding: 20px;
+
+        box-shadow: 0 2px 32px 0 rgba(52, 79, 104, .05), 0 0 16px 0 rgba(68, 83, 113, .10), 0 4px 8px 0 rgba(68, 83, 113, .05);
+    }
+
+    .advantages .item:nth-child(2)
+    {
+        top: 99px;
+    }
+
+    .advantages .item:nth-child(3)
+    {
+        top: 182px;
+    }
+
+    .advantages .item:nth-child(4)
+    {
+        top: 265px;
+    }
+
+    .advantages .item:nth-child(5)
+    {
+        top: 348px;
+    }
+
+    .advantages .item:nth-child(6)
+    {
+        top: 431px;
+    }
+
+
+    .advantages .item .icon
+    {
+        margin-bottom: 16px;
+    }
+
+
+    .advantages .item .desc
+    {
+        line-height: 120%;
+
+        letter-spacing: -.14px;
+    }
+
+
+
+    /*------------------
+        Action block
+    ------------------*/
+    .action_block .data
+    {
+        padding: 20px 20px 372px;
+
+        background: linear-gradient(336deg, #791aef -43.06%, #161026 64.73%);
+    }
+
+
+    .action_block .title
+    {
+        line-height: 100%;
+
+        letter-spacing: -1.28px;
+    }
+
+
+    .action_block .title .letter
+    {
+        width: 24px;
+        height: 24px;
+        margin-top: 12px;
+        margin-bottom: -4px;
+        margin-left: -4px;
+    }
+
+
+    .action_block .title .letter img
+    {
+        right: -5px;
+
+        width: 31px;
+        height: 31px;
+    }
+
+
+    .action_block .desc
+    {
+        line-height: 120%;
+
+        margin-top: 16px;
+
+        letter-spacing: -.14px;
+    }
+
+
+    .action_block .link
+    {
+        margin-top: 20px;
+    }
+
+
+    .action_block .link a
+    {
+        width: 100%;
+
+        text-align: center;
+    }
+
+
+    .action_block .bg,
+    .action_block video
+    {
+        top: 0;
+        right: auto;
+        bottom: auto;
+        left: 50%;
+
+        width: auto;
+        height: calc(100vw - 32px);
+
+        transform: translateX(-50%) rotate(90deg);
+    }
+
+
+
+    /*--------------
+        Feedback
+    --------------*/
+    .feedback .form .line,
+    .feedback .form .submit
+    {
+        width: 100%;
+    }
+
+
+    .feedback .form .agree
+    {
+        margin-top: 20px;
+    }
+
+
+    .feedback .contacts .row
+    {
+        flex-direction: column;
+    }
+
+
+
+    /*-------------
+        Catalog
+    -------------*/
+    .catalog .head
+    {
+        margin-bottom: 32px;
+
+        gap: 12px;
+    }
+
+
+    .catalog .filter
+    {
+        width: 100%;
+
+        gap: 12px;
+    }
+
+
+    .catalog .filter .line
+    {
+        width: 100%;
+    }
+
+    .catalog .filter .line:nth-child(2)
+    {
+        width: calc(100% - 60px);
+    }
+
+
+
+    .catalog .type_links
+    {
+        gap: 8px;
+    }
+
+
+
+    .catalog .list .item
+    {
+        gap: 12px;
+    }
+
+
+    .catalog .list .info.mob_full
+    {
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+    .catalog .list .region,
+    .catalog .list .type
+    {
+        font-size: 10px;
+
+        margin-bottom: 4px;
+
+        letter-spacing: -.2px;
+    }
+
+
+    .catalog .list .name
+    {
+        font-size: 16px;
+
+        letter-spacing: -.32px;
+    }
+
+
+    .catalog .list .col_right
+    {
+        margin-top: 8px;
+    }
+
+
+
+    /*--------------------------
+        Film commission head
+    --------------------------*/
+    .film_commission_head
+    {
+        margin-bottom: 0;
+    }
+
+
+    .film_commission_head:after
+    {
+        height: 32px;
+
+        border-radius: 24px 24px 0 0;
+    }
+
+
+    .film_commission_head .cont
+    {
+        padding-top: 90px;
+        padding-bottom: 64px;
+    }
+
+
+
+    /*-------------------------
+        Film commision info
+    -------------------------*/
+    .film_commission_info .block_title
+    {
+        font-size: 32px;
+        line-height: 100%;
+
+        letter-spacing: -1.28px;
+    }
+
+
+    .film_commission_info .block_desc
+    {
+        margin-bottom: 32px;
+    }
+
+
+    .film_commission_info .files
+    {
+        display: none;
+    }
+
+    .film_commission_info .files.show
+    {
+        display: block;
+    }
+
+
+
+    /*---------------------
+        Financing terms
+    ---------------------*/
+    .financing_terms .mob_spoler_btn
+    {
+        display: inline-block;
+    }
+
+
+    .financing_terms .mob_spoler_btn ~ *
+    {
+        display: none;
+    }
+
+
+    .financing_terms .mob_spoler_btn.active
+    {
+        display: none;
+    }
+
+    .financing_terms .mob_spoler_btn.active ~ *
+    {
+        display: block;
+    }
+
+
+
+    /*-----------
+        Files
+    -----------*/
+    .files .file .btn
+    {
+        display: none;
+    }
+
+
+
+    /*--------------
+        Services
+    --------------*/
+    .services .row
+    {
+        margin-bottom: -16px;
+        margin-left: 0;
+    }
+
+
+    .services .row > *
+    {
+        width: 100%;
+        margin-bottom: 16px;
+        margin-left: 0;
+    }
+
+
+    .services .service .thumb
+    {
+        padding-bottom: 67.638%;
+    }
+
+
+
+    /*---------------
+        Locations
+    ---------------*/
+    .locations .filter .btns
+    {
+        width: 100%;
+        margin-bottom: 16px;
+
+        gap: 15px 8px;
+    }
+
+
+
+    .locations .row
+    {
+        margin-bottom: -16px;
+        margin-left: 0;
+    }
+
+
+    .locations .row > *
+    {
+        width: 100%;
+        margin-bottom: 16px;
+        margin-left: 0;
+    }
+
+
+
+    /*--------------
+        Projects
+    --------------*/
+    .projects .row
+    {
+        margin-bottom: -16px;
+        margin-left: 0;
+    }
+
+
+    .projects .row > *
+    {
+        width: 100%;
+        margin-bottom: 16px;
+        margin-left: 0;
+    }
+
+
+    .projects .project .thumb
+    {
+        padding-bottom: 102.915%;
+    }
+
+
+
+    /*---------------
+        Festivals
+    ---------------*/
+    .festivals .row
+    {
+        margin-bottom: -16px;
+        margin-left: 0;
+    }
+
+
+    .festivals .row > *
+    {
+        width: 100%;
+        margin-bottom: 16px;
+        margin-left: 0;
+    }
+
+
+    .festivals .festival
+    {
+        min-height: 388px;
+    }
+
+
+    .festivals .festival .link
+    {
+        padding-top: 48px;
+    }
+
+
+
+    /*----------------
+        About head
+    ----------------*/
+    .about_head .title
+    {
+        line-height: 120%;
+
+        letter-spacing: -1.28px;
+    }
+
+
+    .about_head .title > * + *
+    {
+        margin-top: 0;
+    }
+
+
+    .about_head .title > *:nth-child(1)
+    {
+        padding-right: 0;
+    }
+
+    .about_head .title > *:nth-child(2)
+    {
+        text-align: center;
+    }
+
+    .about_head .title > *:nth-child(3)
+    {
+        padding-left: 0;
+
+        text-align: center;
+    }
+
+    .about_head .title > *:nth-child(4)
+    {
+        text-align: center;
+    }
+
+
+    .about_head .title .letter
+    {
+        width: 30px;
+        height: 30px;
+        margin-right: 0;
+        margin-left: -4px;
+    }
+
+
+    .about_head .title .letter img
+    {
+        top: 2px;
+        right: 4px;
+
+        width: 36px;
+        height: 37px;
+    }
+
+
+    .about_head .exp
+    {
+        font-size: 14px;
+        line-height: 120%;
+
+        width: 343px;
+        margin-top: 158px;
+
+        letter-spacing: -.14px;
+    }
+
+
+    .about_head .gallery
+    {
+        top: 55%;
+    }
+
+
+
+    /*-----------
+        Tasks
+    -----------*/
+    .tasks .data
+    {
+        padding: 20px;
+    }
+
+
+    .tasks .pre_title,
+    .tasks .head
+    {
+        margin-bottom: 16px;
+    }
+
+
+    .tasks .head .desc
+    {
+        font-size: 14px;
+        line-height: 120%;
+
+        margin-top: 24px;
+
+        letter-spacing: -.14px;
+    }
+
+
+    .tasks .row
+    {
+        margin-bottom: -16px;
+        margin-left: 0;
+    }
+
+
+    .tasks .row > *
+    {
+        width: 100%;
+        margin-bottom: 16px;
+        margin-left: 0;
+    }
+
+
+    .tasks .item
+    {
+        padding: 20px;
+    }
+
+
+    .tasks .item .icon
+    {
+        margin-bottom: 20px;
+    }
+
+
+
+    /*-------------
+        Mission
+    -------------*/
+    .mission .head
+    {
+        margin-bottom: 32px;
+    }
+
+
+    .mission .logos
+    {
+        gap: 0;
+    }
+
+
+    .mission .logos > *
+    {
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+
+    /*-------------------
+        Project steps
+    -------------------*/
+    .project_steps .swiper
+    {
+        width: 318px;
+    }
+
+
+    .project_steps .item
+    {
+        padding: 184px 32px 16px;
+    }
+
+
+    .project_steps .swiper-slide.active .item .thumb
+    {
+        height: 184px;
+    }
+
+
+
+    /*----------------------
+        Support measures
+    ----------------------*/
+    .support_measures .row
+    {
+        margin-bottom: -16px;
+        margin-left: -16px;
+    }
+
+
+    .support_measures .row > *
+    {
+        width: calc(50% - 16px);
+        margin-bottom: 16px;
+        margin-left: 16px;
+    }
+
+
+    .support_measures .item
+    {
+        min-height: 250px;
+        padding: 16px;
+    }
+
+
+    .support_measures .item .icon
+    {
+        height: 98px;
+    }
+
+
+    .support_measures .item .number,
+    .support_measures .item .name
+    {
+        font-size: 14px;
+        line-height: 120%;
+
+        letter-spacing: -.14px;
+    }
+
+
+
+    /*---------------
+        Documents
+    ---------------*/
+    .documents .file .icon
+    {
+        width: 51px;
+        height: 51px;
+    }
+
+
+    .documents .file .icon img
+    {
+        width: 22px;
+        height: 28px;
+    }
+
+
+    .documents .file .icon + *
+    {
+        width: calc(100% - 67px);
+    }
+
+
+    .documents .file .btn
+    {
+        display: none;
+    }
 
 
 
     /*------------
         Footer
     ------------*/
+    footer
+    {
+        padding: 40px 0;
+    }
 
 
-
-    /*-----------
-        PopUp
-    -----------*/
+    footer .feedback
+    {
+        width: calc(100% + 32px);
+        max-width: calc(100% + 32px);
+        margin-right: -16px;
+        margin-left: -16px;
+        padding: 16px;
+    }
 }

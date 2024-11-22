@@ -51,20 +51,8 @@ document.addEventListener('DOMContentLoaded', function () {
 			slideActiveClass: 'active',
 			slideVisibleClass: 'visible',
 			lazy: true,
-			breakpoints: {
-				0: {
-					spaceBetween: 12,
-					slidesPerView: 'auto'
-				},
-				480: {
-					spaceBetween: 16,
-					slidesPerView: 2
-				},
-				768: {
-					spaceBetween: 16,
-					slidesPerView: 2
-				}
-			},
+			spaceBetween: 16,
+			slidesPerView: 'auto',
 			on: {
 				init: swiper => setHeight(swiper.el.querySelectorAll('.item')),
 				resize: swiper => {
@@ -99,14 +87,27 @@ document.addEventListener('DOMContentLoaded', function () {
 				nextEl: '.swiper-button-next',
 				prevEl: '.swiper-button-prev'
 			},
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'bullets',
+				clickable: true,
+				bulletActiveClass: 'active',
+				renderBullet: function (index, className) {
+					return '<span class="' + className + '">' + (index + 1) + "</span>"
+				}
+			},
 			breakpoints: {
 				0: {
 					spaceBetween: 12,
 					slidesPerView: 'auto'
 				},
-				480: {
-					spaceBetween: 16,
+				768: {
+					spaceBetween: 20,
 					slidesPerView: 2
+				},
+				1024: {
+					spaceBetween: 20,
+					slidesPerView: 3
 				},
 				1280: {
 					spaceBetween: 24,
@@ -135,12 +136,6 @@ document.addEventListener('DOMContentLoaded', function () {
 			watchSlidesProgress: true,
 			slideActiveClass: 'active',
 			slideVisibleClass: 'visible',
-			coverflowEffect: {
-				rotate: 50,
-				stretch: 24,
-				depth: 150,
-				slideShadows: true
-			},
 			// initialSlide: 1,
 			navigation: {
 				nextEl: '.swiper-button-next',
@@ -148,6 +143,30 @@ document.addEventListener('DOMContentLoaded', function () {
 			},
 			spaceBetween: 0,
 			slidesPerView: 1,
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'bullets',
+				clickable: true,
+				bulletActiveClass: 'active',
+			},
+			breakpoints: {
+				0: {
+					coverflowEffect: {
+						rotate: 0,
+						stretch: 285,
+						depth: 150,
+						slideShadows: true
+					}
+				},
+				768: {
+					coverflowEffect: {
+						rotate: 50,
+						stretch: 24,
+						depth: 150,
+						slideShadows: true
+					}
+				}
+			}
 		}
 
 		projectStepsSliders.push(new Swiper('.project_steps_s' + i, options))
@@ -230,6 +249,16 @@ document.addEventListener('DOMContentLoaded', function () {
 		loop: true,
 		autoplay: true,
 		path: './carousel.json'
+	})
+
+
+	// Film commision info
+	$('.financing_terms .mob_spoler_btn').click(function(e) {
+		e.preventDefault()
+
+		$(this).toggleClass('active')
+
+		$('.film_commission_info .files').addClass('show')
 	})
 })
 

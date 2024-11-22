@@ -4,6 +4,13 @@
     /*-------------------
         Global styles
     -------------------*/
+    :root
+    {
+        --font_size: 16px;
+        --font_size_title: 48px;
+    }
+
+
     html.custom_scroll ::-webkit-scrollbar
     {
         width: 5px;
@@ -11,13 +18,94 @@
     }
 
 
+    .block,
+    .block.middle_m,
+    .block.big_m
+    {
+        margin-bottom: 80px;
+    }
+
+
+    .cont
+    {
+        padding: 0 24px;
+    }
+
+
+    .swiper-button-next,
+    .swiper-button-prev
+    {
+        margin-bottom: 28px;
+    }
+
+
+
+    /*------------
+        BG block
+    ------------*/
+    .bg_block
+    {
+        padding-bottom: 40px;
+
+        border-radius: 0 0 48px 48px;
+    }
+
+
+    .bg_block:before
+    {
+        height: 1960px;
+    }
+
+
+
+    /*----------
+        Tabs
+    ----------*/
+    .tabs
+    {
+        margin-bottom: 24px;
+    }
+
+
+    .tabs .btn
+    {
+        padding: 12px 18px;
+    }
+
+
 
     /*--------------
-        Fancybox
+        All link
     --------------*/
-    .fancybox__slide
+    .all_link
     {
-        padding: 32px;
+        margin-top: 40px;
+    }
+
+
+    .all_link a
+    {
+        font-size: 16px;
+
+        padding: 16px 20px;
+
+        letter-spacing: -.48px;
+    }
+
+
+
+    /*----------------
+        Pagination
+    ----------------*/
+    .pagination
+    {
+        margin-top: 32px;
+    }
+
+
+    .pagination .links
+    {
+        margin-top: 24px;
     }
 
 
@@ -25,52 +113,1348 @@
     /*------------
         Header
     ------------*/
+    header
+    {
+        padding-top: 0;
+    }
 
 
+    header .menu,
+    header .callback_btn
+    {
+        display: none;
+    }
 
-    /*-------------
-        Sidebar
-    -------------*/
+
+    header .search
+    {
+        margin-left: auto;
+    }
+
+
+    header .menu_btn
+    {
+        display: flex;
+    }
 
 
 
     /*---------------
         Page head
     ---------------*/
+    .page_head
+    {
+        margin-bottom: 40px;
+        padding-top: 0;
+    }
+
+
+    * + .page_title
+    {
+        margin-top: 40px;
+    }
 
 
 
     /*----------------
         Block head
     ----------------*/
+    .block_head
+    {
+        margin-bottom: 32px;
+    }
+
+
+    .block_head .pre_title
+    {
+        font-size: 14px;
+        line-height: 120%;
+
+        margin-bottom: 24px;
+
+        letter-spacing: -.14px;
+    }
+
+
+    .block_head .pre_title span
+    {
+        padding: 11px 15px;
+    }
 
 
 
     /*------------------
         Form elements
     ------------------*/
+    .form .line
+    {
+        margin-bottom: 20px;
+    }
+
+
+    .form .input
+    {
+        font-size: 14px;
+
+        letter-spacing: -.14px;
+    }
+
+
+    .form .agree
+    {
+        font-size: 14px;
+        line-height: 120%;
+
+        letter-spacing: -.14px;
+    }
 
 
 
     /*----------------
         Typography
     ----------------*/
+    .text_block h2
+    {
+        margin-bottom: 24px !important;
+    }
+
+
+    .text_block .bg_section
+    {
+        margin-top: 24px;
+        margin-bottom: 24px;
+        padding: 16px;
+    }
+
+
+    .text_block .bg_section h2
+    {
+        margin-bottom: 16px !important;
+    }
+
+
+    .text_block ul.columns
+    {
+        column-gap: 0;
+        column-count: 1;
+    }
 
 
 
-    /*-----------------
-        Main slider
-    -----------------*/
+    /*-------------------
+        First section
+    -------------------*/
+    .first_section
+    {
+        padding-top: 16px;
+    }
+
+
+    .first_section .pre_title
+    {
+        font-size: 14px;
+        line-height: 120%;
+
+        margin-bottom: 24px;
+
+        letter-spacing: -.14px;
+    }
+
+
+    .first_section .pre_title span
+    {
+        padding: 11px 15px;
+    }
+
+
+    .first_section .title
+    {
+        width: 649px;
+
+        letter-spacing: -1.92px;
+    }
+
+
+    .first_section .title .letter
+    {
+        width: 45px;
+        height: 43px;
+    }
+
+
+    .first_section .title .letter img
+    {
+        width: 80px;
+        height: 86px;
+    }
+
+
+    .first_section .desc
+    {
+        margin-top: 32px;
+    }
+
+
+    .first_section .link a
+    {
+        font-size: 16px;
+
+        padding: 16px 20px;
+
+        letter-spacing: -.48px;
+    }
+
+
+    .first_section .img,
+    .first_section video
+    {
+        width: 518px;
+    }
+
+
+
+    /*-----------------------------
+        Opportunities/Resources
+    -----------------------------*/
+    .opportunities_resources .data
+    {
+        padding: 32px;
+    }
+
+
+    .opportunities_resources .info
+    {
+        min-height: 475px;
+    }
+
+
+    .opportunities_resources .pre_title
+    {
+        font-size: 14px;
+        line-height: 120%;
+
+        letter-spacing: -.14px;
+    }
+
+
+    .opportunities_resources .pre_title span
+    {
+        padding: 11px 15px;
+    }
+
+
+    .opportunities_resources .title
+    {
+        letter-spacing: -1.92px;
+    }
+
+
+    .opportunities_resources .title .letter
+    {
+        top: 3px;
+
+        width: 36px;
+        height: 34px;
+    }
+
+
+    .opportunities_resources .title .letter img
+    {
+        right: -3px;
+
+        width: 59px;
+        height: 64px;
+    }
+
+
+    .opportunities_resources .btns .btn
+    {
+        font-size: 16px;
+
+        padding: 16px 20px;
+
+        letter-spacing: -.48px;
+    }
+
+
+    .opportunities_resources .swiper
+    {
+        width: 430px;
+        margin-right: 0;
+        margin-left: auto;
+    }
+
+
+    .opportunities_resources .item
+    {
+        min-height: 475px;
+        padding: 32px 24px;
+    }
+
+
+
+    /*-----------
+        Steps
+    -----------*/
+    .steps .head
+    {
+        margin-bottom: 40px;
+    }
+
+
+    .steps .head .pre_title
+    {
+        font-size: 14px;
+        line-height: 120%;
+
+        letter-spacing: -.14px;
+    }
+
+
+    .steps .head .pre_title + *
+    {
+        width: calc(100% - 332px);
+    }
+
+
+    .steps .head .desc
+    {
+        font-size: 16px;
+        line-height: 140%;
+
+        letter-spacing: -.16px;
+    }
+
+
+    .steps .row
+    {
+        margin-bottom: -20px;
+        margin-left: -20px;
+    }
+
+
+    .steps .row > *
+    {
+        width: calc(50% - 20px);
+        margin-bottom: 20px;
+        margin-left: 20px;
+    }
+
+
+    .steps .step
+    {
+        height: 145px;
+    }
+
+
+    .steps .step .front
+    {
+        padding: 32px;
+    }
+
+
+    .steps .step .back
+    {
+        display: none;
+    }
+
+
+    .steps .step .name
+    {
+        font-size: 20px;
+
+        width: 164px;
+    }
+
+
+    .steps .step .number
+    {
+        position: absolute;
+        top: 32px;
+        right: 32px;
+    }
+
+
+    .steps .step .desc
+    {
+        font-size: 14px;
+        line-height: 120%;
+
+        margin-top: 16px;
+
+        letter-spacing: -.14px;
+    }
+
+
+    .steps .step .front .desc
+    {
+        display: block;
+    }
+
+
+    .steps .step:hover .front
+    {
+        transform: none;
+    }
+
+
+    .steps .mob_btn
+    {
+        display: block;
+    }
+
+
+
+    /*----------------------
+        Film commissions
+    ----------------------*/
+    .film_commissions .swiper-slide
+    {
+        visibility: visible;
+
+        pointer-events: auto;
+
+        opacity: 1;
+    }
+
+
+    .film_commissions .item
+    {
+        color: #fff;
+    }
+
+
+    .film_commissions .item:before
+    {
+        transition: opacity .1s linear .2s;
+
+        opacity: 1;
+    }
+
+
+    .film_commissions .item .thumb
+    {
+        width: 596px;
+        height: 596px;
+
+        transform: translate(-105px, -132px);
+    }
+
+
+    .film_commissions .item .link
+    {
+        transform: translate(0%, -50%);
+    }
+
+
+
+    /*----------------
+        Advantages
+    ----------------*/
+    .advantages .row
+    {
+        margin-bottom: -20px;
+        margin-left: -20px;
+    }
+
+
+    .advantages .row > *
+    {
+        width: calc(33.333% - 20px);
+        margin-bottom: 20px;
+        margin-left: 20px;
+    }
+
+
+    .advantages .item .icon
+    {
+        margin-bottom: 12px;
+    }
+
+
+
+    /*------------------
+        Action block
+    ------------------*/
+    .action_block .data
+    {
+        padding: 32px;
+    }
+
+
+    .action_block .title
+    {
+        line-height: 90%;
+
+        letter-spacing: -1.92px;
+    }
+
+
+    .action_block .title .letter
+    {
+        width: 53px;
+        height: 53px;
+        margin-top: 16px;
+        margin-bottom: -27px;
+        margin-left: -23px;
+    }
+
+
+    .action_block .title .letter img
+    {
+        width: 53px;
+        height: 53px;
+    }
+
+
+    .action_block .desc
+    {
+        margin-top: 20px;
+    }
+
+
+    .action_block .link
+    {
+        margin-top: 40px;
+    }
+
+
+    .action_block .link a
+    {
+        font-size: 16px;
+
+        padding: 15px 20px;
+
+        letter-spacing: -.48px;
+    }
+
+
+
+    /*--------------
+        Articles
+    --------------*/
+    .articles .row
+    {
+        margin-bottom: -20px;
+        margin-left: -20px;
+    }
+
+
+    .articles .row > *
+    {
+        width: calc(33.333% - 20px);
+        margin-bottom: 20px;
+        margin-left: 20px;
+    }
+
+
+    .articles .article .info
+    {
+        padding: 20px;
+    }
+
+
+    .articles .article .desc
+    {
+        font-size: 14px;
+        line-height: 120%;
+
+        letter-spacing: -.14px;
+
+        -webkit-line-clamp: 4;
+    }
+
+
+    .articles .article .date
+    {
+        line-height: 120%;
+
+        padding-top: 20px;
+    }
+
+
+    .articles .article .link
+    {
+        display: flex;
+    }
+
+
+
+    /*--------------
+        Feedback
+    --------------*/
+    .feedback
+    {
+        padding: 32px;
+    }
+
+
+    .feedback .title
+    {
+        font-size: 32px;
+
+        letter-spacing: -1.28px;
+    }
+
+
+    .feedback .desc
+    {
+        font-size: 14px;
+        line-height: 120%;
+
+        width: 295px;
+
+        letter-spacing: -.14px;
+    }
+
+
+    .feedback .form
+    {
+        margin-top: 32px;
+    }
+
+
+    .feedback .form .line
+    {
+        width: calc((100% - 202px) / 2);
+    }
+
+
+    .feedback .form .submit
+    {
+        width: 178px;
+    }
+
+
+    .feedback .contacts
+    {
+        margin-top: 32px;
+    }
+
+
+    .feedback .contacts .label
+    {
+        font-size: 14px;
+        line-height: 120%;
+
+        letter-spacing: -.14px;
+    }
+
+
+    .feedback .contacts .phone
+    {
+        font-size: 32px;
+
+        letter-spacing: -1.28px;
+    }
+
+
+    .feedback .contacts .row
+    {
+        margin-top: 32px;
+    }
+
+
+    .feedback .contacts .email a,
+    .feedback .contacts .location a
+    {
+        font-size: 14px;
+        line-height: 120%;
+
+        letter-spacing: -.14px;
+    }
+
+
+
+    /*-------------
+        Catalog
+    -------------*/
+    .catalog .head
+    {
+        margin-bottom: 40px;
+    }
+
+
+    .catalog .filter:not(.inline)
+    {
+        width: 100%;
+    }
+
+
+    .catalog .filter:not(.inline) .line
+    {
+        width: calc((100% - 80px) / 2);
+    }
+
+
+
+    .catalog .list .item
+    {
+        padding: 24px;
+
+        gap: 16px;
+    }
+
+
+    .catalog .list .info
+    {
+        max-width: calc(100% - 345px);
+    }
+
+
+    .catalog .list .budget
+    {
+        font-size: 32px;
+
+        margin-top: auto;
+        padding-top: 20px;
+
+        letter-spacing: -1.28px;
+    }
+
+
+
+    /*--------------------------
+        Film commission head
+    --------------------------*/
+    .film_commission_head
+    {
+        margin-bottom: 0;
+        padding-top: 0;
+    }
+
+
+    .film_commission_head:after
+    {
+        height: 40px;
+
+        border-radius: 32px 32px 0 0;
+    }
+
+
+    .film_commission_head .cont
+    {
+        padding-top: 98px;
+        padding-bottom: 80px;
+    }
+
+
+    .film_commission_head .info
+    {
+        width: 566px;
+    }
+
+
+    .film_commission_head .btn
+    {
+        font-size: 16px;
+
+        margin-top: 32px;
+        padding: 16px 20px;
+
+        letter-spacing: -.48px;
+    }
+
+
+
+    .film_commission_info .tabs
+    {
+        margin-bottom: 32px;
+    }
+
+
+    .film_commission_info .col_left
+    {
+        width: calc(100% - 415px);
+    }
+
+
+    .film_commission_info .col_right
+    {
+        width: 395px;
+        padding: 19px;
+
+        gap: 20px;
+    }
+
+
+    .film_commission_info .block_title
+    {
+        margin-bottom: 24px;
+    }
+
+
+    .film_commission_info .block_desc
+    {
+        width: 100%;
+        margin-bottom: 32px;
+    }
+
+
+    .film_commission_info .video
+    {
+        margin-top: 32px;
+    }
+
+
+    .film_commission_info .files
+    {
+        margin-top: 32px;
+    }
+
+
+
+    /*---------------------
+        Financing terms
+    ---------------------*/
+    .financing_terms .tabs
+    {
+        width: 230px;
+        margin: 0;
+        padding: 15px;
+    }
+
+
+    .financing_terms .tab_content.active
+    {
+        width: calc(100% - 230px);
+        padding: 23px;
+    }
+
+
+
+    /*--------------
+        Services
+    --------------*/
+    .services .row
+    {
+        margin-bottom: -20px;
+        margin-left: -20px;
+    }
+
+
+    .services .row > *
+    {
+        width: calc(33.333% - 20px);
+        margin-bottom: 20px;
+        margin-left: 20px;
+    }
+
+
+    .services .service .thumb
+    {
+        padding-bottom: 105.128%;
+    }
+
+
+    .services .service .info
+    {
+        padding: 20px;
+    }
+
+
+    .services .service .name
+    {
+        font-size: 20px;
+
+        width: calc(100% - 32px);
+
+        letter-spacing: -.4px;
+    }
+
+
+    .services .service .desc
+    {
+        font-size: 14px;
+        line-height: 120%;
+
+        display: block;
+
+        width: calc(100% - 32px);
+
+        letter-spacing: -.28px;
+    }
+
+
+    .services .service .desc br
+    {
+        display: none;
+    }
+
+
+    .services .service:hover .btn
+    {
+        display: none;
+    }
+
+
+    .services .service .link
+    {
+        display: flex;
+    }
+
+
+
+    /*----------
+        Rent
+    ----------*/
+    .rent .data
+    {
+        width: calc(100% - 415px);
+    }
+
+
+    .rent .gallery
+    {
+        width: 344px;
+        max-width: 100%;
+
+        column-gap: 8px;
+    }
+
+
+    .rent .gallery > * + *
+    {
+        margin-top: 8px;
+    }
+
+
+    .rent .btns .btn
+    {
+        font-size: 16px;
+
+        padding: 16px 20px;
+    }
+
+
+    .rent .btns .btn.border
+    {
+        padding: 15px 19px;
+    }
+
+
+
+    /*---------------
+        Locations
+    ---------------*/
+    .locations .filter
+    {
+        margin-bottom: 32px;
+    }
+
+
+    .locations .row
+    {
+        margin-bottom: -20px;
+        margin-left: -20px;
+    }
+
+
+    .locations .row > *
+    {
+        width: calc(33.333% - 20px);
+        margin-bottom: 20px;
+        margin-left: 20px;
+    }
+
+
+    .locations .location .info
+    {
+        padding: 20px;
+    }
+
+
+    .locations .location .name
+    {
+        min-height: 72px;
+    }
+
+
+    .locations .pagination .more_btn
+    {
+        font-size: 14px;
+
+        padding: 11px 16px;
+
+        letter-spacing: -.42px;
+    }
+
+
+
+    /*--------------
+        Projects
+    --------------*/
+    .projects .head
+    {
+        margin-bottom: 32px;
+    }
+
+
+    .projects .row
+    {
+        margin-bottom: -20px;
+        margin-left: -20px;
+    }
+
+
+    .projects .row > *
+    {
+        width: calc(33.333% - 20px);
+        margin-bottom: 20px;
+        margin-left: 20px;
+    }
+
+
+    .projects .project .sticker
+    {
+        line-height: 120%;
+
+        letter-spacing: -.14px;
+    }
+
+
+    .projects .project .thumb
+    {
+        padding-bottom: 113.141%;
+    }
+
+
+    .projects .pagination .more_btn
+    {
+        font-size: 14px;
+
+        padding: 11px 16px;
+
+        letter-spacing: -.42px;
+    }
+
+
+
+    /*---------------
+        Festivals
+    ---------------*/
+    .festivals .row
+    {
+        margin-bottom: -20px;
+        margin-left: -20px;
+    }
+
+
+    .festivals .row > *
+    {
+        width: calc(33.333% - 20px);
+        margin-bottom: 20px;
+        margin-left: 20px;
+    }
+
+
+    .festivals .festival
+    {
+        padding: 19px;
+
+        border-color: transparent;
+    }
+
+
+    .festivals .festival .thumb
+    {
+        margin-bottom: 20px;
+    }
+
+
+    .festivals .festival .link
+    {
+        padding-top: 20px;
+    }
+
+
+    .festivals .pagination .more_btn
+    {
+        font-size: 14px;
+
+        padding: 11px 16px;
+
+        letter-spacing: -.42px;
+    }
+
+
+
+    /*----------------
+        About head
+    ----------------*/
+    .about_head
+    {
+        padding-top: 0;
+    }
+
+
+    .about_head .pre_title
+    {
+        font-size: 14px;
+        line-height: 120%;
+
+        margin-bottom: 24px;
+
+        letter-spacing: -.14px;
+    }
+
+
+    .about_head .pre_title span
+    {
+        padding: 11px 15px;
+    }
+
+
+    .about_head .title
+    {
+        width: 718px;
+
+        letter-spacing: -1.92px;
+    }
+
+
+    .about_head .title .letter
+    {
+        width: 45px;
+        height: 43px;
+        margin-right: -2px;
+        margin-left: -4px;
+    }
+
+
+    .about_head .title .letter img
+    {
+        top: 4px;
+
+        width: 56px;
+        height: 58px;
+    }
+
+
+    .about_head .exp
+    {
+        font-size: 16px;
+        line-height: 140%;
+
+        width: 489px;
+        margin-top: 395px;
+
+        letter-spacing: -.16px;
+    }
+
+
+    .about_head .gallery
+    {
+        top: 28%;
+    }
+
+
+
+    /*-----------
+        Tasks
+    -----------*/
+    .tasks .data
+    {
+        padding: 32px;
+    }
+
+
+    .tasks .pre_title,
+    .tasks .head
+    {
+        margin-bottom: 24px;
+    }
+
+
+    .tasks .row
+    {
+        margin-bottom: -20px;
+        margin-left: -20px;
+    }
+
+
+    .tasks .row > *
+    {
+        width: calc(50% - 20px);
+        margin-bottom: 20px;
+        margin-left: 20px;
+    }
+
+
+    .tasks .item
+    {
+        padding: 24px;
+    }
+
+
+    .tasks .item .icon
+    {
+        margin-bottom: 24px;
+    }
+
+
+
+    /*-------------
+        Mission
+    -------------*/
+    .mission .head .pre_title
+    {
+        font-size: 14px;
+        line-height: 120%;
+
+        letter-spacing: -.14px;
+    }
+
+
+    .mission .head .pre_title span
+    {
+        padding: 11px 15px;
+    }
+
+
+    .mission .head .title
+    {
+        font-size: 32px;
+        line-height: 100%;
+
+        letter-spacing: -1.28px;
+    }
+
+
+
+    /*-------------------
+        Project steps
+    -------------------*/
+    .project_steps .swiper
+    {
+        width: 410px;
+    }
+
+
+    .project_steps .item
+    {
+        padding: 273px 32px 32px;
+    }
+
+
+    .project_steps .swiper-slide.active .item .thumb
+    {
+        height: 273px;
+    }
+
+
+    .project_steps .item .name
+    {
+        font-size: 32px;
+        line-height: 100%;
+
+        letter-spacing: -1.28px;
+    }
+
+
+    .project_steps .item .desc
+    {
+        font-size: 14px;
+        line-height: 120%;
+
+        letter-spacing: -.14px;
+    }
+
+
+
+    /*----------------------
+        Support measures
+    ----------------------*/
+    .support_measures .row
+    {
+        margin-bottom: -20px;
+        margin-left: -20px;
+    }
+
+
+    .support_measures .row > *
+    {
+        width: calc(25% - 20px);
+        margin-bottom: 20px;
+        margin-left: 20px;
+    }
+
+
+    .support_measures .item
+    {
+        min-height: 311px;
+        padding: 24px;
+    }
+
+
+    .support_measures .item .icon
+    {
+        height: 140px;
+    }
+
+
+    .support_measures .item .name
+    {
+        font-size: 18px;
+
+        letter-spacing: -.36px;
+    }
+
+
+
+    /*---------------
+        Documents
+    ---------------*/
+    .documents .row
+    {
+        margin-bottom: -16px;
+        margin-left: 0;
+    }
+
+
+    .documents .row > *
+    {
+        width: 100%;
+        margin-bottom: 16px;
+        margin-left: 0;
+    }
+
+
+    .documents .file .btn
+    {
+        color: #7f1aff;
+    }
 
 
 
     /*------------
         Footer
     ------------*/
+    footer
+    {
+        padding: 24px 0;
+
+        border-radius: 32px 32px 0 0;
+    }
 
 
+    footer .data
+    {
+        width: 338px;
+    }
 
-    /*-----------
-        PopUp
-    -----------*/
+
+    footer .links
+    {
+        margin-top: 32px;
+
+        column-gap: 0;
+        column-count: 1;
+    }
+
+
+    footer .feedback
+    {
+        width: calc(100% - 370px);
+    }
 }
