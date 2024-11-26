@@ -172,6 +172,12 @@
     }
 
 
+    .text_block h2
+    {
+        margin-bottom: 16px !important;
+    }
+
+
     .text_block ul li
     {
         padding-left: 24px;
@@ -182,6 +188,48 @@
     {
         top: 5px;
         left: 5px;
+    }
+
+
+    .text_block .message
+    {
+        margin-top: 24px;
+        margin-bottom: 24px;
+        padding: 20px 20px 20px 27px;
+    }
+
+
+    .text_block .message:before
+    {
+        width: 3px;
+    }
+
+
+    .text_block figure
+    {
+        margin-top: 24px;
+        margin-bottom: 24px;
+    }
+
+
+    .text_block blockquote
+    {
+        padding: 16px;
+
+        background-position: calc(100% - 16px) calc(100% - 85px) ;
+        background-size: 38px 29px;
+    }
+
+
+    .text_block blockquote .person
+    {
+        margin-top: 68px;
+    }
+
+
+    .text_block .m
+    {
+        margin-top: 20px;
     }
 
 
@@ -1346,6 +1394,57 @@
     {
         right: 16px;
         bottom: 16px;
+    }
+
+
+
+    /*------------------
+        Article info
+    ------------------*/
+    .article_info .article .article_name
+    {
+        line-height: 100%;
+    }
+
+
+    .article_info .article .image figcaption
+    {
+        padding: 0 16px;
+    }
+
+
+    .article_info .article .info
+    {
+        padding: 16px;
+    }
+
+
+    .article_info .authors
+    {
+        margin-top: 28px;
+    }
+
+
+    .article_info .authors .title
+    {
+        margin-bottom: 16px;
+    }
+
+    .article_info .authors .row
+    {
+        gap: 16px;
+    }
+
+
+    .article_info .share
+    {
+        margin-top: 20px;
+    }
+
+
+    .text_block .gallery > *
+    {
+        width: 100%;
     }
 
 

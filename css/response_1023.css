@@ -396,6 +396,23 @@
 
 
 
+    /*------------------
+        Article info
+    ------------------*/
+    .article_info .content
+    {
+        width: 100%;
+    }
+
+
+    .article_info aside
+    {
+        width: 100%;
+        margin-top: 32px;
+    }
+
+
+
     /*------------
         Footer
     ------------*/
