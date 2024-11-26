@@ -5946,7 +5946,9 @@ header .menu_btn .icon
     padding: 16px;
 
     transition: box-shadow .2s linear;
+    text-decoration: none;
 
+    color: currentColor;
     border-radius: 16px;
     background: #fff;
 }
@@ -6021,7 +6023,6 @@ header .menu_btn .icon
     height: 36px;
 
     transition: .2s linear;
-    text-decoration: none;
     letter-spacing: -.42px;
 
     color: #4c4c67;
