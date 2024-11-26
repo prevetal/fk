@@ -918,24 +918,6 @@ header .menu_btn .icon
 }
 
 
-.breadcrumbs .sep
-{
-    position: relative;
-    top: -1px;
-
-    display: inline-block;
-
-    width: 4px;
-    height: 4px;
-    margin: 0 12px;
-
-    vertical-align: middle;
-
-    border-radius: 50%;
-    background: #e4ddec;
-}
-
-
 
 .page_head .row
 {
@@ -3479,7 +3461,7 @@ header .menu_btn .icon
     display: flex;
     flex-direction: column;
 
-    width: 780px;
+    width: 700px;
     max-width: calc(100% - 518px);
     margin-right: auto;
 }
