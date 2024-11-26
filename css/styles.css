@@ -1607,6 +1607,42 @@ header .menu_btn .icon
 }
 
 
+.text_block ol
+{
+    counter-reset: li;
+}
+
+
+.text_block ol li
+{
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    padding-left: 25px;
+
+    list-style-type: none;
+}
+
+
+.text_block ol li + li
+{
+    margin-top: 16px;
+}
+
+
+.text_block ol li:before
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    content: counter(li) '.';
+    counter-increment: li;
+}
+
+
 .text_block .message
 {
     font-weight: 500;
@@ -1781,7 +1817,7 @@ header .menu_btn .icon
 .text_block b,
 .text_block strong
 {
-    font-weight: 500;
+    font-weight: 600;
 }
 
 
@@ -6761,6 +6797,114 @@ header .menu_btn .icon
     letter-spacing: -.32px;
 
     opacity: .5;
+}
+
+
+
+/*--------------------
+    Privacy policy
+--------------------*/
+.privacy_policy .title
+{
+    font-family: var(--font_family2);
+    font-size: 32px;
+    line-height: 120%;
+
+    margin-bottom: 40px;
+
+    letter-spacing: -1.28px;
+}
+
+
+.privacy_policy .row
+{
+    align-content: stretch;
+    align-items: stretch;
+    justify-content: space-between;
+
+    border: 1px solid #e4ddec;
+    border-radius: 24px;
+    background: #fff;
+    box-shadow: 0 2px 5px 0 rgba(87, 95, 139, .08);
+}
+
+
+.privacy_policy .tabs
+{
+    flex-direction: column;
+
+    width: 312px;
+    max-width: 100%;
+    margin: 0;
+    padding: 23px;
+
+    border-right: 1px solid #e4ddec;
+
+    gap: 8px;
+}
+
+
+.privacy_policy .tabs .btn
+{
+    line-height: 140%;
+
+    position: relative;
+
+    overflow: hidden;
+
+    width: 100%;
+    padding: 8px 12px;
+
+    text-align: left;
+    letter-spacing: -.32px;
+
+    border-radius: 10px;
+}
+
+.privacy_policy .tabs .btn:after
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: block;
+
+    width: 4px;
+    height: 100%;
+
+    content: '';
+    transition: opacity .2s linear;
+    pointer-events: none;
+
+    opacity: 0;
+    background: #7f1aff;
+}
+
+
+.privacy_policy .tabs .btn.active
+{
+    color: #7f1aff;
+    background: #f9f7fd;
+    box-shadow: none;
+}
+
+
+.privacy_policy .tabs .btn.active:after
+{
+    opacity: 1;
+}
+
+
+.privacy_policy .tab_content
+{
+    width: 0;
+}
+
+
+.privacy_policy .tab_content.active
+{
+    width: calc(100% - 312px);
+    padding: 31px;
 }
 
 

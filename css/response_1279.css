@@ -1709,6 +1709,25 @@
 
 
 
+    /*--------------------
+        Privacy policy
+    --------------------*/
+    .privacy_policy .tabs
+    {
+        width: 296px;
+        margin: 0;
+        padding: 15px;
+    }
+
+
+    .privacy_policy .tab_content.active
+    {
+        width: calc(100% - 296px);
+        padding: 23px;
+    }
+
+
+
     /*------------
         Footer
     ------------*/
