@@ -79,7 +79,7 @@
     /*--------------
         Articles
     --------------*/
-    .articles .row
+    .articles .row.inline
     {
         display: block;
         overflow: auto;
@@ -97,7 +97,7 @@
     }
 
 
-    .articles .row::-webkit-scrollbar
+    .articles .row.inline::-webkit-scrollbar
     {
         display: none !important;
 
@@ -108,13 +108,13 @@
     }
 
 
-    .articles .row::-webkit-scrollbar-thumb
+    .articles .row.inline::-webkit-scrollbar-thumb
     {
         background-color: transparent !important;
     }
 
 
-    .articles .row > *
+    .articles .row.inline > *
     {
         display: inline-block;
 
@@ -129,7 +129,7 @@
     }
 
 
-    .articles .row > * + *
+    .articles .row.inline > * + *
     {
         margin-left: 20px;
     }
@@ -376,6 +376,22 @@
     .support_measures .row > *
     {
         width: calc(50% - 20px);
+    }
+
+
+
+    /*-------------------
+        Contacts info
+    -------------------*/
+    .contacts_info .row > *
+    {
+        width: calc(50% - 20px);
+    }
+
+
+    .contacts_info .row > *.big
+    {
+        width: calc(100% - 20px);
     }
 
 

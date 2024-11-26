@@ -123,9 +123,23 @@
     }
 
 
+    .page_head .row,
     * + .page_title
     {
         margin-top: 32px;
+    }
+
+
+    .page_head .filter
+    {
+        width: 100%;
+        margin-top: 24px;
+    }
+
+
+    .page_head .filter .line
+    {
+        width: 100%;
     }
 
 
@@ -1088,6 +1102,250 @@
     .documents .file .btn
     {
         display: none;
+    }
+
+
+
+    /*-------------------
+        Contacts info
+    -------------------*/
+    .contacts_info
+    {
+        padding-top: 8px;
+    }
+
+
+    .contacts_info .head
+    {
+        margin-bottom: 32px;
+    }
+
+
+    .contacts_info .head .title
+    {
+        letter-spacing: -1.28px;
+
+        gap: 16px;
+    }
+
+    .contacts_info .head .title > *:nth-last-child(1)
+    {
+        padding-right: 0;
+
+        text-align: center;
+    }
+
+
+    .contacts_info .head .title .letter
+    {
+        width: 27px;
+        height: 32px;
+    }
+
+    .contacts_info .head .title .letter img
+    {
+        top: 3px;
+
+        width: 35px;
+        height: 35px;
+    }
+
+
+    .contacts_info .head .desc
+    {
+        font-size: 14px;
+        line-height: 120%;
+
+        width: 343px;
+        margin-top: 24px;
+
+        letter-spacing: -.14px;
+    }
+
+
+
+    .contacts_info .row
+    {
+        margin-bottom: -16px;
+        margin-left: -16px;
+    }
+
+
+    .contacts_info .row > *
+    {
+        width: calc(50% - 16px);
+        margin-bottom: 16px;
+        margin-left: 16px;
+    }
+
+
+    .contacts_info .row > *.big
+    {
+        width: calc(100% - 16px);
+    }
+
+
+    .contacts_info .item
+    {
+        min-height: 266px;
+        padding: 16px;
+    }
+
+
+    .contacts_info .item .pre_title
+    {
+        font-size: 12px;
+
+        letter-spacing: -.12px;
+    }
+
+
+    .contacts_info .item .pre_title span
+    {
+        padding: 13px 15px;
+    }
+
+
+    .contacts_info .item .thumb
+    {
+        height: 98px;
+    }
+
+
+    .contacts_info .item .title
+    {
+        font-size: 14px;
+        line-height: 120%;
+
+        letter-spacing: -.14px;
+    }
+
+
+    .contacts_info .item .email,
+    .contacts_info .item .phone
+    {
+        font-size: 12px;
+        line-height: 120%;
+
+        margin-top: 16px;
+
+        letter-spacing: -.12px;
+    }
+
+
+    .contacts_info .map
+    {
+        min-height: 533px;
+    }
+
+
+    .contacts_info .map .info
+    {
+        right: 12px;
+
+        width: calc(100% - 24px);
+        max-width: calc(100% - 24px);
+        padding: 24px;
+    }
+
+
+    .contacts_info .map .address br
+    {
+        display: none;
+    }
+
+
+
+    /*-------------------
+        Online survey
+    -------------------*/
+    .online_survey:before
+    {
+        bottom: -323px;
+
+        height: 2085px;
+    }
+
+
+
+    /*--------------
+        Articles
+    --------------*/
+    .articles .row
+    {
+        margin-bottom: -16px;
+        margin-left: 0;
+    }
+
+
+    .articles .row > *,
+    .articles .row > *.big
+    {
+        width: 100%;
+        margin-bottom: 16px;
+        margin-left: 0;
+    }
+
+
+    .articles .article.big
+    {
+        border-radius: 16px;
+    }
+
+
+    .articles .row:not(.inline) .article:not(.big)
+    {
+        position: relative;
+    }
+
+
+    .articles .row:not(.inline) .article:not(.big) .thumb
+    {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+
+        width: 66px;
+        height: 66px;
+        padding: 0;
+
+        border-radius: 8px;
+    }
+
+
+    .articles .row:not(.inline) .article:not(.big) .info
+    {
+        padding: 16px;
+    }
+
+
+    .articles .row:not(.inline) .article:not(.big) .name
+    {
+        font-size: 18px;
+
+        width: calc(100% - 78px);
+        min-height: 66px;
+
+        letter-spacing: -.36px;
+    }
+
+
+    .articles .row:not(.inline) .article:not(.big) .desc
+    {
+        display: none;
+    }
+
+
+    .articles .row:not(.inline) .article:not(.big) .date
+    {
+        padding-top: 16px;
+    }
+
+
+    .articles .row:not(.inline) .article:not(.big) .link
+    {
+        right: 16px;
+        bottom: 16px;
     }
 
 

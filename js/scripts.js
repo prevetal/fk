@@ -292,3 +292,28 @@ window.addEventListener('resize', function () {
 		}
 	}
 })
+
+
+
+// Map
+function mapInit() {
+	ymaps.ready(() => {
+		let myMap = new ymaps.Map('map', {
+			center: [55.761350, 37.609056],
+			zoom: 16,
+			controls: []
+		})
+
+		// Кастомный маркер
+		let myPlacemark = new ymaps.Placemark([55.761350, 37.609056], {}, {
+			iconLayout : 'default#image',
+			iconImageHref : 'images/ic_map_marker.svg',
+			iconImageSize : [85, 106],
+			iconImageOffset : [-43, -106],
+		})
+
+		myMap.geoObjects.add(myPlacemark)
+
+		myMap.behaviors.disable('scrollZoom')
+	})
+}
