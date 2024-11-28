@@ -1531,6 +1531,72 @@
 
 
 
+    /*----------------
+        Error page
+    ----------------*/
+    .error_page
+    {
+        padding: 100px 20px 20px;
+    }
+
+
+    .error_page .code
+    {
+        font-size: 200px;
+
+        letter-spacing: -2px;
+
+        gap: 5px;
+    }
+
+
+    .error_page .code .img
+    {
+        width: 94px;
+        margin-top: 20px;
+    }
+
+
+    .error_page .data
+    {
+        margin-top: 40px;
+        padding: 24px 16px;
+    }
+
+
+    .error_page .data .title
+    {
+        font-size: 32px;
+
+        letter-spacing: -1.28px;
+    }
+
+
+    .error_page .data .desc
+    {
+        font-size: 14px;
+
+        letter-spacing: -.14px;
+    }
+
+
+    .error_page .data .links
+    {
+        margin-top: 24px;
+    }
+
+
+    .error_page .data .links a
+    {
+        font-size: 16px;
+
+        padding: 12px 17px;
+
+        letter-spacing: -.48px;
+    }
+
+
+
     /*------------
         Footer
     ------------*/

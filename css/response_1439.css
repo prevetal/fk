@@ -30,4 +30,32 @@
     {
         padding: 24px;
     }
+
+
+
+    /*----------------
+        Error page
+    ----------------*/
+    .error_page
+    {
+        padding: 100px 40px;
+    }
+
+
+    .error_page .data
+    {
+        margin-top: 60px;
+        margin-right: auto;
+        margin-left: auto;
+
+        text-align: center;
+    }
+
+
+    .error_page .data .links
+    {
+        justify-content: center;
+
+        margin-top: 32px;
+    }
 }

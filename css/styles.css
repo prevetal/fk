@@ -7346,6 +7346,153 @@ header .callback_btn:hover
 
 
 
+/*----------------
+    Error page
+----------------*/
+.error_page
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex: 1 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    padding: 60px;
+}
+
+
+.error_page > *
+{
+    position: relative;
+    z-index: 3;
+}
+
+
+.error_page .bg
+{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+
+    object-fit: cover;
+}
+
+
+.error_page .code
+{
+    font-family: var(--font_family2);
+    font-size: 350px;
+    line-height: 102%;
+
+    display: flex;
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    letter-spacing: -3.5px;
+
+    color: #fff;
+
+    gap: 10px;
+}
+
+
+.error_page .code .img
+{
+    position: relative;
+
+    width: 188px;
+    margin-top: 24px;
+}
+
+
+.error_page .code img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+
+    width: 100%;
+}
+
+
+.error_page .data
+{
+    width: 611px;
+    max-width: 100%;
+    margin-left: 96px;
+    padding: 44px 50px;
+
+    border-radius: 32px;
+    background: #fff;
+}
+
+
+.error_page .data .title
+{
+    font-family: var(--font_family2);
+    font-size: 48px;
+    line-height: 120%;
+
+    letter-spacing: -1.92px;
+}
+
+
+.error_page .data .desc
+{
+    font-size: 18px;
+    line-height: 120%;
+
+    margin-top: 16px;
+
+    letter-spacing: -.36px;
+}
+
+
+.error_page .data .links
+{
+    display: flex;
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    margin-top: 24px;
+
+    gap: 16px;
+}
+
+
+.error_page .data .links a
+{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 98%;
+
+    display: block;
+
+    padding: 15px 23px;
+
+    text-decoration: none;
+    letter-spacing: -.36px;
+
+    color: currentColor;
+    border: 1px solid #160f25;
+    border-radius: 10px;
+}
+
+
+
 /*------------
     Footer
 ------------*/
