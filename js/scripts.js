@@ -260,6 +260,94 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		$('.film_commission_info .files').addClass('show')
 	})
+
+
+	// Film commision info
+	$('header .menu_btn').click(function(e) {
+		e.preventDefault()
+
+		$('header .menu_btn').toggleClass('active')
+		$(BODY).toggleClass('menu_open')
+
+		$('header .menu_btn').hasClass('active')
+			? $('.mob_menu').fadeIn(300)
+			: $('.mob_menu').fadeOut(200)
+
+		$('header .menu_btn').hasClass('active')
+			? $('.overlay').fadeIn(300)
+			: $('.overlay').fadeOut(200)
+	})
+
+
+	// Search
+	$('header .search_btn, .search_modal .head .close_btn, .search_modal .mob_close_btn').click(function(e) {
+		e.preventDefault()
+
+		$('header .search_btn').toggleClass('active')
+		$(BODY).toggleClass('search_open')
+
+		$('header .search_btn').hasClass('active')
+			? $('.search_modal').fadeIn(300)
+			: $('.search_modal').fadeOut(200)
+
+		$('header .search_btn').hasClass('active')
+			? $('.overlay').fadeIn(300)
+			: $('.overlay').fadeOut(200)
+	})
+
+
+	$('.overlay').click(function(e) {
+		e.preventDefault()
+
+		if ($(BODY).hasClass('menu_open')) {
+			$('header .menu_btn').removeClass('active')
+			$(BODY).removeClass('menu_open')
+
+			$('.mob_menu').fadeOut(200)
+		}
+
+		if ($(BODY).hasClass('search_open')) {
+			$('header .search_btn').removeClass('active')
+			$(BODY).removeClass('search_open')
+
+			$('.search_modal').fadeOut(200)
+		}
+
+		$('.overlay').fadeOut(200)
+	})
+
+
+	$('.search_modal form .input').keyup(function(e) {
+		e.preventDefault()
+
+		let _self = $(this)
+
+		setTimeout(() => {
+			if (_self.val().length) {
+				$('.search_modal form .clear_btn').fadeIn(300)
+
+				$('.search_modal .tips').removeClass('show')
+				$('.search_modal .result').addClass('show')
+			} else {
+				$('.search_modal form .clear_btn').fadeOut(200)
+
+				$('.search_modal .result').removeClass('show')
+				$('.search_modal .tips').addClass('show')
+			}
+		})
+	})
+
+
+	$('.search_modal form .clear_btn').click(function(e) {
+		e.preventDefault()
+
+		$('.search_modal form .input').val('')
+
+		$(this).fadeOut(200)
+
+		$('.search_modal .result').removeClass('show')
+		$('.search_modal .tips').addClass('show')
+	})
 })
 
 
