@@ -434,6 +434,27 @@
 
 
 
+    /*---------------------------
+        Support measures info
+    ---------------------------*/
+    .support_measures_info .links
+    {
+        width: 100%;
+        padding: 19px;
+
+        border: none;
+        border-bottom: 1px solid #e4ddec;
+    }
+
+
+    .support_measures_info .content
+    {
+        width: 100%;
+        padding: 19px;
+    }
+
+
+
     /*------------
         Footer
     ------------*/
@@ -470,5 +491,15 @@
     footer .mob_bottom
     {
         display: block;
+    }
+
+
+
+    /*-----------
+        PopUp
+    -----------*/
+    #order_modal
+    {
+        padding: 32px;
     }
 }

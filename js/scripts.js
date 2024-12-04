@@ -36,6 +36,16 @@ document.addEventListener('DOMContentLoaded', function () {
 	})
 
 
+	// Home animation
+	lottie.loadAnimation({
+		container: document.querySelector('.first_section .anim'),
+		renderer: 'canvas',
+		loop: true,
+		autoplay: true,
+		path: './index_anim.json'
+	})
+
+
 	// Opportunities/Resources slider
 	opportunitiesResourcesSliders = []
 
@@ -128,7 +138,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		el.classList.add('project_steps_s' + i)
 
 		let options = {
-			loop: false,
+			loop: true,
 			speed: 750,
 			effect: 'coverflow',
 			grabCursor: true,
@@ -136,25 +146,25 @@ document.addEventListener('DOMContentLoaded', function () {
 			watchSlidesProgress: true,
 			slideActiveClass: 'active',
 			slideVisibleClass: 'visible',
-			// initialSlide: 1,
+			loopAdditionalSlides: 1,
 			navigation: {
 				nextEl: '.swiper-button-next',
 				prevEl: '.swiper-button-prev'
 			},
-			spaceBetween: 0,
-			slidesPerView: 1,
 			pagination: {
 				el: '.swiper-pagination',
 				type: 'bullets',
 				clickable: true,
-				bulletActiveClass: 'active',
+				bulletActiveClass: 'active'
 			},
+			spaceBetween: 0,
+			slidesPerView: 1,
 			breakpoints: {
 				0: {
 					coverflowEffect: {
 						rotate: 0,
 						stretch: 285,
-						depth: 150,
+						depth: 124,
 						slideShadows: true
 					}
 				},
@@ -162,9 +172,20 @@ document.addEventListener('DOMContentLoaded', function () {
 					coverflowEffect: {
 						rotate: 50,
 						stretch: 24,
-						depth: 150,
+						depth: 212,
 						slideShadows: true
 					}
+				}
+			},
+			on: {
+				init: (swiper) => {
+					swiper.slidePrev(0, false)
+					swiper.slideNext(0, false)
+				},
+				transitionStart: (swiper) => {
+					let parent = $(swiper.el).closest('.project_steps')
+
+					setTimeout(() => parent.find('.block_head .title').hide().eq(swiper.realIndex).fadeIn(300))
 				}
 			}
 		}
@@ -347,6 +368,61 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		$('.search_modal .result').removeClass('show')
 		$('.search_modal .tips').addClass('show')
+	})
+
+
+	// Submit feedback form
+	$('.feedback form, #order_modal form').submit(function(e) {
+		e.preventDefault()
+
+		// Show success modal
+		Fancybox.show([{
+			src: '#success_feedback_modal',
+			type: 'inline'
+		}])
+	})
+
+
+	// Fancybox
+	Fancybox.defaults.autoFocus = false
+	Fancybox.defaults.trapFocus = false
+	Fancybox.defaults.dragToClose = false
+	Fancybox.defaults.placeFocusBack = false
+	Fancybox.defaults.l10n = {
+		CLOSE: 'Закрыть',
+		NEXT: 'Следующий',
+		PREV: 'Предыдущий',
+		MODAL: 'Вы можете закрыть это модальное окно нажав клавишу ESC'
+	}
+
+	Fancybox.defaults.tpl = {
+		closeButton: '<button data-fancybox-close class="f-button is-close-btn" title="{{CLOSE}}"><svg><use xlink:href="images/sprite.svg#ic_close"></use></svg></button>',
+
+		main: `<div class="fancybox__container" role="dialog" aria-modal="true" aria-label="{{MODAL}}" tabindex="-1">
+			<div class="fancybox__backdrop"></div>
+			<div class="fancybox__carousel"></div>
+			<div class="fancybox__footer"></div>
+		</div>`,
+	}
+
+
+	// Modals
+	$('.modal_btn').click(function(e) {
+		e.preventDefault()
+
+		Fancybox.close()
+
+		Fancybox.show([{
+			src: document.getElementById(e.target.getAttribute('data-modal')),
+			type: 'inline'
+		}])
+	})
+
+
+	$('.success_modal .close_btn').click(function(e) {
+		e.preventDefault()
+
+		Fancybox.close()
 	})
 })
 

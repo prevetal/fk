@@ -31,6 +31,7 @@
 		<!-- Connecting style files -->
 		<link rel="stylesheet" href="css/swiper-bundle.min.css" async>
 		<link rel="stylesheet" href="css/swiper.css" async>
+		<link rel="stylesheet" href="css/fancybox.css" async>
 		<link rel="stylesheet" href="css/styles.css" async>
 
 		<link rel="stylesheet" href="css/response_1439.css" media="print, (max-width: 1439px)" async>
@@ -725,7 +726,9 @@
 						<form action="" class="form">
 							<div class="line">
 								<div class="field">
-									<input type="text" name="" value="" class="input" placeholder="Ваше имя">
+									<input type="text" name="" value="" class="input pad_t">
+
+									<div class="fixed_label">Ваше имя</div>
 								</div>
 							</div>
 
@@ -780,22 +783,27 @@
 		</div>
 
 
+		<section class="modal success_modal" id="success_feedback_modal">
+			<div class="modal_title">Заявка успешно отправлена!</div>
+
+			<div class="image">
+				<img src="images/tmp/success_modal.png" alt="" loading="lazy">
+			</div>
+
+			<div class="modal_desc">Мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время и&nbsp;поможем подобрать ресурсы для развития вашего кинопроекта</div>
+
+			<button class="close_btn">Закрыть</button>
+		</section>
+
+
 		<!-- Connecting javascript files -->
 		<script src="js/jquery-3.6.3.min.js"></script>
 		<script src="js/functions.js"></script>
 		<script src="js/swiper-bundle.min.js"></script>
+		<script src="js/fancybox.js"></script>
 		<script src="js/imask.js"></script>
 		<script src="js/nice-select2.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.3/lottie.min.js"></script>
 		<script src="js/scripts.js"></script>
-
-		<!-- Yandex map -->
-		<script src="http://api-maps.yandex.ru/2.1.75/?load=package.standard,package.geoObjects&lang=ru-RU"></script>
-		<script>
-			document.addEventListener('DOMContentLoaded', function () {
-				// Map
-				mapInit()
-			})
-		</script>
 	</body>
 </html>

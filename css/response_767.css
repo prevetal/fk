@@ -30,7 +30,23 @@
     --------------*/
     .fancybox__slide
     {
+        position: relative;
+
         padding: 20px;
+    }
+
+
+    .fancybox__slide::after
+    {
+        display: none;
+    }
+
+
+    .fancybox__content > .f-button.is-close-btn,
+    .is-compact .fancybox__content > .f-button.is-close-btn
+    {
+        top: 20px;
+        right: 20px;
     }
 
 
@@ -362,6 +378,12 @@
     .first_section .desc br
     {
         display: none;
+    }
+
+
+    .first_section .anim
+    {
+        padding-bottom: 100%;
     }
 
 
@@ -869,9 +891,9 @@
     /*-----------
         Files
     -----------*/
-    .files .file .btn
+    .files .list
     {
-        display: none;
+        gap: 24px;
     }
 
 
@@ -1153,13 +1175,17 @@
 
     .project_steps .item
     {
-        padding: 184px 32px 16px;
+        min-height: 0;
+        padding: 200px 24px 24px;
     }
 
 
     .project_steps .swiper-slide.active .item .thumb
     {
-        height: 184px;
+        width: 312px;
+        height: 312px;
+
+        transform: translateY(-100px);
     }
 
 
@@ -1597,6 +1623,63 @@
 
 
 
+    /*---------------------------
+        Support measures info
+    ---------------------------*/
+    .support_measures_info .title
+    {
+        font-size: 26px;
+        line-height: 100%;
+
+        margin-bottom: 32px;
+
+        letter-spacing: -1.04px;
+    }
+
+
+    .support_measures_info .links
+    {
+        padding: 15px;
+    }
+
+
+
+    .support_measures_info .features
+    {
+        margin-top: 24px;
+
+        gap: 20px;
+    }
+
+
+    .support_measures_info .features .label
+    {
+        width: 100%;
+        margin-bottom: 8px;
+        padding: 0;
+    }
+
+
+    .support_measures_info .features .val
+    {
+        width: 100%;
+    }
+
+
+
+    .support_measures_info .files
+    {
+        margin-top: 24px;
+    }
+
+
+    .support_measures_info .files .title
+    {
+        margin-bottom: 24px;
+    }
+
+
+
     /*------------
         Footer
     ------------*/
@@ -1613,5 +1696,56 @@
         margin-right: -16px;
         margin-left: -16px;
         padding: 16px;
+    }
+
+
+
+    /*-----------
+        PopUp
+    -----------*/
+    .modal
+    {
+        position: static;
+
+        padding: 20px;
+    }
+
+
+    .modal_title
+    {
+        line-height: calc(100% + 8px);
+    }
+
+
+
+    #order_modal
+    {
+        padding: 24px;
+    }
+
+
+    #order_modal .form .submit
+    {
+        padding-top: 144px;
+    }
+
+
+    #order_modal .form .submit_btn
+    {
+        width: 100%;
+    }
+
+
+
+    .success_modal .image
+    {
+        margin-top: 20px;
+    }
+
+
+    .success_modal .close_btn
+    {
+        width: 100%;
+        margin-top: 20px;
     }
 }

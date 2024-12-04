@@ -31,6 +31,7 @@
 		<!-- Connecting style files -->
 		<link rel="stylesheet" href="css/swiper-bundle.min.css" async>
 		<link rel="stylesheet" href="css/swiper.css" async>
+		<link rel="stylesheet" href="css/fancybox.css" async>
 		<link rel="stylesheet" href="css/styles.css" async>
 
 		<link rel="stylesheet" href="css/response_1439.css" media="print, (max-width: 1439px)" async>
@@ -463,7 +464,7 @@
 
 											<div class="desc">Разрешение на&nbsp;съёмки<br> на&nbsp;улицах города</div>
 
-											<button class="btn">Подать заявку</button>
+											<button class="btn modal_btn" data-modal="order_modal">Подать заявку</button>
 
 											<a href="/" class="link">
 												<svg class="icon"><use xlink:href="images/sprite.svg#ic_arrow_hor"></use></svg>
@@ -481,7 +482,7 @@
 
 											<div class="desc">Разрешение на&nbsp;съёмки<br> на&nbsp;улицах города</div>
 
-											<button class="btn">Подать заявку</button>
+											<button class="btn modal_btn" data-modal="order_modal">Подать заявку</button>
 
 											<a href="/" class="link">
 												<svg class="icon"><use xlink:href="images/sprite.svg#ic_arrow_hor"></use></svg>
@@ -499,7 +500,7 @@
 
 											<div class="desc">Разрешение на&nbsp;съёмки<br> на&nbsp;улицах города</div>
 
-											<button class="btn">Подать заявку</button>
+											<button class="btn modal_btn" data-modal="order_modal">Подать заявку</button>
 
 											<a href="/" class="link">
 												<svg class="icon"><use xlink:href="images/sprite.svg#ic_arrow_hor"></use></svg>
@@ -517,7 +518,7 @@
 
 											<div class="desc">Разрешение на&nbsp;съёмки<br> на&nbsp;улицах города</div>
 
-											<button class="btn">Подать заявку</button>
+											<button class="btn modal_btn" data-modal="order_modal">Подать заявку</button>
 
 											<a href="/" class="link">
 												<svg class="icon"><use xlink:href="images/sprite.svg#ic_arrow_hor"></use></svg>
@@ -535,7 +536,7 @@
 
 											<div class="desc">Разрешение на&nbsp;съёмки<br> на&nbsp;улицах города</div>
 
-											<button class="btn">Подать заявку</button>
+											<button class="btn modal_btn" data-modal="order_modal">Подать заявку</button>
 
 											<a href="/" class="link">
 												<svg class="icon"><use xlink:href="images/sprite.svg#ic_arrow_hor"></use></svg>
@@ -553,7 +554,7 @@
 
 											<div class="desc">Разрешение на&nbsp;съёмки<br> на&nbsp;улицах города</div>
 
-											<button class="btn">Подать заявку</button>
+											<button class="btn modal_btn" data-modal="order_modal">Подать заявку</button>
 
 											<a href="/" class="link">
 												<svg class="icon"><use xlink:href="images/sprite.svg#ic_arrow_hor"></use></svg>
@@ -571,7 +572,7 @@
 
 											<div class="desc">Разрешение на&nbsp;съёмки<br> на&nbsp;улицах города</div>
 
-											<button class="btn">Подать заявку</button>
+											<button class="btn modal_btn" data-modal="order_modal">Подать заявку</button>
 
 											<a href="/" class="link">
 												<svg class="icon"><use xlink:href="images/sprite.svg#ic_arrow_hor"></use></svg>
@@ -589,7 +590,7 @@
 
 											<div class="desc">Разрешение на&nbsp;съёмки<br> на&nbsp;улицах города</div>
 
-											<button class="btn">Подать заявку</button>
+											<button class="btn modal_btn" data-modal="order_modal">Подать заявку</button>
 
 											<a href="/" class="link">
 												<svg class="icon"><use xlink:href="images/sprite.svg#ic_arrow_hor"></use></svg>
@@ -1087,7 +1088,9 @@
 						<form action="" class="form">
 							<div class="line">
 								<div class="field">
-									<input type="text" name="" value="" class="input" placeholder="Ваше имя">
+									<input type="text" name="" value="" class="input pad_t">
+
+									<div class="fixed_label">Ваше имя</div>
 								</div>
 							</div>
 
@@ -1142,10 +1145,76 @@
 		</div>
 
 
+		<section class="modal" id="order_modal">
+			<div class="modal_title">Подать заявку</div>
+
+			<form action="" class="form">
+				<div class="line">
+					<div class="field">
+						<input type="text" name="" value="" class="input pad_t">
+
+						<div class="fixed_label">Как Вас зовут</div>
+					</div>
+				</div>
+
+				<div class="line">
+					<div class="field">
+						<input type="email" name="" value="" class="input pad_t">
+
+						<div class="fixed_label">Email</div>
+					</div>
+				</div>
+
+				<div class="line">
+					<div class="field">
+						<div class="label">+7</div>
+
+						<input type="tel" name="" value="" class="input" placeholder="(999) 999 99 99">
+					</div>
+				</div>
+
+				<div class="line">
+					<div class="field">
+						<select name="" data-placeholder="Услуга">
+							<option value="1">Согласование перекрытий</option>
+							<option value="2">Скаутинг локаций</option>
+							<option value="3">Разрешение на проведение съёмок в регионе</option>
+							<option value="4">Техническое сопровождение киносъемок</option>
+						</select>
+
+						<svg class="arr"><use xlink:href="images/sprite.svg#ic_arr_ver"></use></svg>
+					</div>
+				</div>
+
+				<div class="line agree">
+					<div class="field">Нажимая на кнопку «Отправить», вы даёте согласие на обработку <a href="/" target="_blank">персональных данных</a></div>
+				</div>
+
+				<div class="submit">
+					<button type="submit" class="submit_btn" disabled>Отправить</button>
+				</div>
+			</form>
+		</section>
+
+
+		<section class="modal success_modal" id="success_feedback_modal">
+			<div class="modal_title">Заявка успешно отправлена!</div>
+
+			<div class="image">
+				<img src="images/tmp/success_modal.png" alt="" loading="lazy">
+			</div>
+
+			<div class="modal_desc">Мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время и&nbsp;поможем подобрать ресурсы для развития вашего кинопроекта</div>
+
+			<button class="close_btn">Закрыть</button>
+		</section>
+
+
 		<!-- Connecting javascript files -->
 		<script src="js/jquery-3.6.3.min.js"></script>
 		<script src="js/functions.js"></script>
 		<script src="js/swiper-bundle.min.js"></script>
+		<script src="js/fancybox.js"></script>
 		<script src="js/imask.js"></script>
 		<script src="js/nice-select2.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.3/lottie.min.js"></script>
