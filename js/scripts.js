@@ -227,7 +227,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 	// Custom select - Nice select
-	const selects = document.querySelectorAll('select')
+	const selects = document.querySelectorAll('select:not(.skip)')
 
 	if (selects) {
 		selects.forEach(el => {
@@ -409,6 +409,30 @@ document.addEventListener('DOMContentLoaded', function () {
 	// Modals
 	$('.modal_btn').click(function(e) {
 		e.preventDefault()
+
+		if (e.target.getAttribute('data-modal')) {
+			let select = document.getElementById(e.target.getAttribute('data-modal')).querySelector('.services_select')
+
+			if (select) {
+				Array.from(select.options).forEach(el => el.removeAttribute('selected'))
+
+				select.querySelector('select option[value="'+ e.target.getAttribute('data-service-index') +'"]').setAttribute('selected', true)
+
+				if (typeof orderServicesInstance === 'undefined') {
+					if (Array.from(select.options).some(option => option.getAttribute('selected') !== null)) {
+						select.classList.add('selected')
+					}
+
+					orderServicesInstance = NiceSelect.bind(select, {
+						placeholder: select.getAttribute('data-placeholder')
+					})
+
+					select.addEventListener('change', () => el.classList.add('selected'))
+				} else {
+					orderServicesInstance.update()
+				}
+			}
+		}
 
 		Fancybox.close()
 
