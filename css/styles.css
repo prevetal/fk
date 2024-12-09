@@ -1137,7 +1137,21 @@ header .menu_btn.active .icon + .icon
 }
 
 
-.search_modal .tips a
+.search_modal .tips label
+{
+    display: block;
+
+    cursor: pointer;
+}
+
+
+.search_modal .tips label input
+{
+    display: none;
+}
+
+
+.search_modal .tips label div
 {
     font-size: 14px;
     font-weight: 500;
@@ -1149,7 +1163,6 @@ header .menu_btn.active .icon + .icon
 
     transition: .2s linear;
     vertical-align: top;
-    text-decoration: none;
     letter-spacing: -.42px;
 
     color: #4c4c67;
@@ -1158,7 +1171,8 @@ header .menu_btn.active .icon + .icon
 }
 
 
-.search_modal .tips a:hover
+.search_modal .tips label div:hover,
+.search_modal .tips label input:checked + div
 {
     color: #fff;
     border-color: #160f25;
