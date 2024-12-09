@@ -1623,28 +1623,10 @@
 
 
 
-    /*---------------------------
-        Support measures info
-    ---------------------------*/
-    .support_measures_info .title
-    {
-        font-size: 26px;
-        line-height: 100%;
-
-        margin-bottom: 32px;
-
-        letter-spacing: -1.04px;
-    }
-
-
-    .support_measures_info .links
-    {
-        padding: 15px;
-    }
-
-
-
-    .support_measures_info .features
+    /*---------------
+        Text page
+    ---------------*/
+    .text_page .features
     {
         margin-top: 24px;
 
@@ -1652,7 +1634,7 @@
     }
 
 
-    .support_measures_info .features .label
+    .text_page .features .label
     {
         width: 100%;
         margin-bottom: 8px;
@@ -1660,20 +1642,20 @@
     }
 
 
-    .support_measures_info .features .val
+    .text_page .features .val
     {
         width: 100%;
     }
 
 
 
-    .support_measures_info .files
+    .text_page .files
     {
         margin-top: 24px;
     }
 
 
-    .support_measures_info .files .title
+    .text_page .files .title
     {
         margin-bottom: 24px;
     }

@@ -7376,10 +7376,10 @@ header .callback_btn:hover
 
 
 
-/*--------------------
-    Privacy policy
---------------------*/
-.privacy_policy .title
+/*---------------
+    Text page
+---------------*/
+.text_page .title
 {
     font-family: var(--font_family2);
     font-size: 32px;
@@ -7391,7 +7391,7 @@ header .callback_btn:hover
 }
 
 
-.privacy_policy .row
+.text_page .row
 {
     align-content: stretch;
     align-items: stretch;
@@ -7404,7 +7404,7 @@ header .callback_btn:hover
 }
 
 
-.privacy_policy .tabs
+.text_page .tabs
 {
     flex-direction: column;
 
@@ -7419,7 +7419,7 @@ header .callback_btn:hover
 }
 
 
-.privacy_policy .tabs .btn
+.text_page .tabs .btn
 {
     line-height: 140%;
 
@@ -7436,7 +7436,7 @@ header .callback_btn:hover
     border-radius: 10px;
 }
 
-.privacy_policy .tabs .btn:after
+.text_page .tabs .btn:after
 {
     position: absolute;
     top: 0;
@@ -7456,7 +7456,7 @@ header .callback_btn:hover
 }
 
 
-.privacy_policy .tabs .btn.active
+.text_page .tabs .btn.active
 {
     color: #7f1aff;
     background: #f9f7fd;
@@ -7464,130 +7464,26 @@ header .callback_btn:hover
 }
 
 
-.privacy_policy .tabs .btn.active:after
+.text_page .tabs .btn.active:after
 {
     opacity: 1;
 }
 
 
-.privacy_policy .tab_content
+.text_page .tab_content
 {
     width: 0;
 }
 
 
-.privacy_policy .tab_content.active
+.text_page .tab_content.active
 {
     width: calc(100% - 312px);
     padding: 31px;
 }
 
 
-
-/*---------------------------
-    Support measures info
----------------------------*/
-.support_measures_info .title
-{
-    font-family: var(--font_family2);
-    font-size: 32px;
-    line-height: 120%;
-
-    margin-bottom: 40px;
-
-    letter-spacing: -1.28px;
-}
-
-
-.support_measures_info .row
-{
-    align-content: stretch;
-    align-items: stretch;
-    justify-content: space-between;
-
-    border: 1px solid #e4ddec;
-    border-radius: 24px;
-    background: #fff;
-    box-shadow: 0 2px 5px 0 rgba(87, 95, 139, .08);
-}
-
-
-.support_measures_info .links
-{
-    display: flex;
-    flex-direction: column;
-
-    width: 312px;
-    max-width: 100%;
-    padding: 23px;
-
-    border-right: 1px solid #e4ddec;
-
-    gap: 8px;
-}
-
-
-.support_measures_info .links .btn
-{
-    line-height: 140%;
-
-    position: relative;
-
-    display: block;
-    overflow: hidden;
-
-    width: 100%;
-    padding: 8px 12px;
-
-    text-decoration: none;
-    letter-spacing: -.32px;
-
-    color: currentColor;
-    border-radius: 10px;
-}
-
-.support_measures_info .links .btn:after
-{
-    position: absolute;
-    top: 0;
-    right: 0;
-
-    display: block;
-
-    width: 4px;
-    height: 100%;
-
-    content: '';
-    transition: opacity .2s linear;
-    pointer-events: none;
-
-    opacity: 0;
-    background: #7f1aff;
-}
-
-
-.support_measures_info .links .btn.active
-{
-    color: #7f1aff;
-    background: #f9f7fd;
-    box-shadow: none;
-}
-
-
-.support_measures_info .links .btn.active:after
-{
-    opacity: 1;
-}
-
-
-.support_measures_info .content
-{
-    width: calc(100% - 312px);
-    padding: 31px;
-}
-
-
-.support_measures_info .features
+.text_page .features
 {
     display: flex;
     flex-direction: column;
@@ -7598,7 +7494,7 @@ header .callback_btn:hover
 }
 
 
-.support_measures_info .features > *
+.text_page .features > *
 {
     display: flex;
     align-content: flex-start;
@@ -7608,7 +7504,7 @@ header .callback_btn:hover
 }
 
 
-.support_measures_info .features .label
+.text_page .features .label
 {
     font-weight: 500;
     line-height: 140%;
@@ -7621,7 +7517,7 @@ header .callback_btn:hover
 }
 
 
-.support_measures_info .features .val
+.text_page .features .val
 {
     line-height: 140%;
 
@@ -7638,13 +7534,13 @@ header .callback_btn:hover
 }
 
 
-.support_measures_info .files
+.text_page .files
 {
     margin-top: 32px;
 }
 
 
-.support_measures_info .files .title
+.text_page .files .title
 {
     font-size: 24px;
     font-weight: 500;

@@ -413,10 +413,10 @@
 
 
 
-    /*--------------------
-        Privacy policy
-    --------------------*/
-    .privacy_policy .tabs
+    /*---------------
+        Text page
+    ---------------*/
+    .text_page .tabs
     {
         width: 100%;
         padding: 19px;
@@ -426,28 +426,7 @@
     }
 
 
-    .privacy_policy .tab_content.active
-    {
-        width: 100%;
-        padding: 19px;
-    }
-
-
-
-    /*---------------------------
-        Support measures info
-    ---------------------------*/
-    .support_measures_info .links
-    {
-        width: 100%;
-        padding: 19px;
-
-        border: none;
-        border-bottom: 1px solid #e4ddec;
-    }
-
-
-    .support_measures_info .content
+    .text_page .tab_content.active
     {
         width: 100%;
         padding: 19px;
