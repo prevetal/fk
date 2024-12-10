@@ -36,16 +36,6 @@ document.addEventListener('DOMContentLoaded', function () {
 	})
 
 
-	// Home animation
-	lottie.loadAnimation({
-		container: document.querySelector('.first_section .anim'),
-		renderer: 'canvas',
-		loop: true,
-		autoplay: true,
-		path: './index_anim.json'
-	})
-
-
 	// Opportunities/Resources slider
 	opportunitiesResourcesSliders = []
 
@@ -260,16 +250,6 @@ document.addEventListener('DOMContentLoaded', function () {
 		e.preventDefault()
 
 		$(this).toggleClass('active')
-	})
-
-
-	// About gallery
-	lottie.loadAnimation({
-		container: document.querySelector('.about_head .gallery'),
-		renderer: 'canvas',
-		loop: true,
-		autoplay: true,
-		path: './carousel.json'
 	})
 
 

@@ -938,5 +938,18 @@
 		<script src="js/nice-select2.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.3/lottie.min.js"></script>
 		<script src="js/scripts.js"></script>
+
+		<script>
+			document.addEventListener('DOMContentLoaded', function () {
+				// Home animation
+				lottie.loadAnimation({
+					container: document.querySelector('.first_section .anim'),
+					renderer: 'canvas',
+					loop: true,
+					autoplay: true,
+					path: './index_anim.json'
+				})
+			})
+		</script>
 	</body>
 </html>
