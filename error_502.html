@@ -28,16 +28,460 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Onest:wght@100..900&display=swap" rel="stylesheet">
 
-		<!-- Connecting style files -->
-		<link rel="stylesheet" href="css/swiper-bundle.min.css" async>
-		<link rel="stylesheet" href="css/swiper.css" async>
-		<link rel="stylesheet" href="css/fancybox.css" async>
-		<link rel="stylesheet" href="css/styles.css" async>
+		<!-- Styles -->
+		<style>
+			*
+			{
+			    box-sizing: border-box;
+			    margin: 0;
+			    padding: 0;
 
-		<link rel="stylesheet" href="css/response_1439.css" media="print, (max-width: 1439px)" async>
-		<link rel="stylesheet" href="css/response_1279.css" media="print, (max-width: 1279px)" async>
-		<link rel="stylesheet" href="css/response_1023.css" media="print, (max-width: 1023px)" async>
-		<link rel="stylesheet" href="css/response_767.css" media="print, (max-width: 767px)" async>
+			    scroll-margin-top: 24px;
+			}
+
+			*:before,
+			*:after
+			{
+			    box-sizing: border-box;
+			}
+
+			html
+			{
+			    -webkit-font-smoothing: antialiased;
+			    -moz-osx-font-smoothing: grayscale;
+			        -ms-text-size-adjust: 100%;
+			    -webkit-text-size-adjust: 100%;
+			}
+
+			body
+			{
+			    margin: 0;
+
+			    overscroll-behavior: none;
+			    -webkit-tap-highlight-color: transparent;
+			    -webkit-overflow-scrolling: touch;
+			    text-rendering: optimizeLegibility;
+			    text-decoration-skip: objects;
+			}
+
+			img
+			{
+			    border-style: none;
+			}
+
+			textarea
+			{
+			    overflow: auto;
+			}
+
+			input,
+			textarea,
+			input:active,
+			textarea:active,
+			button
+			{
+			    margin: 0;
+
+			    -webkit-border-radius: 0;
+			            border-radius: 0;
+			         outline: none transparent !important;
+			    box-shadow: none;
+
+			    -webkit-appearance: none;
+			            appearance: none;
+			    -moz-outline: none !important;
+			}
+
+			input::-webkit-outer-spin-button,
+			input::-webkit-inner-spin-button
+			{
+			    margin: 0;
+
+			    -webkit-appearance: none;
+			}
+
+			input[type=number]
+			{
+			    -moz-appearance: textfield;
+			}
+
+			:focus
+			{
+			    outline: 0;
+			}
+
+			:hover,
+			:active
+			{
+			    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+			    -webkit-touch-callout: none;
+			}
+
+
+			::-ms-clear
+			{
+			    display: none;
+			}
+
+
+			:root
+			{
+			    --bg: #f4f0f9;
+			    --text_color: #160f25;
+			    --font_size: 16px;
+			    --font_size_title: 64px;
+			    --font_size_title_small: 48px;
+			    --font_family: 'Onest', 'Arial', sans-serif;
+			    --font_family2: 'Jost', 'Arial', sans-serif;
+			}
+
+
+			html
+			{
+			    height: 100%;
+			    min-height: -moz-available;
+			    min-height: -webkit-fill-available;
+			    min-height:         fill-available;
+			}
+
+
+			body
+			{
+			    font: var(--font_size) var(--font_family);
+
+			    height: 100%;
+			    min-height: -moz-available;
+			    min-height: -webkit-fill-available;
+			    min-height:         fill-available;
+
+			    color: var(--text_color);
+			}
+
+
+			.wrap
+			{
+			    position: relative;
+			    z-index: 9;
+
+			    display: flex;
+			    overflow: clip;
+			    flex-direction: column;
+
+			    min-height: 100%;
+
+			    background: var(--bg);
+			}
+
+
+			.main
+			{
+			    display: flex;
+			    flex: 1 0 auto;
+			    flex-direction: column;
+			}
+
+
+			.error_page
+			{
+			    position: relative;
+
+			    display: flex;
+			    overflow: hidden;
+			    align-content: center;
+			    align-items: center;
+			    flex: 1 0 auto;
+			    flex-wrap: wrap;
+			    justify-content: center;
+
+			    padding: 60px;
+			}
+
+
+			.error_page > *
+			{
+			    position: relative;
+			    z-index: 3;
+			}
+
+
+			.error_page .bg
+			{
+			    position: absolute;
+			    z-index: 1;
+			    top: 0;
+			    left: 0;
+
+			    width: 100%;
+			    height: 100%;
+
+			    pointer-events: none;
+
+			    object-fit: cover;
+			}
+
+
+			.error_page .code
+			{
+			    font-family: var(--font_family2);
+			    font-size: 350px;
+			    line-height: 102%;
+
+			    display: flex;
+			    align-content: flex-start;
+			    align-items: flex-start;
+			    flex-wrap: wrap;
+			    justify-content: flex-start;
+
+			    letter-spacing: -3.5px;
+
+			    color: #fff;
+
+			    gap: 10px;
+			}
+
+
+			.error_page .code .img
+			{
+			    position: relative;
+
+			    width: 188px;
+			    margin-top: 24px;
+			}
+
+
+			.error_page .code img
+			{
+			    position: absolute;
+			    top: 0;
+			    left: 0;
+
+			    display: block;
+
+			    width: 100%;
+			}
+
+
+			.error_page .data
+			{
+			    width: 611px;
+			    max-width: 100%;
+			    margin-left: 96px;
+			    padding: 44px 50px;
+
+			    border-radius: 32px;
+			    background: #fff;
+			}
+
+
+			.error_page .data .title
+			{
+			    font-family: var(--font_family2);
+			    font-size: 48px;
+			    line-height: 120%;
+
+			    letter-spacing: -1.92px;
+			}
+
+
+			.error_page .data .desc
+			{
+			    font-size: 18px;
+			    line-height: 120%;
+
+			    margin-top: 16px;
+
+			    letter-spacing: -.36px;
+			}
+
+
+			.error_page .data .links
+			{
+			    display: flex;
+			    align-content: flex-start;
+			    align-items: flex-start;
+			    flex-wrap: wrap;
+			    justify-content: flex-start;
+
+			    margin-top: 24px;
+
+			    gap: 16px;
+			}
+
+
+			.error_page .data .links a
+			{
+			    font-size: 18px;
+			    font-weight: 500;
+			    line-height: 98%;
+
+			    display: block;
+
+			    padding: 15px 23px;
+
+			    text-decoration: none;
+			    letter-spacing: -.36px;
+
+			    color: currentColor;
+			    border: 1px solid #160f25;
+			    border-radius: 10px;
+			}
+
+
+			.error_page .anim_bg1
+			{
+			    position: absolute;
+			    z-index: 5;
+			    top: 0;
+			    left: 0;
+
+			    display: block;
+
+			    width: 50%;
+			    height: 100%;
+
+			    animation: curtain 1.75s ease-in-out forwards;
+
+			    object-fit: cover;
+			    object-position: 0 50%;
+			}
+
+
+			.error_page .anim_bg2
+			{
+			    position: absolute;
+			    z-index: 5;
+			    top: 0;
+			    right: 0;
+
+			    display: block;
+
+			    width: 50%;
+			    height: 100%;
+
+			    animation: curtain 1.75s ease-in-out forwards;
+
+			    object-position: 100% 50%;
+			    object-fit: cover;
+			}
+
+
+			@keyframes curtain
+			{
+			    0%
+			    {
+			        width: 50%;
+			    }
+			    60%
+			    {
+			        width: 11%;
+			    }
+			    75%
+			    {
+			        width: 13%;
+			    }
+			    90%
+			    {
+			        width: 11%;
+			    }
+			    100%
+			    {
+			        width: 0;
+			    }
+			}
+
+
+			@media print, (max-width: 1439px)
+			{
+			    .error_page
+			    {
+			        padding: 100px 40px;
+			    }
+
+
+			    .error_page .data
+			    {
+			        margin-top: 60px;
+			        margin-right: auto;
+			        margin-left: auto;
+
+			        text-align: center;
+			    }
+
+
+			    .error_page .data .links
+			    {
+			        justify-content: center;
+
+			        margin-top: 32px;
+			    }
+			}
+
+
+			@media print, (max-width: 767px)
+			{
+			    .error_page
+			    {
+			        padding: 100px 20px 20px;
+			    }
+
+
+			    .error_page .code
+			    {
+			        font-size: 200px;
+
+			        letter-spacing: -2px;
+
+			        gap: 5px;
+			    }
+
+
+			    .error_page .code .img
+			    {
+			        width: 94px;
+			        margin-top: 20px;
+			    }
+
+
+			    .error_page .data
+			    {
+			        margin-top: 40px;
+			        padding: 24px 16px;
+			    }
+
+
+			    .error_page .data .title
+			    {
+			        font-size: 32px;
+
+			        letter-spacing: -1.28px;
+			    }
+
+
+			    .error_page .data .desc
+			    {
+			        font-size: 14px;
+
+			        letter-spacing: -.14px;
+			    }
+
+
+			    .error_page .data .links
+			    {
+			        margin-top: 24px;
+			    }
+
+
+			    .error_page .data .links a
+			    {
+			        font-size: 16px;
+
+			        padding: 12px 17px;
+
+			        letter-spacing: -.48px;
+			    }
+			}
+
+		</style>
 	</head>
 
 	<body>
@@ -72,33 +516,12 @@
 						</div>
 					</div>
 
-					<img src="images/bg_error_page.jpg" alt="" class="bg">
+					<img src="images/bg_error_page.jpg" alt="" class="bg" loading="lazy">
+
+					<img src="images/bg_anim_error_page_left.jpg" alt="" class="anim_bg1">
+					<img src="images/bg_anim_error_page_right.jpg" alt="" class="anim_bg2">
 				</section>
 			</div>
 		</div>
-
-
-		<section class="modal success_modal" id="success_feedback_modal">
-			<div class="modal_title">Заявка успешно отправлена!</div>
-
-			<div class="image">
-				<img src="images/tmp/success_modal.png" alt="" loading="lazy">
-			</div>
-
-			<div class="modal_desc">Мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время и&nbsp;поможем подобрать ресурсы для развития вашего кинопроекта</div>
-
-			<button class="close_btn">Закрыть</button>
-		</section>
-
-
-		<!-- Connecting javascript files -->
-		<script src="js/jquery-3.6.3.min.js"></script>
-		<script src="js/functions.js"></script>
-		<script src="js/swiper-bundle.min.js"></script>
-		<script src="js/fancybox.js"></script>
-		<script src="js/imask.js"></script>
-		<script src="js/nice-select2.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.3/lottie.min.js"></script>
-		<script src="js/scripts.js"></script>
 	</body>
 </html>

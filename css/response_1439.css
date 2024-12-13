@@ -58,4 +58,16 @@
 
         margin-top: 32px;
     }
+
+
+
+    /*-------------
+        Cookies
+    -------------*/
+    .cookies
+    {
+        right: 40px;
+
+        max-width: calc(100% - 80px);
+    }
 }

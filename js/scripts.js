@@ -386,6 +386,20 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 
 
+	// Zoom images
+	Fancybox.bind('.fancy_img', {
+		Carousel: {
+			transition: 'slide',
+		},
+		Image: {
+			zoom: false
+		},
+		Thumbs: {
+			autoStart: false
+		}
+	})
+
+
 	// Modals
 	$('.modal_btn').click(function(e) {
 		e.preventDefault()
@@ -427,6 +441,16 @@ document.addEventListener('DOMContentLoaded', function () {
 		e.preventDefault()
 
 		Fancybox.close()
+	})
+
+
+	// Cookies
+	setTimeout(() => $('.cookies').addClass('show'), 1000)
+
+	$('.cookies .btn').click(function(e) {
+		e.preventDefault()
+
+		$('.cookies').removeClass('show')
 	})
 })
 

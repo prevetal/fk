@@ -36,7 +36,7 @@
     }
 
 
-    .fancybox__slide::after
+    .fancybox__slide:not(.has-image)::after
     {
         display: none;
     }
@@ -1550,9 +1550,18 @@
     }
 
 
-    .text_block .gallery > *
+    .text_block .gallery
+    {
+        margin-left: 0;
+    }
+
+
+    .text_block .gallery > *,
+    .text_block .gallery > *.small,
+    .text_block .gallery > *.full_w
     {
         width: 100%;
+        margin-left: 0;
     }
 
 
@@ -1658,6 +1667,33 @@
     .text_page .files .title
     {
         margin-bottom: 24px;
+    }
+
+
+
+    /*-------------
+        Cookies
+    -------------*/
+    .cookies
+    {
+        right: 16px;
+        bottom: 16px;
+
+        max-width: calc(100% - 32px);
+        padding: 18px 24px;
+    }
+
+
+    .cookies .text
+    {
+        width: 100%;
+        margin-bottom: 16px;
+    }
+
+
+    .cookies .btn
+    {
+        width: 100%;
     }
 
 

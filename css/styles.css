@@ -325,6 +325,44 @@ button
 }
 
 
+.fancybox__thumbs
+{
+    --f-thumb-width: 75px;
+    --f-thumb-height: 75px;
+    --f-thumb-border-radius: 8px;
+    --f-thumb-outline: 3px;
+    --f-thumb-outline-color: #e4ddec;
+}
+
+
+.f-thumbs__slide__button:after
+{
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+
+    display: block;
+
+    width: calc(var(--f-thumb-width) - (var(--f-thumb-outline) * 2));
+    height: calc(var(--f-thumb-height) - (var(--f-thumb-outline) * 2));
+
+    content: '';
+    transition: opacity .2s linear;
+    pointer-events: none;
+
+    opacity: 0;
+    border: var(--f-thumb-outline) solid var(--f-thumb-outline-color);
+    border-radius: inherit;
+}
+
+
+.is-nav-selected .f-thumbs__slide__button:after
+{
+    opacity: 1;
+}
+
+
 
 /*----------------
     Mini modal
@@ -2294,20 +2332,86 @@ header .callback_btn:hover
     flex-wrap: wrap;
     justify-content: space-between;
 
-    gap: 16px;
+    margin-top: 32px;
+    margin-bottom: 16px;
+    margin-left: -16px;
 }
 
 
 .text_block .gallery > *
 {
-    width: calc(50% - 8px);
+    width: calc(50% - 16px);
+    margin-top: 0;
+    margin-bottom: 16px;
+    margin-left: 16px;
+}
+
+.text_block .gallery > *.small
+{
+    width: calc(33.333% - 16px);
+}
+
+.text_block .gallery > *.full_w
+{
+    width: calc(100% - 16px);
 }
 
 
-.text_block .gallery figure
+.text_block .gallery .more
 {
-    margin-top: 0;
-    margin-bottom: 0;
+    font-weight: 500;
+    line-height: 140%;
+
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    text-align: center;
+    letter-spacing: -.32px;
+
+    border-radius: 18px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, .70) 0%, rgba(0, 0, 0, .70) 100%);
+}
+
+
+.text_block .gallery .hide
+{
+    display: none;
+}
+
+
+.text_block .gallery a
+{
+    position: relative;
+
+    display: block;
+
+    text-decoration: none;
+
+    color: #fff;
+}
+
+
+.text_block .gallery .caption
+{
+    font-size: 14px;
+    line-height: 120%;
+
+    width: calc(100% - 16px);
+
+    letter-spacing: -.14px;
+
+    color: rgba(22, 15, 37, .50);
 }
 
 
@@ -7572,7 +7676,10 @@ header .callback_btn:hover
 ----------------*/
 .error_page
 {
+    position: relative;
+
     display: flex;
+    overflow: hidden;
     align-content: center;
     align-items: center;
     flex: 1 0 auto;
@@ -7710,6 +7817,147 @@ header .callback_btn:hover
     color: currentColor;
     border: 1px solid #160f25;
     border-radius: 10px;
+}
+
+
+.error_page .anim_bg1
+{
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    left: 0;
+
+    display: block;
+
+    width: 50%;
+    height: 100%;
+
+    animation: curtain 1.75s ease-in-out forwards;
+
+    object-fit: cover;
+    object-position: 0 50%;
+}
+
+
+.error_page .anim_bg2
+{
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    right: 0;
+
+    display: block;
+
+    width: 50%;
+    height: 100%;
+
+    animation: curtain 1.75s ease-in-out forwards;
+
+    object-position: 100% 50%;
+    object-fit: cover;
+}
+
+
+@keyframes curtain
+{
+    0%
+    {
+        width: 50%;
+    }
+    60%
+    {
+        width: 11%;
+    }
+    75%
+    {
+        width: 13%;
+    }
+    90%
+    {
+        width: 11%;
+    }
+    100%
+    {
+        width: 0;
+    }
+}
+
+
+
+/*-------------
+    Cookies
+-------------*/
+.cookies
+{
+    position: fixed;
+    z-index: 90;
+    right: 60px;
+    bottom: 24px;
+
+    display: none;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    width: 583px;
+    max-width: calc(100% - 120px);
+    padding: 18px 24px;
+
+    border-radius: 24px;
+    background: #fff;
+    box-shadow: 0 4px 8px 0 rgba(68, 83, 113, .08);
+}
+
+
+.cookies.show
+{
+    display: flex;
+}
+
+
+.cookies .text
+{
+    font-size: 14px;
+    line-height: 120%;
+
+    width: calc(100% - 103px);
+
+    letter-spacing: -.14px;
+
+    color: #4c4c67;
+}
+
+
+.cookies .text a
+{
+    text-decoration: none;
+
+    color: #7f1aff;
+}
+
+
+.cookies .btn
+{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 98%;
+
+    height: 48px;
+    padding: 0 20px;
+
+    transition: background .2s linear;
+    letter-spacing: -.48px;
+
+    color: #fff;
+    border-radius: 10px;
+    background: #160f25;
+}
+
+
+.cookies .btn:hover
+{
+    background: #2f1f53;
 }
 
 
