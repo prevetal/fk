@@ -342,13 +342,13 @@
     ----------------*/
     .about_head .exp
     {
-        margin-top: 320px;
+        margin-top: 340px;
     }
 
 
-    .about_head .gallery
+    .about_head video
     {
-        top: 32%;
+        top: 38%;
     }
 
 
@@ -477,7 +477,9 @@
     /*-----------
         PopUp
     -----------*/
-    #order_modal
+    #order_modal,
+    #consult_modal,
+    #feddback_modal
     {
         padding: 32px;
     }

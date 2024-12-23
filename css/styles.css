@@ -1690,6 +1690,12 @@ header .callback_btn:hover
 }
 
 
+.form .fixed_label span
+{
+    color: #7f1aff;
+}
+
+
 .form .input:focus ~ .fixed_label,
 .form textarea:focus ~ .fixed_label,
 .form .input.active ~ .fixed_label,
@@ -2598,33 +2604,13 @@ header .callback_btn:hover
 }
 
 
-.first_section .anim
+.first_section video
 {
-    position: relative;
-
-    display: flex;
-    align-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: block;
 
     width: 648px;
     max-width: 100%;
-    margin: 10px auto 0;
-    padding-bottom: 648px;
-}
-
-
-.first_section .anim > *
-{
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    display: block;
-
-    width: 100%;
-    height: 100%;
+    margin: 0 auto;
 }
 
 
@@ -4645,13 +4631,14 @@ header .callback_btn:hover
 .film_commission_info .contacts .email a,
 .film_commission_info .contacts .address
 {
-    display: flex;
-    align-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    line-height: 22px;
 
-    white-space: nowrap;
+    display: flex;
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
     text-decoration: none;
 
     color: currentColor;
@@ -4668,6 +4655,7 @@ header .callback_btn:hover
 
     width: 20px;
     height: 20px;
+    margin: 1px 0;
 
     color: #b8aec4;
 }
@@ -6115,14 +6103,19 @@ header .callback_btn:hover
 }
 
 
-.about_head .gallery
+.about_head video
 {
     position: absolute;
     z-index: 1;
-    top: 12%;
-    left: -6%;
+    top: 30%;
+    right: 0;
+    left: 0;
 
-    width: 112%;
+    display: block;
+
+    width: 1440px;
+    max-width: 100%;
+    margin: 0 auto;
 
     pointer-events: none;
 }
@@ -6419,13 +6412,13 @@ header .callback_btn:hover
 .project_steps .swiper-button-prev
 {
     right: auto;
-    left: -88%;
+    left: -86.5%;
 }
 
 
 .project_steps .swiper-button-next
 {
-    right: -88%;
+    right: -86.5%;
 }
 
 
@@ -6462,9 +6455,6 @@ header .callback_btn:hover
 .project_steps .item .thumb
 {
     position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
 
     display: flex;
     align-content: center;
@@ -6472,24 +6462,27 @@ header .callback_btn:hover
     flex-wrap: wrap;
     justify-content: center;
 
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
+    width: 325px;
+    height: 325px;
+    margin: auto;
 
-    transition: .25s linear;
+    transition: .35s linear;
     pointer-events: none;
+
+    inset: 0;
 }
 
 
 .project_steps .item .thumb img
 {
+    position: absolute;
+    top: 0;
+    left: 0;
+
     display: block;
 
-    max-width: 100%;
-    max-height: 100%;
-
-    transition: transform .25s linear;
-    transform: scale(.70);
+    width: 100%;
+    height: 100%;
 }
 
 
@@ -6529,13 +6522,7 @@ header .callback_btn:hover
     width: 411px;
     height: 411px;
 
-    transform: translateY(-117px);
-}
-
-
-.project_steps .swiper-slide.active .item .thumb img
-{
-    transform: scale(1);
+    transform: translateY(-167px);
 }
 
 
@@ -8192,26 +8179,34 @@ footer .feedback
 
 
 
-#order_modal
+#order_modal,
+#consult_modal,
+#feddback_modal
 {
     width: 648px;
     padding: 48px;
 }
 
 
-#order_modal .form .line
+#order_modal .form .line,
+#consult_modal .form .line,
+#feddback_modal .form .line
 {
     margin-bottom: 16px;
 }
 
 
-#order_modal .form .submit
+#order_modal .form .submit,
+#consult_modal .form .submit,
+#feddback_modal .form .submit
 {
     padding-top: 14px;
 }
 
 
-#order_modal .form .submit_btn
+#order_modal .form .submit_btn,
+#consult_modal .form .submit_btn,
+#feddback_modal .form .submit_btn
 {
     width: auto;
     margin-left: auto;

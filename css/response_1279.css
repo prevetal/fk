@@ -317,10 +317,9 @@
     }
 
 
-    .first_section .anim
+    .first_section .video
     {
         width: 518px;
-        padding-bottom: 518px;
     }
 
 
@@ -1284,15 +1283,15 @@
         line-height: 140%;
 
         width: 489px;
-        margin-top: 395px;
+        margin-top: 424px;
 
         letter-spacing: -.16px;
     }
 
 
-    .about_head .gallery
+    .about_head video
     {
-        top: 28%;
+        top: 30%;
     }
 
 

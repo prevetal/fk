@@ -11,6 +11,22 @@
 
 
 
+    /*----------------
+        About head
+    ----------------*/
+    .about_head video
+    {
+        top: 33.333%;
+    }
+
+
+    .about_head .exp
+    {
+        margin-top: 500px;
+    }
+
+
+
     /*------------------
         Article info
     ------------------*/

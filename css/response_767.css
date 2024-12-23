@@ -381,12 +381,6 @@
     }
 
 
-    .first_section .anim
-    {
-        padding-bottom: 100%;
-    }
-
-
 
     /*-----------------------------
         Opportunities/Resources
@@ -1079,9 +1073,9 @@
     }
 
 
-    .about_head .gallery
+    .about_head video
     {
-        top: 55%;
+        top: 57%;
     }
 
 
@@ -1736,19 +1730,25 @@
 
 
 
-    #order_modal
+    #order_modal,
+    #consult_modal,
+    #feddback_modal
     {
         padding: 24px;
     }
 
 
-    #order_modal .form .submit
+    #order_modal .form .submit,
+    #consult_modal .form .submit,
+    #feddback_modal .form .submit
     {
         padding-top: 144px;
     }
 
 
-    #order_modal .form .submit_btn
+    #order_modal .form .submit_btn,
+    #consult_modal .form .submit_btn,
+    #feddback_modal .form .submit_btn
     {
         width: 100%;
     }
