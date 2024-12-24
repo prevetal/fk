@@ -1410,12 +1410,14 @@
     }
 
 
-    .project_steps .swiper-slide.active .item .thumb
+    .project_steps .item .thumb
     {
-        width: 380px;
-        height: 380px;
+        transform: scale(.85);
+    }
 
-        transform: translateY(-116px);
+    .project_steps .active .item .thumb
+    {
+        transform: translateY(-124px) scale(.85);
     }
 
 

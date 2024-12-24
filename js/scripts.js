@@ -169,13 +169,13 @@ document.addEventListener('DOMContentLoaded', function () {
 			},
 			on: {
 				init: (swiper) => {
-					swiper.slidePrev(0, false)
-					swiper.slideNext(0, false)
+					// swiper.slidePrev(0, false)
+					// swiper.slideNext(0, false)
 				},
-				transitionStart: (swiper) => {
+				beforeSlideChangeStart: (swiper) => {
 					let parent = $(swiper.el).closest('.project_steps')
 
-					setTimeout(() => parent.find('.block_head .title').hide().eq(swiper.realIndex).fadeIn(300))
+					parent.find('.block_head .title').hide().eq(swiper.realIndex).fadeIn(300)
 				}
 			}
 		}
