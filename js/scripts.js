@@ -160,9 +160,9 @@ document.addEventListener('DOMContentLoaded', function () {
 				},
 				768: {
 					coverflowEffect: {
-						rotate: 50,
+						rotate: 60,
 						stretch: 24,
-						depth: 212,
+						depth: 280,
 						slideShadows: true
 					}
 				}
@@ -421,7 +421,7 @@ document.addEventListener('DOMContentLoaded', function () {
 						placeholder: select.getAttribute('data-placeholder')
 					})
 
-					select.addEventListener('change', () => el.classList.add('selected'))
+					select.addEventListener('change', () => select.classList.add('selected'))
 				} else {
 					orderServicesInstance.update()
 				}

@@ -4665,7 +4665,7 @@ header .callback_btn:hover
 .film_commission_info .contacts .email span,
 .film_commission_info .contacts .address span
 {
-    max-width: calc(100% - 32px);
+    width: calc(100% - 32px);
 }
 
 
@@ -6412,13 +6412,13 @@ header .callback_btn:hover
 .project_steps .swiper-button-prev
 {
     right: auto;
-    left: -86.5%;
+    left: -76%;
 }
 
 
 .project_steps .swiper-button-next
 {
-    right: -86.5%;
+    right: -76%;
 }
 
 
