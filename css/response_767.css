@@ -855,33 +855,6 @@
 
 
 
-    /*---------------------
-        Financing terms
-    ---------------------*/
-    .financing_terms .mob_spoler_btn
-    {
-        display: inline-block;
-    }
-
-
-    .financing_terms .mob_spoler_btn ~ *
-    {
-        display: none;
-    }
-
-
-    .financing_terms .mob_spoler_btn.active
-    {
-        display: none;
-    }
-
-    .financing_terms .mob_spoler_btn.active ~ *
-    {
-        display: block;
-    }
-
-
-
     /*-----------
         Files
     -----------*/

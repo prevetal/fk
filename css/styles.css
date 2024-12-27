@@ -3942,7 +3942,7 @@ header .callback_btn:hover
 
 .catalog .tabs
 {
-    margin-bottom: 0;
+    margin-bottom: 0 !important;
 }
 
 
@@ -4026,7 +4026,7 @@ header .callback_btn:hover
 
     margin-bottom: 32px;
 
-    gap: 16px;
+    gap: 8px;
 }
 
 
@@ -4453,7 +4453,7 @@ header .callback_btn:hover
 
 
 
-.film_commission_info .col_left
+.film_commission_info .row > .col_left
 {
     width: 648px;
     max-width: 100%;
@@ -4461,7 +4461,7 @@ header .callback_btn:hover
 
 
 
-.film_commission_info .col_right
+.film_commission_info .row > .col_right
 {
     display: flex;
     flex-direction: column;
@@ -4480,7 +4480,7 @@ header .callback_btn:hover
 }
 
 
-.film_commission_info .col_right .title
+.film_commission_info .row > .col_right .title
 {
     font-family: var(--font_family2);
     font-size: 24px;
@@ -4493,7 +4493,7 @@ header .callback_btn:hover
 }
 
 
-.film_commission_info .col_right .divider
+.film_commission_info .row > .col_right .divider
 {
     height: 1px;
 
@@ -4807,128 +4807,6 @@ header .callback_btn:hover
 .files .file .btn:hover
 {
     border-color: var(--text_color);
-}
-
-
-
-/*---------------------
-    Financing terms
----------------------*/
-.financing_terms
-{
-    display: flex;
-    align-content: stretch;
-    align-items: stretch;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
-    border: 1px solid #e4ddec;
-    border-radius: 24px;
-    background: #fff;
-    box-shadow: 0 2px 5px 0 rgba(87, 95, 139, .08);
-}
-
-
-.financing_terms .tabs
-{
-    flex-direction: column;
-
-    width: 312px;
-    max-width: 100%;
-    margin: 0;
-    padding: 23px;
-
-    border-right: 1px solid #e4ddec;
-
-    gap: 8px;
-}
-
-
-.financing_terms .tabs .btn
-{
-    line-height: 140%;
-
-    position: relative;
-
-    overflow: hidden;
-
-    width: 100%;
-    padding: 8px 12px;
-
-    text-align: left;
-    letter-spacing: -.32px;
-
-    border-radius: 10px;
-}
-
-.financing_terms .tabs .btn:after
-{
-    position: absolute;
-    top: 0;
-    right: 0;
-
-    display: block;
-
-    width: 4px;
-    height: 100%;
-
-    content: '';
-    transition: opacity .2s linear;
-    pointer-events: none;
-
-    opacity: 0;
-    background: #7f1aff;
-}
-
-
-.financing_terms .tabs .btn.active
-{
-    color: #7f1aff;
-    background: #f9f7fd;
-    box-shadow: none;
-}
-
-
-.financing_terms .tabs .btn.active:after
-{
-    opacity: 1;
-}
-
-
-.financing_terms .tab_content
-{
-    width: 0;
-}
-
-
-.financing_terms .tab_content.active
-{
-    width: calc(100% - 312px);
-    padding: 31px;
-}
-
-
-.financing_terms .files
-{
-    margin-top: 32px;
-}
-
-
-.financing_terms .mob_spoler_btn
-{
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 98%;
-
-    display: none;
-
-    margin-top: 4px;
-    margin-bottom: 0;
-    padding: 2px 0;
-
-    letter-spacing: -.48px;
-
-    color: #7f1aff;
 }
 
 

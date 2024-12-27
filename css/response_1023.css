@@ -232,37 +232,16 @@
 
 
 
-    .film_commission_info .col_left
+    .film_commission_info .row > .col_left
     {
         width: 100%;
     }
 
 
-    .film_commission_info .col_right
+    .film_commission_info .row > .col_right
     {
         width: 100%;
         margin-top: 32px;
-    }
-
-
-
-    /*---------------------
-        Financing terms
-    ---------------------*/
-    .financing_terms .tabs
-    {
-        width: 100%;
-        padding: 19px;
-
-        border: none;
-        border-bottom: 1px solid #e4ddec;
-    }
-
-
-    .financing_terms .tab_content.active
-    {
-        width: 100%;
-        padding: 19px;
     }
 
 
