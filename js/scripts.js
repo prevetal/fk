@@ -172,10 +172,11 @@ document.addEventListener('DOMContentLoaded', function () {
 					// swiper.slidePrev(0, false)
 					// swiper.slideNext(0, false)
 				},
-				beforeSlideChangeStart: (swiper) => {
+				beforeTransitionStart: (swiper) => {
 					let parent = $(swiper.el).closest('.project_steps')
 
-					parent.find('.block_head .title').hide().eq(swiper.realIndex + 1).fadeIn(300)
+					parent.find('.block_head .title').hide()
+					parent.find('.block_head .title').eq(swiper.realIndex).fadeIn(300)
 				}
 			}
 		}
