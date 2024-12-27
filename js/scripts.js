@@ -175,7 +175,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				beforeSlideChangeStart: (swiper) => {
 					let parent = $(swiper.el).closest('.project_steps')
 
-					parent.find('.block_head .title').hide().eq(swiper.realIndex).fadeIn(300)
+					parent.find('.block_head .title').hide().eq(swiper.realIndex + 1).fadeIn(300)
 				}
 			}
 		}
