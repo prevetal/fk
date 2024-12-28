@@ -54,7 +54,12 @@
 
     .bg_block:before
     {
-        height: 1960px;
+        height: calc(100% + 1108px);
+    }
+
+    .bg_block.small_bg:before
+    {
+        height: calc(100% + 680px);
     }
 
 
@@ -388,6 +393,7 @@
     }
 
 
+    .opportunities_resources .items_wrap,
     .opportunities_resources .swiper
     {
         width: 430px;

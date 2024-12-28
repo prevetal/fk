@@ -18,6 +18,7 @@
 
 html
 {
+    scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
         -ms-text-size-adjust: 100%;
@@ -427,13 +428,19 @@ button
     display: block;
 
     width: 100%;
-    height: 2308px;
+    height: calc(100% + 1280px);
 
     content: '';
     pointer-events: none;
 
     border-radius: inherit;
     background: url(../images/gradient_pattern.png) 50% 100%/1440px auto no-repeat, radial-gradient(291.76% 93.31% at 50% 6.69%, rgba(255, 251, 26, .00) 29.7%, #801bff 49.46%, #48118d 57.05%, #160f25 68.13%);
+}
+
+
+.bg_block.small_bg:before
+{
+    height: calc(100% + 920px);
 }
 
 
@@ -2611,6 +2618,9 @@ header .callback_btn:hover
     width: 648px;
     max-width: 100%;
     margin: 0 auto;
+
+    transform: translateZ(0);
+    pointer-events: none;
 }
 
 
@@ -2618,8 +2628,17 @@ header .callback_btn:hover
 /*-----------------------------
     Opportunities/Resources
 -----------------------------*/
+.opportunities_resources .cont
+{
+    position: relative;
+}
+
+
 .opportunities_resources .data
 {
+    position: sticky;
+    top: var(--top_offset);
+
     display: flex;
     overflow: hidden;
     align-content: stretch;
@@ -2631,6 +2650,8 @@ header .callback_btn:hover
 
     border-radius: 24px;
     background: #f4f0f9;
+
+    --top_offset: 0;
 }
 
 
@@ -2642,6 +2663,14 @@ header .callback_btn:hover
     width: 350px;
     max-width: 100%;
     min-height: 533px;
+
+    transition: opacity .2s linear;
+}
+
+
+.opportunities_resources .info.hide
+{
+    opacity: 0;
 }
 
 
@@ -2735,6 +2764,46 @@ header .callback_btn:hover
 .opportunities_resources .btns .btn:hover
 {
     background: #2f1f53;
+}
+
+
+.opportunities_resources .items_wrap
+{
+    position: relative;
+    z-index: 5;
+
+    width: 645px;
+    max-width: 100%;
+
+    counter-reset: number;
+    white-space: nowrap;
+}
+
+
+.opportunities_resources .items
+{
+    display: inline-block;
+
+    vertical-align: top;
+
+    will-change: transform;
+}
+
+
+.opportunities_resources .items > *
+{
+    display: inline-block;
+
+    width: 294px;
+
+    vertical-align: top;
+    white-space: normal;
+}
+
+
+.opportunities_resources .items > * + *
+{
+    margin-left: 12px;
 }
 
 
@@ -3465,6 +3534,7 @@ header .callback_btn:hover
     width: 100%;
     height: 100%;
 
+    transform: translateZ(0);
     pointer-events: none;
 
     object-fit: cover;
@@ -4371,6 +4441,7 @@ header .callback_btn:hover
     width: 100%;
     height: 100%;
 
+    transform: translateZ(0);
     pointer-events: none;
 
     object-fit: cover;
@@ -5995,6 +6066,7 @@ header .callback_btn:hover
     max-width: 100%;
     margin: 0 auto;
 
+    transform: translateZ(0);
     pointer-events: none;
 }
 

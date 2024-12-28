@@ -36,37 +36,49 @@ document.addEventListener('DOMContentLoaded', function () {
 	})
 
 
-	// Opportunities/Resources slider
-	opportunitiesResourcesSliders = []
+	// Opportunities/Resources
+	// opportunitiesResourcesSliders = []
 
-	const opportunitiesResources = document.querySelectorAll('.opportunities_resources .swiper')
+	if ($('.opportunities_resources').length) {
+		opportunitiesResourcesOffset = $('.opportunities_resources .items').outerWidth() - $('.opportunities_resources .items_wrap').outerWidth() + 5
 
-	opportunitiesResources.forEach((el, i) => {
-		el.classList.add('opportunities_resources_s' + i)
+		opportunitiesResourcesTopOffset = (WH - $('.opportunities_resources .data').outerHeight()) / 2
 
-		let options = {
-			loop: false,
-			speed: 500,
-			watchSlidesProgress: true,
-			slideActiveClass: 'active',
-			slideVisibleClass: 'visible',
-			lazy: true,
-			spaceBetween: 16,
-			slidesPerView: 'auto',
-			on: {
-				init: swiper => setHeight(swiper.el.querySelectorAll('.item')),
-				resize: swiper => {
-					let items = swiper.el.querySelectorAll('.item')
+		opportunitiesResourcesAnimStart = $('.opportunities_resources .data').offset().top + opportunitiesResourcesTopOffset
 
-					items.forEach(el => el.style.height = 'auto')
+		$('.opportunities_resources .offset').height(opportunitiesResourcesOffset)
 
-					setHeight(items)
-				}
-			}
-		}
+		$('.opportunities_resources .data').css('--top_offset', opportunitiesResourcesTopOffset + 'px')
+	}
 
-		opportunitiesResourcesSliders.push(new Swiper('.opportunities_resources_s' + i, options))
-	})
+	// const opportunitiesResources = document.querySelectorAll('.opportunities_resources .swiper')
+
+	// opportunitiesResources.forEach((el, i) => {
+	// 	el.classList.add('opportunities_resources_s' + i)
+
+	// 	let options = {
+	// 		loop: false,
+	// 		speed: 500,
+	// 		watchSlidesProgress: true,
+	// 		slideActiveClass: 'active',
+	// 		slideVisibleClass: 'visible',
+	// 		lazy: true,
+	// 		spaceBetween: 16,
+	// 		slidesPerView: 'auto',
+	// 		on: {
+	// 			init: swiper => setHeight(swiper.el.querySelectorAll('.item')),
+	// 			resize: swiper => {
+	// 				let items = swiper.el.querySelectorAll('.item')
+
+	// 				items.forEach(el => el.style.height = 'auto')
+
+	// 				setHeight(items)
+	// 			}
+	// 		}
+	// 	}
+
+	// 	opportunitiesResourcesSliders.push(new Swiper('.opportunities_resources_s' + i, options))
+	// })
 
 
 	// Film commissions slider
@@ -467,6 +479,20 @@ window.addEventListener('resize', function () {
 		WW = window.innerWidth || document.clientWidth || BODY.clientWidth
 
 
+		// Opportunities/Resources
+		if ($('.opportunities_resources').length) {
+			opportunitiesResourcesOffset = $('.opportunities_resources .items').outerWidth() - $('.opportunities_resources .items_wrap').outerWidth() + 5
+
+			opportunitiesResourcesTopOffset = (WH - $('.opportunities_resources .data').outerHeight()) / 2
+
+			opportunitiesResourcesAnimStart = $('.opportunities_resources .data').offset().top + opportunitiesResourcesTopOffset
+
+			$('.opportunities_resources .offset').height(opportunitiesResourcesOffset)
+
+			$('.opportunities_resources .data').css('--top_offset', opportunitiesResourcesTopOffset + 'px')
+		}
+
+
 		// Mob. version
 		if (!fakeResize) {
 			fakeResize = true
@@ -482,6 +508,21 @@ window.addEventListener('resize', function () {
 		} else {
 			fakeResize = false
 			fakeResize2 = true
+		}
+	}
+})
+
+
+
+window.addEventListener('scroll', function () {
+	// Opportunities/Resources
+	if ($('.opportunities_resources').length) {
+		if ($(window).scrollTop() > opportunitiesResourcesAnimStart && ($(window).scrollTop() - opportunitiesResourcesAnimStart) < opportunitiesResourcesOffset) {
+			($(window).scrollTop() - opportunitiesResourcesAnimStart) > opportunitiesResourcesOffset * 0.2
+				? $('.opportunities_resources .info').addClass('hide')
+				: $('.opportunities_resources .info').removeClass('hide')
+
+			$('.opportunities_resources .items').css('transform', `translateX(${opportunitiesResourcesAnimStart - $(window).scrollTop()}px)`)
 		}
 	}
 })

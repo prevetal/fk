@@ -60,16 +60,14 @@
     }
 
 
-
     .bg_block:before
     {
-        height: 2520px;
+        height: calc(100% + 1208px);
     }
 
-
-    .bg_block.mob_big_bg:before
+    .bg_block.small_bg:before
     {
-        height: 2800px;
+        height: calc(100% + 980px);
     }
 
 
@@ -398,6 +396,12 @@
     }
 
 
+    .opportunities_resources .info.hide
+    {
+        opacity: 1;
+    }
+
+
     .opportunities_resources .title
     {
         margin-top: 24px;
@@ -430,6 +434,7 @@
     }
 
 
+    .opportunities_resources .items_wrap,
     .opportunities_resources .swiper
     {
         width: 100%;

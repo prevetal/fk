@@ -14,9 +14,9 @@
     /*------------
         BG block
     ------------*/
-    .bg_block:before
+    .bg_block.small_bg:before
     {
-        height: 2000px;
+        height: calc(100% + 760px);
     }
 
 
@@ -30,6 +30,7 @@
     }
 
 
+    .opportunities_resources .items_wrap,
     .opportunities_resources .swiper
     {
         width: calc(100% - 350px);
