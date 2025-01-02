@@ -465,6 +465,30 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		$('.cookies').removeClass('show')
 	})
+
+
+	// Film commision - Rent gallery
+	let rentGallerySliders = document.querySelectorAll('.rent .gallery .swiper')
+
+	if (rentGallerySliders.length) {
+		rentGallerySliders.forEach(el => {
+			new Swiper(el, {
+				spaceBetween: 16,
+				direction: 'vertical',
+				lazyPreloadPrevNext: 1,
+				centeredSlides: true,
+				speed: 8000,
+				autoplay: {
+					delay: 1,
+					reverseDirection: el.getAttribute('data-reverse') ? true : false,
+					disableOnInteraction: true
+				},
+				loop: true,
+				slidesPerView:'auto',
+				allowTouchMove: false
+			})
+		})
+	}
 })
 
 
