@@ -157,7 +157,8 @@
     }
 
 
-    .catalog .list .info
+    .catalog .list .info,
+    .catalog .list .info.mob_full
     {
         align-self: center;
 
@@ -167,7 +168,8 @@
     }
 
 
-    .catalog .list .col_right
+    .catalog .list .col_right,
+    .catalog .list .col_right.small
     {
         width: 100%;
     }
@@ -320,15 +322,10 @@
     /*----------------
         About head
     ----------------*/
-    .about_head .exp
-    {
-        margin-top: 340px;
-    }
-
-
     .about_head video
     {
-        top: 38%;
+        margin-top: -3.5vw;
+        margin-bottom: -8vw;
     }
 
 

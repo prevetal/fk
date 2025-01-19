@@ -67,7 +67,7 @@
 
     .bg_block.small_bg:before
     {
-        height: calc(100% + 980px);
+        height: calc(100% + 1248px);
     }
 
 
@@ -103,6 +103,7 @@
     ------------*/
     header
     {
+        padding-top: 32px;
         padding-bottom: 16px;
     }
 
@@ -191,6 +192,8 @@
     ---------------*/
     .mob_menu
     {
+        top: 32px;
+
         width: calc(100% - 32px);
     }
 
@@ -202,6 +205,24 @@
     .page_head
     {
         margin-bottom: 24px;
+    }
+
+
+    .page_head .back_btn .icon
+    {
+        position: relative;
+        top: -1px;
+    }
+
+
+    .page_head .back_btn span
+    {
+        display: none;
+    }
+
+    .page_head .back_btn span + span
+    {
+        display: inline;
     }
 
 
@@ -310,6 +331,8 @@
 
     .text_block blockquote
     {
+        margin-top: 24px;
+        margin-bottom: 24px;
         padding: 16px;
 
         background-position: calc(100% - 16px) calc(100% - 85px) ;
@@ -433,16 +456,27 @@
         display: none;
     }
 
+    .opportunities_resources .btns.mob
+    {
+        display: block;
+    }
 
-    .opportunities_resources .items_wrap,
-    .opportunities_resources .swiper
+
+    .opportunities_resources .items_wrap
     {
         width: 100%;
         margin-top: 24px;
     }
 
 
-    .opportunities_resources .swiper-slide
+    /* .opportunities_resources .swiper
+    {
+        width: 100%;
+        margin-top: 24px;
+    } */
+
+
+    /* .opportunities_resources .swiper-slide
     {
         visibility: visible;
 
@@ -451,6 +485,12 @@
         pointer-events: auto;
 
         opacity: 1;
+    } */
+
+
+    .opportunities_resources .items > *
+    {
+        width: 230px;
     }
 
 
@@ -551,6 +591,12 @@
     }
 
 
+    .film_commissions .swiper-pagination
+    {
+        display: flex;
+    }
+
+
     .film_commissions .item
     {
         padding: 24px;
@@ -648,10 +694,11 @@
 
     .action_block .title .letter
     {
+        top: 11px;
+
         width: 24px;
         height: 24px;
-        margin-top: 12px;
-        margin-bottom: -4px;
+        margin-bottom: 0;
         margin-left: -4px;
     }
 
@@ -816,7 +863,9 @@
 
     .film_commission_head:after
     {
-        height: 32px;
+        bottom: -1px;
+
+        height: 33px;
 
         border-radius: 24px 24px 0 0;
     }
@@ -824,7 +873,7 @@
 
     .film_commission_head .cont
     {
-        padding-top: 90px;
+        padding-top: 122px;
         padding-bottom: 64px;
     }
 
@@ -1022,6 +1071,8 @@
 
     .about_head .title .letter
     {
+        top: 5px;
+
         width: 30px;
         height: 30px;
         margin-right: 0;
@@ -1039,21 +1090,24 @@
     }
 
 
+    .about_head video
+    {
+        width: 120%;
+        margin-top: -3vw;
+        margin-right: -10%;
+        margin-bottom: -6vw;
+        margin-left: -10%;
+    }
+
+
     .about_head .exp
     {
         font-size: 14px;
         line-height: 120%;
 
         width: 343px;
-        margin-top: 158px;
 
         letter-spacing: -.14px;
-    }
-
-
-    .about_head video
-    {
-        top: 57%;
     }
 
 
@@ -1281,6 +1335,14 @@
     }
 
 
+    .contacts_info .head .title span:not(.letter)
+    {
+        display: block;
+
+        margin-top: 16px;
+    }
+
+
     .contacts_info .head .desc
     {
         font-size: 14px;
@@ -1420,6 +1482,35 @@
     .articles .article.big
     {
         border-radius: 16px;
+    }
+
+
+    .articles .article.big .thumb
+    {
+        min-height: 562px;
+    }
+
+
+    .articles .article.big .thumb:before
+    {
+        background: linear-gradient(180deg, rgba(0, 0, 0, .00) 33.93%, rgba(0, 0, 0, .70) 64.92%);
+    }
+
+
+    .articles .article.big .name a
+    {
+        -webkit-line-clamp: 3;
+    }
+
+
+    .articles .article.big .desc
+    {
+        display: -webkit-box;
+        overflow: hidden;
+        align-self: stretch;
+        -webkit-box-orient: vertical;
+
+        -webkit-line-clamp: 4;
     }
 
 
@@ -1733,12 +1824,6 @@
         width: 100%;
     }
 
-
-
-    .success_modal .image
-    {
-        margin-top: 20px;
-    }
 
 
     .success_modal .close_btn

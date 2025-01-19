@@ -172,6 +172,7 @@ body.search_open
 }
 
 
+body.search_open,
 html.custom_scroll body.lock
 {
     padding-right: var(--scroll_width);
@@ -408,10 +409,6 @@ button
 {
     position: relative;
 
-    width: 1440px;
-    max-width: 100%;
-    margin-right: auto;
-    margin-left: auto;
     padding-bottom: 140px;
 
     border-radius: 0 0 60px 60px;
@@ -434,13 +431,13 @@ button
     pointer-events: none;
 
     border-radius: inherit;
-    background: url(../images/gradient_pattern.png) 50% 100%/1440px auto no-repeat, radial-gradient(291.76% 93.31% at 50% 6.69%, rgba(255, 251, 26, .00) 29.7%, #801bff 49.46%, #48118d 57.05%, #160f25 68.13%);
+    background: url(../images/gradient_pattern.png) 50% 100%/100% auto no-repeat, radial-gradient(291.76% 93.31% at 50% 13.28%, rgba(255, 251, 26, .00) 29.7%, #801bff 49.46%, #48118d 57.05%, #160f25 68.13%);
 }
 
 
 .bg_block.small_bg:before
 {
-    height: calc(100% + 920px);
+    height: calc(100% + 820px);
 }
 
 
@@ -883,6 +880,8 @@ header .search_btn
     height: 42px;
     margin-left: 40px;
 
+    transition: .2s linear;
+
     border-radius: 8px;
     background: #f4f0f9;
 }
@@ -894,6 +893,13 @@ header .search_btn .icon
 
     width: 16px;
     height: 16px;
+}
+
+
+header .search_btn:hover
+{
+    color: #fff;
+    background: #2f1f53;
 }
 
 
@@ -1026,6 +1032,8 @@ header .menu_btn.active .icon + .icon
     width: 42px;
     height: 42px;
 
+    transition: .2s linear;
+
     color: #7f1aff;
     border-radius: 8px;
     background: #f4f0f9;
@@ -1038,6 +1046,13 @@ header .menu_btn.active .icon + .icon
 
     width: 16px;
     height: 16px;
+}
+
+
+.search_modal .head .close_btn:hover
+{
+    color: #fff;
+    background: #2f1f53;
 }
 
 
@@ -1308,7 +1323,7 @@ header .menu_btn.active .icon + .icon
 {
     position: absolute;
     z-index: 101;
-    top: 0;
+    top: 24px;
     right: 0;
     left: 0;
 
@@ -1430,6 +1445,12 @@ header .callback_btn:hover
 
     width: 20px;
     height: 20px;
+}
+
+
+.page_head .back_btn span + span
+{
+    display: none;
 }
 
 
@@ -2260,6 +2281,8 @@ header .callback_btn:hover
 
 .text_block blockquote
 {
+    margin-top: 32px;
+    margin-bottom: 32px;
     padding: 24px;
 
     border-radius: 16px;
@@ -2744,6 +2767,15 @@ header .callback_btn:hover
 }
 
 
+.opportunities_resources .btns.mob
+{
+    display: none;
+
+    width: 100%;
+    margin-top: 16px;
+}
+
+
 .opportunities_resources .btns .btn
 {
     font-size: 18px;
@@ -2758,6 +2790,12 @@ header .callback_btn:hover
     color: #fff;
     border-radius: 10px;
     background: #160f25;
+}
+
+
+.opportunities_resources .btns.mob .btn
+{
+    width: 100%;
 }
 
 
@@ -3235,6 +3273,12 @@ header .callback_btn:hover
 }
 
 
+.film_commissions .swiper-pagination
+{
+    display: none;
+}
+
+
 .film_commissions .item
 {
     position: relative;
@@ -3335,6 +3379,8 @@ header .callback_btn:hover
 
     border-radius: 50%;
     background: #ddd;
+
+    object-fit: cover;
 }
 
 
@@ -3559,12 +3605,12 @@ header .callback_btn:hover
 .action_block .title .letter
 {
     position: relative;
+    top: 23px;
 
     display: inline-block;
 
     width: 42px;
     height: 47px;
-    margin-top: 17px;
 
     vertical-align: top;
 }
@@ -4598,6 +4644,17 @@ header .callback_btn:hover
 .film_commission_info .video
 {
     margin-top: 40px;
+}
+
+
+.film_commission_info .video .video-js,
+.film_commission_info .video video
+{
+    overflow: hidden;
+
+    max-width: 100%;
+
+    border-radius: 16px;
 }
 
 
@@ -6025,6 +6082,7 @@ header .callback_btn:hover
 .about_head .title .letter
 {
     position: relative;
+    top: 6px;
 
     display: inline-block;
 
@@ -6049,6 +6107,18 @@ header .callback_btn:hover
 }
 
 
+.about_head video
+{
+    display: block;
+
+    width: 100%;
+    margin-top: -6vw;
+    margin-bottom: -12vw;
+
+    pointer-events: none;
+}
+
+
 .about_head .exp
 {
     font-size: 18px;
@@ -6056,31 +6126,12 @@ header .callback_btn:hover
 
     width: 471px;
     max-width: 100%;
-    margin: 526px auto 0;
+    margin: 0 auto;
 
     text-align: center;
     letter-spacing: -.36px;
 
     color: #4c4c67;
-}
-
-
-.about_head video
-{
-    position: absolute;
-    z-index: 1;
-    top: 30%;
-    right: 0;
-    left: 0;
-
-    display: block;
-
-    width: 1440px;
-    max-width: 100%;
-    margin: 0 auto;
-
-    transform: translateZ(0);
-    pointer-events: none;
 }
 
 
@@ -6218,10 +6269,10 @@ header .callback_btn:hover
 }
 
 
-.tasks .item .icon + *
+/* .tasks .item .icon + *
 {
     margin-top: auto;
-}
+} */
 
 
 
@@ -6748,6 +6799,21 @@ header .callback_btn:hover
 }
 
 
+.support_measures a.item
+{
+    transition: box-shadow .2s linear;
+    text-decoration: none;
+
+    color: currentColor;
+}
+
+
+.support_measures a.item:hover
+{
+    box-shadow: 0 2px 32px 0 rgba(52, 79, 104, .05), 0 0 16px 0 rgba(68, 83, 113, .10), 0 4px 8px 0 rgba(68, 83, 113, .05);
+}
+
+
 .support_measures .item .number
 {
     line-height: 140%;
@@ -6808,17 +6874,6 @@ header .callback_btn:hover
     margin-top: auto;
 
     letter-spacing: -.56px;
-}
-
-
-.support_measures .item .name a
-{
-    display: inline-block;
-
-    vertical-align: top;
-    text-decoration: none;
-
-    color: currentColor;
 }
 
 
@@ -7972,12 +8027,19 @@ header .callback_btn:hover
 
     padding: 15px 23px;
 
+    transition: border-color .2s linear;
     text-decoration: none;
     letter-spacing: -.36px;
 
-    color: currentColor;
-    border: 1px solid #160f25;
+    color: #160f25;
+    border: 1px solid rgba(22, 15, 37, .50);
     border-radius: 10px;
+}
+
+
+.error_page .data .links a:hover
+{
+    border-color: #160f25;
 }
 
 
@@ -8395,19 +8457,17 @@ footer .feedback
 }
 
 
-.success_modal .image
+.success_modal .video
 {
-    margin-top: 32px;
+    margin-top: 16px;
 }
 
 
-.success_modal .image img
+.success_modal .video video
 {
     display: block;
 
-    width: 200px;
-    max-width: 100%;
-    margin: 0 auto;
+    width: 100%;
 }
 
 
@@ -8418,7 +8478,7 @@ footer .feedback
 
     display: block;
 
-    margin: 32px auto 0;
+    margin: 16px auto 0;
     padding: 16px 20px;
 
     letter-spacing: -.48px;

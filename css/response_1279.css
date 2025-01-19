@@ -41,6 +41,31 @@
 
 
 
+    /*--------------
+        Fancybox
+    --------------*/
+    .fancybox__slide.has-image
+    {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+
+    .is-horizontal .f-carousel__nav .f-button.is-prev,
+    .is-horizontal .fancybox__nav .f-button.is-prev
+    {
+        left: 0;
+    }
+
+
+    .is-horizontal .f-carousel__nav .f-button.is-next,
+    .is-horizontal .fancybox__nav .f-button.is-next
+    {
+        right: 0;
+    }
+
+
+
     /*------------
         BG block
     ------------*/
@@ -59,7 +84,7 @@
 
     .bg_block.small_bg:before
     {
-        height: calc(100% + 680px);
+        height: calc(100% + 648px);
     }
 
 
@@ -119,12 +144,6 @@
     /*------------
         Header
     ------------*/
-    header
-    {
-        padding-top: 0;
-    }
-
-
     header .menu,
     header .callback_btn
     {
@@ -609,10 +628,11 @@
 
     .action_block .title .letter
     {
+        top: 15px;
+
         width: 53px;
         height: 53px;
-        margin-top: 16px;
-        margin-bottom: -27px;
+        margin-bottom: -10px;
         margin-left: -23px;
     }
 
@@ -707,6 +727,26 @@
     {
         width: 100%;
         min-height: 428px;
+    }
+
+
+    .articles .article.big .thumb:before
+    {
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+
+        display: block;
+
+        width: 100%;
+        height: 100%;
+
+        content: '';
+        pointer-events: none;
+
+        border-radius: inherit;
+        background: linear-gradient(180deg, rgba(0, 0, 0, .00) 52.72%, rgba(0, 0, 0, .70) 83.31%);
     }
 
 
@@ -850,7 +890,25 @@
 
     .catalog .list .info
     {
-        max-width: calc(100% - 345px);
+        max-width: calc(100% - 426px);
+    }
+
+
+    .catalog .list .info.mob_full
+    {
+        max-width: calc(100% - 320px);
+    }
+
+
+    .catalog .list .col_right
+    {
+        width: 330px;
+        max-width: 100%;
+    }
+
+    .catalog .list .col_right.small
+    {
+        width: 200px;
     }
 
 
@@ -886,7 +944,7 @@
 
     .film_commission_head .cont
     {
-        padding-top: 98px;
+        padding-top: 114px;
         padding-bottom: 80px;
     }
 
@@ -1248,6 +1306,8 @@
 
     .about_head .title .letter
     {
+        top: 0;
+
         width: 45px;
         height: 43px;
         margin-right: -2px;
@@ -1270,15 +1330,8 @@
         line-height: 140%;
 
         width: 489px;
-        margin-top: 424px;
 
         letter-spacing: -.16px;
-    }
-
-
-    .about_head video
-    {
-        top: 30%;
     }
 
 

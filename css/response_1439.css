@@ -16,13 +16,8 @@
     ----------------*/
     .about_head video
     {
-        top: 33.333%;
-    }
-
-
-    .about_head .exp
-    {
-        margin-top: 500px;
+        margin-top: -5vw;
+        margin-bottom: -10vw;
     }
 
 
