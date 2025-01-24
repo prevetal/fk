@@ -1032,6 +1032,17 @@
     }
 
 
+    .services .service > div
+    {
+        pointer-events: auto;
+    }
+
+    .services .service > div > *
+    {
+        pointer-events: none;
+    }
+
+
     .services .service .thumb
     {
         padding-bottom: 105.128%;

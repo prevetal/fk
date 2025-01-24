@@ -134,6 +134,8 @@ html
     min-height: -moz-available;
     min-height: -webkit-fill-available;
     min-height:         fill-available;
+
+    --fancybox-scrollbar-compensate: var(--scroll_width) !important;
 }
 
 
@@ -4971,6 +4973,12 @@ header .callback_btn:hover
 }
 
 
+.services .service > div
+{
+    pointer-events: none;
+}
+
+
 .services .service .thumb
 {
     position: relative;
@@ -5068,6 +5076,7 @@ header .callback_btn:hover
     padding: 14px 24px;
 
     letter-spacing: -.42px;
+    pointer-events: auto;
 
     color: var(--text_color);
     border-radius: 8px;
@@ -5095,10 +5104,6 @@ header .callback_btn:hover
 
     width: 20px;
     height: 20px;
-
-    text-decoration: none;
-
-    color: currentColor;
 }
 
 
