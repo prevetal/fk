@@ -1160,6 +1160,14 @@
     }
 
 
+    .locations .location .swiper-horizontal > .swiper-pagination-bullets,
+    .locations .location .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .locations .location .swiper-pagination-fraction
+    {
+        opacity: 1;
+    }
+
+
     .locations .location .info
     {
         padding: 20px;

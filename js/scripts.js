@@ -132,6 +132,34 @@ document.addEventListener('DOMContentLoaded', function () {
 	})
 
 
+	// Locations thumbs slider
+	const locationsThumbsSliders = [],
+		locationsThumbs = document.querySelectorAll('.locations .location .swiper')
+
+	locationsThumbs.forEach((el, i) => {
+		el.classList.add('locations_location_s' + i)
+
+		let options = {
+			loop: true,
+			speed: 500,
+			watchSlidesProgress: true,
+			slideActiveClass: 'active',
+			slideVisibleClass: 'visible',
+			lazy: true,
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'bullets',
+				clickable: true,
+				bulletActiveClass: 'active'
+			},
+			spaceBetween: 0,
+			slidesPerView: 1
+		}
+
+		locationsThumbsSliders.push(new Swiper('.locations_location_s' + i, options))
+	})
+
+
 	// Project steps slider
 	const projectStepsSliders = [],
 		projectSteps = document.querySelectorAll('.project_steps .swiper')

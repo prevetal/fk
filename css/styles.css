@@ -348,8 +348,8 @@ button
 
     display: block;
 
-    width: calc(var(--f-thumb-width) - (var(--f-thumb-outline) * 2));
-    height: calc(var(--f-thumb-height) - (var(--f-thumb-outline) * 2));
+    width: calc(100% - var(--f-thumb-outline) * 2);
+    height: calc(100% - var(--f-thumb-outline) * 2);
 
     content: '';
     transition: opacity .2s linear;
@@ -4513,11 +4513,13 @@ header .callback_btn:hover
 
 .film_commission_head .back_btn
 {
+    display: none;
+
     color: #f4f0f9;
 }
 
 
-.film_commission_head .back_btn a:hover
+.film_commission_head .breadcrumbs
 {
     color: #fff;
 }
@@ -5497,6 +5499,43 @@ header .callback_btn:hover
     border-radius: 24px;
     background: #fff;
     box-shadow: 0 4px 8px 0 rgba(68, 83, 113, .08);
+}
+
+
+.locations .location .swiper
+{
+    width: 100%;
+}
+
+
+.locations .location .swiper-horizontal > .swiper-pagination-bullets,
+.locations .location .swiper-pagination-bullets.swiper-pagination-horizontal,
+.locations .location .swiper-pagination-fraction
+{
+    position: absolute;
+    bottom: 0;
+
+    flex-wrap: nowrap;
+
+    padding: 12px 16px;
+
+    transition: opacity .2s linear;
+
+    opacity: 0;
+}
+
+
+.locations .location .swiper-pagination-bullet
+{
+    width: 100%;
+}
+
+
+.locations .location:hover .swiper-horizontal > .swiper-pagination-bullets,
+.locations .location:hover .swiper-pagination-bullets.swiper-pagination-horizontal,
+.locations .location:hover .swiper-pagination-fraction
+{
+    opacity: 1;
 }
 
 

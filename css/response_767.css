@@ -220,7 +220,7 @@
         display: none;
     }
 
-    .page_head .back_btn span + span
+    .page_head .back_btn span:last-child
     {
         display: inline;
     }
@@ -629,7 +629,7 @@
 
         padding: 20px;
 
-        box-shadow: 0 2px 32px 0 rgba(52, 79, 104, .05), 0 0 16px 0 rgba(68, 83, 113, .10), 0 4px 8px 0 rgba(68, 83, 113, .05);
+        box-shadow: 0 4px 40px 0 rgba(52, 79, 104, .05), 0 2px 30px 0 rgba(52, 79, 104, .07);
     }
 
     .advantages .item:nth-child(2)
@@ -875,6 +875,18 @@
     {
         padding-top: 122px;
         padding-bottom: 64px;
+    }
+
+
+    .film_commission_head .breadcrumbs
+    {
+        display: none;
+    }
+
+
+    .film_commission_head .back_btn
+    {
+        display: flex;
     }
 
 
