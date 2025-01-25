@@ -503,8 +503,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			new Swiper(el, {
 				spaceBetween: 16,
 				direction: 'vertical',
-				lazyPreloadPrevNext: 1,
-				centeredSlides: true,
+				lazyPreloadPrevNext: 2,
 				speed: 8000,
 				autoplay: {
 					delay: 1,
