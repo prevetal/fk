@@ -62,12 +62,12 @@
 
     .bg_block:before
     {
-        height: calc(100% + 1208px);
+        height: 165%;
     }
 
     .bg_block.small_bg:before
     {
-        height: calc(100% + 1248px);
+        height: 168%;
     }
 
 
