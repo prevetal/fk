@@ -211,6 +211,15 @@ document.addEventListener('DOMContentLoaded', function () {
 				init: (swiper) => {
 					// swiper.slidePrev(0, false)
 					// swiper.slideNext(0, false)
+
+					setHeight(swiper.el.querySelectorAll('.item'))
+				},
+				resize: swiper => {
+					let items = swiper.el.querySelectorAll('.item')
+
+					items.forEach(el => el.style.height = 'auto')
+
+					setHeight(items)
 				},
 				beforeTransitionStart: (swiper) => {
 					let parent = $(swiper.el).closest('.project_steps')
